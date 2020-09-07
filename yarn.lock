@@ -5567,6 +5567,11 @@ hex-rgb@^4.1.0:
   resolved "https://registry.yarnpkg.com/hex-rgb/-/hex-rgb-4.2.0.tgz#fb377f2e5658fc924f1efa189685922e56ecaf0f"
   integrity sha512-I7DkKeQ2kR2uyqgbxPgNgClH/rfs1ioKZhZW8VTIAirsxCR5EyhYeywgZbhMScgUbKCkgo6bb6JwA0CLTn9beA==
 
+highlight.js@^9.13.1:
+  version "9.18.3"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.18.3.tgz#a1a0a2028d5e3149e2380f8a865ee8516703d634"
+  integrity sha512-zBZAmhSupHIl5sITeMqIJnYCDfAEc3Gdkqj65wC1lpI468MMQeeQkhcIAvk+RylAkxrCcI9xy9piHiXeQ1BdzQ==
+
 hmac-drbg@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/hmac-drbg/-/hmac-drbg-1.0.1.tgz#d2745701025a6c775a6c545793ed502fc0c649a1"
@@ -11422,10 +11427,24 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.0.0.tgz#ddad8d675ee02c761a14229f0e440e219de1da1c"
   integrity sha512-arhk1wtWAfLsJyxGMoEYhoBowM87/i6HLSG2LH/03Yog6i2d9JEN1peMP0Ceis+/n9DxdenGYZZTxbPPJyHciA==
 
+vue-hljs@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/vue-hljs/-/vue-hljs-1.1.2.tgz#d6639e30964d1accb316f33b4e3266edc1e6012d"
+  integrity sha512-KRNdqY8Z54Tn6M34azYmKybW9YL5uhAnjpRTkIaxJOP2e0jkGkTBXzkYJFOFwBC+lWj+1SBs5PLvc6O3RKhpsQ==
+  dependencies:
+    highlight.js "^9.13.1"
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
   integrity sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==
+
+vue-instagram-embed@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue-instagram-embed/-/vue-instagram-embed-1.0.0.tgz#d32d3b1fbd4738eeeab6b7a6a80c6d29a1ba24c5"
+  integrity sha512-sQAa4ew6g4OE20XQzc/uYw40jFOoIFSFpfqvhaKNpgkQkBG5aNRxqdLsgAJtXAj2Q2H9kvQ/xxbiLGoQTrIsbQ==
+  dependencies:
+    vue-hljs "^1.1.2"
 
 vue-jest@^3.0.4:
   version "3.0.6"
