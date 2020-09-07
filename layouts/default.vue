@@ -7,56 +7,57 @@
       >
         <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
           <div class="px-5 py-2">
-            <a
-              href="#"
+            <nuxt-link
+              to="/"
               class="text-base leading-6 text-gray-500 hover:text-gray-900"
             >
-              About
-            </a>
+              Home
+            </nuxt-link>
           </div>
           <div class="px-5 py-2">
-            <a
-              href="#"
+            <nuxt-link
+              to="/blog"
               class="text-base leading-6 text-gray-500 hover:text-gray-900"
             >
               Blog
-            </a>
+            </nuxt-link>
           </div>
           <div class="px-5 py-2">
-            <a
+            <nuxt-link
+              to="/uses"
+              class="text-base leading-6 text-gray-500 hover:text-gray-900"
+            >
+              Uses
+            </nuxt-link>
+          </div>
+          <!-- <div class="px-5 py-2">
+            <nuxt-link
+              to="/comp"
+              class="text-base leading-6 text-gray-500 hover:text-gray-900"
+            >
+              Comp
+            </nuxt-link>
+          </div> -->
+          <!-- <div class="px-5 py-2">
+            <nuxt-link
               href="#"
               class="text-base leading-6 text-gray-500 hover:text-gray-900"
             >
-              Jobs
-            </a>
-          </div>
-          <div class="px-5 py-2">
-            <a
+              Resume
+            </nuxt-link>
+          </div> -->
+          <!-- <div class="px-5 py-2">
+            <nuxt-link
               href="#"
               class="text-base leading-6 text-gray-500 hover:text-gray-900"
             >
-              Press
-            </a>
-          </div>
-          <div class="px-5 py-2">
-            <a
-              href="#"
-              class="text-base leading-6 text-gray-500 hover:text-gray-900"
-            >
-              Accessibility
-            </a>
-          </div>
-          <div class="px-5 py-2">
-            <a
-              href="#"
-              class="text-base leading-6 text-gray-500 hover:text-gray-900"
-            >
-              Partners
-            </a>
-          </div>
+              Give
+            </nuxt-link>
+          </div> -->
         </nav>
         <div class="mt-8 flex justify-center">
-          <a href="#" class="text-gray-400 hover:text-gray-500">
+          <!-- FACEBOOK -->
+          <!-- <a href="#" class="text-gray-400 hover:text-gray-500">
             <span class="sr-only">Facebook</span>
             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -65,8 +66,12 @@
                 clip-rule="evenodd"
               />
             </svg>
-          </a>
-          <a href="#" class="ml-6 text-gray-400 hover:text-gray-500">
+          </a> -->
+          <!-- INSTAGRAM -->
+          <a
+            href="https://www.instagram.com/arisaknits/"
+            class="ml-6 text-gray-400 hover:text-gray-500"
+          >
             <span class="sr-only">Instagram</span>
             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -76,7 +81,11 @@
               />
             </svg>
           </a>
-          <a href="#" class="ml-6 text-gray-400 hover:text-gray-500">
+          <!-- TWITTER -->
+          <a
+            href="https://twitter.com/asirawr"
+            class="ml-6 text-gray-400 hover:text-gray-500"
+          >
             <span class="sr-only">Twitter</span>
             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -84,7 +93,10 @@
               />
             </svg>
           </a>
-          <a href="#" class="ml-6 text-gray-400 hover:text-gray-500">
+          <a
+            href="https://github.com/arisas"
+            class="ml-6 text-gray-400 hover:text-gray-500"
+          >
             <span class="sr-only">GitHub</span>
             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -94,7 +106,7 @@
               />
             </svg>
           </a>
-          <a href="#" class="ml-6 text-gray-400 hover:text-gray-500">
+          <!-- <a href="#" class="ml-6 text-gray-400 hover:text-gray-500">
             <span class="sr-only">Dribbble</span>
             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -103,7 +115,7 @@
                 clip-rule="evenodd"
               />
             </svg>
-          </a>
+          </a> -->
         </div>
         <div class="mt-8">
           <p class="text-center text-base leading-6 text-gray-400">
