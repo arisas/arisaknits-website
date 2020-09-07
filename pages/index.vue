@@ -5,7 +5,7 @@
         <span class="text-purple-600">arisa</span
         ><span class="-ml-1">knits</span>
       </h1>
-      <div class="py-16 bg-gray-50 overflow-hidden lg:py-24">
+      <div class="pt-8 pb-0 sm:py-16 bg-gray-50 overflow-hidden lg:py-24">
         <div
           class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl"
         >
@@ -218,18 +218,30 @@
                   fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
                 />
               </svg>
+              <img
+                alt="Photo by Arisa on April 27, 2019. Image may contain: 1 person."
+                class="relative mx-auto"
+                width="490"
+                decoding="auto"
+                sizes="480px"
+                srcset="
+                  https://scontent-sea1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/58454166_2349616728660792_1752140806556150652_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&amp;_nc_cat=100&amp;_nc_ohc=FG7BdR0boyQAX_ZwYkO&amp;oh=14eaa8e4a57714abeaf084b7f88b4a85&amp;oe=5F7F9945  640w,
+                  https://scontent-sea1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p750x750/58454166_2349616728660792_1752140806556150652_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&amp;_nc_cat=100&amp;_nc_ohc=FG7BdR0boyQAX_ZwYkO&amp;oh=8a7d3168c24ba9527b71d2eb85fa199c&amp;oe=5F7E5901  750w,
+                  https://scontent-sea1-1.cdninstagram.com/v/t51.2885-15/e35/58454166_2349616728660792_1752140806556150652_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&amp;_nc_cat=100&amp;_nc_ohc=FG7BdR0boyQAX_ZwYkO&amp;oh=4411f90af9c2cfe6a3fa6da87b198ce7&amp;oe=5F7FCA2F                 1080w
+                "
+                src="https://scontent-sea1-1.cdninstagram.com/v/t51.2885-15/e35/58454166_2349616728660792_1752140806556150652_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&amp;_nc_cat=100&amp;_nc_ohc=FG7BdR0boyQAX_ZwYkO&amp;oh=4411f90af9c2cfe6a3fa6da87b198ce7&amp;oe=5F7FCA2F"
+                style="object-fit: cover"
+              />
               <!-- <img class="relative mx-auto" width="490" src="https://tailwindui.com/img/features/feature-example-1.png" alt=""> -->
-              <instagram-embed
+              <!-- <instagram-embed
                 class="relative mx-auto"
                 url="https://www.instagram.com/p/BwxRa1XBNmf/"
                 :max-width="500"
-              />
+              /> -->
             </div>
           </div>
         </div>
       </div>
-
-      <!-- <script async src="//www.instagram.com/embed.js"></script> -->
     </div>
   </div>
 </template>
