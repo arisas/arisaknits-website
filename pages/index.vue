@@ -247,10 +247,10 @@
 </template>
 
 <script>
-import InstagramEmbed from 'vue-instagram-embed'
+// import InstagramEmbed from 'vue-instagram-embed'
 export default {
   components: {
-    InstagramEmbed,
+    // InstagramEmbed,
   },
 }
 </script>
