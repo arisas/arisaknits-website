@@ -51,7 +51,12 @@
             <p
               class="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500"
             >
-              I sew and knit 🧶 🧵 you can follow my dog @cheyennethekelpie
+              I sew and knit 🧶 🧵 you can follow my dog
+              <a
+                href="https://www.instagram.com/cheyennethekelpie/"
+                title="Follow Arisa's dog on Instagram!"
+                >@cheyennethekelpie</a
+              >
             </p>
           </div>
 
