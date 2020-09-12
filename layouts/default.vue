@@ -10,6 +10,7 @@
             <nuxt-link
               to="/"
               class="text-base leading-6 text-gray-500 hover:text-gray-900"
+              title="ArisaKnits - Home"
             >
               Home
             </nuxt-link>
@@ -18,6 +19,7 @@
             <nuxt-link
               to="/blog"
               class="text-base leading-6 text-gray-500 hover:text-gray-900"
+              title="Arisa Blogs"
             >
               Blog
             </nuxt-link>
@@ -26,6 +28,7 @@
             <nuxt-link
               to="/uses"
               class="text-base leading-6 text-gray-500 hover:text-gray-900"
+              title="Arisa Uses"
             >
               Uses
             </nuxt-link>
@@ -71,6 +74,7 @@
           <a
             href="https://www.instagram.com/arisaknits/"
             class="ml-6 text-gray-400 hover:text-gray-500"
+            title="Follow Arisa on Instagram!"
           >
             <span class="sr-only">Instagram</span>
             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -85,6 +89,7 @@
           <a
             href="https://twitter.com/asirawr"
             class="ml-6 text-gray-400 hover:text-gray-500"
+            title="Follow Arisa on Twitter!"
           >
             <span class="sr-only">Twitter</span>
             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -96,6 +101,7 @@
           <a
             href="https://github.com/arisas"
             class="ml-6 text-gray-400 hover:text-gray-500"
+            title="Follow Arisa on GitHub!"
           >
             <span class="sr-only">GitHub</span>
             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
