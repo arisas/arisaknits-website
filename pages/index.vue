@@ -169,6 +169,7 @@
                 "
                 src="https://scontent-sea1-1.cdninstagram.com/v/t51.2885-15/e35/58454166_2349616728660792_1752140806556150652_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&amp;_nc_cat=100&amp;_nc_ohc=FG7BdR0boyQAX_ZwYkO&amp;oh=4411f90af9c2cfe6a3fa6da87b198ce7&amp;oe=5F7FCA2F"
                 style="object-fit: cover; max-width: 400px"
+                loading="lazy"
               />
               <!-- <img class="relative mx-auto" width="490" src="https://tailwindui.com/img/features/feature-example-1.png" alt=""> -->
               <!-- <instagram-embed
