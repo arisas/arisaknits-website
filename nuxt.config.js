@@ -23,6 +23,53 @@ export default {
         name: 'description',
         content: process.env.npm_package_description || '',
       },
+      { name: 'image', content: '/meta-image.jpg' },
+      { name: 'msapplication-TileColor', content: '#9f00a7' },
+      { name: 'theme-color', content: '#ffffff' },
+      // <!-- Schema.org for Google -->
+      {
+        itemprop: 'name',
+        content: process.env.npm_package_name,
+      },
+      {
+        itemprop: 'description',
+        content: process.env.npm_package_description,
+      },
+      {
+        itemprop: 'image',
+        content: '/meta-image.jpg',
+      },
+      // <!-- Twitter -->
+      { name: 'twitter:card', content: 'summary' },
+      {
+        name: 'twitter:title',
+        content: process.env.npm_package_name,
+      },
+      {
+        name: 'twitter:description',
+        content: process.env.npm_package_description,
+      },
+      { name: 'twitter:site', content: '@asirawr' },
+      { name: 'twitter:creator', content: '@asirawr' },
+      {
+        name: 'twitter:image:src',
+        content: '/meta-image.jpg',
+      },
+      //<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+      {
+        name: 'og:title',
+        content: process.env.npm_package_name,
+      },
+      {
+        name: 'og:description',
+        content: process.env.npm_package_description,
+      },
+      {
+        name: 'og:image',
+        content: '/meta-image.jpg',
+      },
+      { name: 'og:url', content: 'https://arisaknits.com' },
+      { name: 'og:type', content: 'website' },
     ],
     link: [
       // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -31,6 +78,10 @@ export default {
 
         href:
           'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧶</text></svg>',
+      },
+      {
+        rel: 'image_src',
+        href: `https://arisaknits.com/meta-image.jpg`,
       },
     ],
   },

@@ -1,5 +1,6 @@
 {
-  "name": "arisaknits-website",
+  "name": "arisaknits",
+  "description": "Arisa Johnsey (she/her). Dev relations at Panic / previously Valve. I like to knit 🧶 and sew 🧵 things— see my craft projects on Instagram @arisaknits",
   "version": "1.0.0",
   "private": true,
   "scripts": {
