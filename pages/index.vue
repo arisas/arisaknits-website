@@ -43,11 +43,11 @@
           </svg>
 
           <div class="relative">
-            <h3
+            <h2
               class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
             >
-              She / Her
-            </h3>
+              Arisa Johnsey (She / Her)
+            </h2>
             <p
               class="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500"
             >
@@ -59,11 +59,11 @@
             class="relative mt-12 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center text-left"
           >
             <div class="relative">
-              <h4
+              <h3
                 class="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9"
               >
                 Recent Posts
-              </h4>
+              </h3>
               <p class="mt-3 text-lg leading-7 text-gray-500">
                 Check out my latest posts. Hope you enjoy!
               </p>
@@ -76,6 +76,7 @@
                 >
                   <NuxtLink
                     :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+                    :title="`Read More: ${article.title}`"
                   >
                     <div class="flex">
                       <div class="flex-shrink-0">
@@ -112,9 +113,9 @@
                         </div>
                       </div>
                       <div class="ml-4">
-                        <h5 class="text-lg leading-6 font-medium text-gray-900">
+                        <h4 class="text-lg leading-6 font-medium text-gray-900">
                           {{ article.title }}
-                        </h5>
+                        </h4>
                         <p class="mt-2 text-base leading-6 text-gray-500">
                           {{ article.description }}
                         </p>
@@ -160,6 +161,7 @@
               </svg>
               <img
                 alt="Photo of Arisa knitting on the beach on April 27, 2019."
+                title="Photo of Arisa knitting on the beach on April 27, 2019."
                 class="relative mx-auto"
                 decoding="auto"
                 srcset="
