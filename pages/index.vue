@@ -56,7 +56,7 @@
           </div>
 
           <div
-            class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center"
+            class="relative mt-12 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center text-left"
           >
             <div class="relative">
               <h4
@@ -69,27 +69,34 @@
               </p>
 
               <ul class="mt-10">
-                <li>
-                  <div class="flex">
-                    <div class="flex-shrink-0">
-                      <div
-                        class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="h-6 w-6"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
+                <li
+                  v-for="article of articles"
+                  :key="article.slug"
+                  class="mt-10 hover:bg-pink-200"
+                >
+                  <NuxtLink
+                    :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+                  >
+                    <div class="flex">
+                      <div class="flex-shrink-0">
+                        <div
+                          class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
                         >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                          />
-                        </svg>
-                        <!-- <svg
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                            />
+                          </svg>
+                          <!-- <svg
                           class="h-6 w-6"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -102,85 +109,18 @@
                             d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
                           />
                         </svg> -->
+                        </div>
+                      </div>
+                      <div class="ml-4">
+                        <h5 class="text-lg leading-6 font-medium text-gray-900">
+                          {{ article.title }}
+                        </h5>
+                        <p class="mt-2 text-base leading-6 text-gray-500">
+                          {{ article.description }}
+                        </p>
                       </div>
                     </div>
-                    <div class="ml-4">
-                      <h5 class="text-lg leading-6 font-medium text-gray-900">
-                        Competitive exchange rates
-                      </h5>
-                      <p class="mt-2 text-base leading-6 text-gray-500">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Maiores impedit perferendis suscipit eaque, iste
-                        dolor cupiditate blanditiis ratione.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li class="mt-10">
-                  <div class="flex">
-                    <div class="flex-shrink-0">
-                      <div
-                        class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
-                      >
-                        <svg
-                          class="h-6 w-6"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="ml-4">
-                      <h5 class="text-lg leading-6 font-medium text-gray-900">
-                        No hidden fees
-                      </h5>
-                      <p class="mt-2 text-base leading-6 text-gray-500">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Maiores impedit perferendis suscipit eaque, iste
-                        dolor cupiditate blanditiis ratione.
-                      </p>
-                    </div>
-                  </div>
-                </li>
-                <li class="mt-10">
-                  <div class="flex">
-                    <div class="flex-shrink-0">
-                      <div
-                        class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
-                      >
-                        <svg
-                          class="h-6 w-6"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M13 10V3L4 14h7v7l9-11h-7z"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="ml-4">
-                      <h5 class="text-lg leading-6 font-medium text-gray-900">
-                        Transfers are instant
-                      </h5>
-                      <p class="mt-2 text-base leading-6 text-gray-500">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Maiores impedit perferendis suscipit eaque, iste
-                        dolor cupiditate blanditiis ratione.
-                      </p>
-                    </div>
-                  </div>
+                  </NuxtLink>
                 </li>
               </ul>
             </div>
@@ -219,18 +159,16 @@
                 />
               </svg>
               <img
-                alt="Photo by Arisa on April 27, 2019. Image may contain: 1 person."
+                alt="Photo of Arisa knitting on the beach on April 27, 2019."
                 class="relative mx-auto"
-                width="490"
                 decoding="auto"
-                sizes="480px"
                 srcset="
                   https://scontent-sea1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/58454166_2349616728660792_1752140806556150652_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&amp;_nc_cat=100&amp;_nc_ohc=FG7BdR0boyQAX_ZwYkO&amp;oh=14eaa8e4a57714abeaf084b7f88b4a85&amp;oe=5F7F9945  640w,
                   https://scontent-sea1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p750x750/58454166_2349616728660792_1752140806556150652_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&amp;_nc_cat=100&amp;_nc_ohc=FG7BdR0boyQAX_ZwYkO&amp;oh=8a7d3168c24ba9527b71d2eb85fa199c&amp;oe=5F7E5901  750w,
                   https://scontent-sea1-1.cdninstagram.com/v/t51.2885-15/e35/58454166_2349616728660792_1752140806556150652_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&amp;_nc_cat=100&amp;_nc_ohc=FG7BdR0boyQAX_ZwYkO&amp;oh=4411f90af9c2cfe6a3fa6da87b198ce7&amp;oe=5F7FCA2F                 1080w
                 "
                 src="https://scontent-sea1-1.cdninstagram.com/v/t51.2885-15/e35/58454166_2349616728660792_1752140806556150652_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&amp;_nc_cat=100&amp;_nc_ohc=FG7BdR0boyQAX_ZwYkO&amp;oh=4411f90af9c2cfe6a3fa6da87b198ce7&amp;oe=5F7FCA2F"
-                style="object-fit: cover"
+                style="object-fit: cover; max-width: 400px"
               />
               <!-- <img class="relative mx-auto" width="490" src="https://tailwindui.com/img/features/feature-example-1.png" alt=""> -->
               <!-- <instagram-embed
@@ -251,6 +189,17 @@
 export default {
   components: {
     // InstagramEmbed,
+  },
+  async asyncData({ $content, params }) {
+    const articles = await $content('articles', params.slug)
+      .only(['title', 'description', 'img', 'slug'])
+      .sortBy('createdAt', 'desc')
+      .limit(6)
+      .fetch()
+
+    return {
+      articles,
+    }
   },
 }
 </script>
