@@ -8,6 +8,7 @@
         class="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto"
         :document="article"
       />
+      <p>{{ formatDate(article.updatedAt) }}</p>
     </article>
   </div>
 </template>
@@ -18,6 +19,12 @@ export default {
     const article = await $content('articles', params.slug).fetch()
 
     return { article }
+  },
+  methods: {
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleDateString('en', options)
+    },
   },
   head() {
     return {
