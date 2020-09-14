@@ -83,6 +83,7 @@ export default {
         rel: 'image_src',
         href: `https://arisaknits.com/meta-image.jpg`,
       },
+      { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
     ],
   },
   /*
