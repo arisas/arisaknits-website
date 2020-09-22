@@ -119,6 +119,15 @@ export default {
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
   ],
+  hooks: {
+      'content:file:beforeInsert': async (document, database) => {
+        if (document.extension === '.json' && document.body) {
+          const data = await database.markdown.toJSON(document.body)
+
+          Object.assign(document, data)
+        }
+      }
+    },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
