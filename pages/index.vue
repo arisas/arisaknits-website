@@ -51,9 +51,8 @@
             <p
               class="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500"
             >
-              🏡 Duwamish and Coast Salish land
-              🧵 🧶 ✏️ Knitting and more~
-              🐶 You can follow my dog
+              🏡 Duwamish and Coast Salish land 🧵 🧶 ✏️ Knitting and more~ 🐶
+              You can follow my dog
               <a
                 href="https://www.instagram.com/cheyennethekelpie/"
                 title="Follow Arisa's dog on Instagram!"
@@ -172,11 +171,11 @@
                 class="relative mx-auto"
                 decoding="auto"
                 srcset="
-                  https://scontent-sea1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/58454166_2349616728660792_1752140806556150652_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&amp;_nc_cat=100&amp;_nc_ohc=FG7BdR0boyQAX_ZwYkO&amp;oh=14eaa8e4a57714abeaf084b7f88b4a85&amp;oe=5F7F9945  640w,
-                  https://scontent-sea1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p750x750/58454166_2349616728660792_1752140806556150652_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&amp;_nc_cat=100&amp;_nc_ohc=FG7BdR0boyQAX_ZwYkO&amp;oh=8a7d3168c24ba9527b71d2eb85fa199c&amp;oe=5F7E5901  750w,
-                  https://scontent-sea1-1.cdninstagram.com/v/t51.2885-15/e35/58454166_2349616728660792_1752140806556150652_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&amp;_nc_cat=100&amp;_nc_ohc=FG7BdR0boyQAX_ZwYkO&amp;oh=4411f90af9c2cfe6a3fa6da87b198ce7&amp;oe=5F7FCA2F                 1080w
+                  /img/640w.jpg   640w,
+                  /img/750w.jpg   750w,
+                  /img/1080w.jpg 1080w
                 "
-                src="https://scontent-sea1-1.cdninstagram.com/v/t51.2885-15/e35/58454166_2349616728660792_1752140806556150652_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&amp;_nc_cat=100&amp;_nc_ohc=FG7BdR0boyQAX_ZwYkO&amp;oh=4411f90af9c2cfe6a3fa6da87b198ce7&amp;oe=5F7FCA2F"
+                src="/img/FD192C33-952F-4A46-AC37-EC906C33F03F-12271-000007E434020820.jpg"
                 style="object-fit: cover; max-width: 400px"
                 loading="lazy"
               />
@@ -190,6 +189,7 @@
           </div>
         </div>
       </div>
+      <NewsletterCta />
     </div>
   </div>
 </template>
