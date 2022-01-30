@@ -5,7 +5,7 @@
     <img
       alt="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
       title="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
-      class="relative mx-auto"
+      class="relative mx-auto rounded-full"
       decoding="auto"
       src="/img/icon_234.png"
       style="object-fit: cover; max-width: 400px"
@@ -37,9 +37,9 @@
         :src="screenshot.src"
         style="object-fit: cover; max-width: 400px"
         loading="lazy"
+        class="applewatch"
       />
     </div>
-    <div class="flex justify-center gap-6 overflow-auto"></div>
   </div>
 </template>
 
@@ -67,22 +67,12 @@ export default {
       ],
     }
   },
-  methods: {
-    addTodo() {
-      const trimmedText = this.newTodoText.trim()
-      if (trimmedText) {
-        this.todos.push({
-          id: nextTodoId++,
-          text: trimmedText,
-        })
-        this.newTodoText = ''
-      }
-    },
-    removeTodo(idToRemove) {
-      this.todos = this.todos.filter((todo) => {
-        return todo.id !== idToRemove
-      })
-    },
-  },
 }
 </script>
+
+<style>
+.applewatch {
+  border-radius: 5rem;
+  border: 1rem solid black;
+}
+</style>
