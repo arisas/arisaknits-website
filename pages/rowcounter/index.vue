@@ -29,30 +29,60 @@
 
     <div class="flex justify-center gap-6 overflow-auto">
       <img
-        alt="ArisaKnits Row Counter App Screenshot with Zero"
-        title="ArisaKnits Row Counter App Screenshot with Zero"
+        v-for="screenshot in screenshots"
+        :key="screenshot.src"
+        :alt="screenshot.alt"
+        :title="screenshot.title"
         decoding="auto"
-        src="/img/screenshot_default.png"
-        style="object-fit: cover; max-width: 400px"
-        loading="lazy"
-      />
-      <img
-        alt="ArisaKnits Row Counter App Screenshot with Numbers"
-        title="ArisaKnits Row Counter App Screenshot with Numbers"
-        decoding="auto"
-        src="/img/screenshot_plus.png"
-        style="object-fit: cover; max-width: 400px"
-        loading="lazy"
-      />
-
-      <img
-        alt="ArisaKnits Row Counter App Screenshot with Negative Numbers"
-        title="ArisaKnits Row Counter App Screenshot with Negative Numbers"
-        decoding="auto"
-        src="/img/screenshot_minus.png"
+        :src="screenshot.src"
         style="object-fit: cover; max-width: 400px"
         loading="lazy"
       />
     </div>
+    <div class="flex justify-center gap-6 overflow-auto"></div>
   </div>
 </template>
+
+<script>
+export default {
+  components: {},
+  data() {
+    return {
+      screenshots: [
+        {
+          alt: 'ArisaKnits Row Counter App Screenshot with Zero',
+          title: 'ArisaKnits Row Counter App Screenshot with Zero',
+          src: '/img/screenshot_default.png',
+        },
+        {
+          alt: 'ArisaKnits Row Counter App Screenshot with Numbers',
+          title: 'ArisaKnits Row Counter App Screenshot with Numbers',
+          src: '/img/screenshot_plus.png',
+        },
+        {
+          alt: 'ArisaKnits Row Counter App Screenshot with Negative Numbers',
+          title: 'ArisaKnits Row Counter App Screenshot with Negative Numbers',
+          src: '/img/screenshot_minus.png',
+        },
+      ],
+    }
+  },
+  methods: {
+    addTodo() {
+      const trimmedText = this.newTodoText.trim()
+      if (trimmedText) {
+        this.todos.push({
+          id: nextTodoId++,
+          text: trimmedText,
+        })
+        this.newTodoText = ''
+      }
+    },
+    removeTodo(idToRemove) {
+      this.todos = this.todos.filter((todo) => {
+        return todo.id !== idToRemove
+      })
+    },
+  },
+}
+</script>
