@@ -12,7 +12,7 @@
     </p>
 
     <p class="text-center text-gray-500 text-lg mt-14">
-      ArisaKnits is owned by Arisa Johnsey (arisa@hey.com)
+      ArisaKnits is owned by Arisa Johnsey (arisa@arisaknits.com)
     </p>
 
     <p class="text-center text-gray-500 text-lg my-2">
