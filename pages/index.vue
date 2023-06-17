@@ -53,17 +53,17 @@
             <p
               class="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500"
             >
-              🏡 Duwamish and Coast Salish land 🧵 🧶 ✏️ Knitting and more~
+              🏡 Coast Salish lands 👾🧶 I do developer relations in games and knit/crochet/sew in my free time
             </p>
             <p
               class="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500"
             >
-              🐶 You can follow my dog
+              🐶 You can follow my dogs
               <a
-                href="https://www.instagram.com/cheyennethekelpie/"
+                href="https://www.instagram.com/cheyenneanddundee/"
                 class="text-purple-500 hover:text-purple-700"
                 title="Follow Arisa's dog on Instagram!"
-                >@cheyennethekelpie</a
+                >@cheyenneanddundee</a
               >
             </p>
           </div>
