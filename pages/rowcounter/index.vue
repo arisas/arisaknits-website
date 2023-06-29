@@ -1,7 +1,7 @@
 <template>
   <div class="text-center my-8">
-    <h1 class="text-3xl font-extrabold">ArisaKnits Row Counter</h1>
-    <p class="text-gray-500 text-xl my-8">A watchOS app coming soon!</p>
+    <h1 class="text-3xl font-extrabold">ArisaKnits Row Counter App</h1>
+    <p class="text-gray-500 text-xl my-8">A watchOS app!</p>
     <img
       alt="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
       title="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
@@ -18,7 +18,7 @@
 
     <p class="text-gray-500 text-xl mb-4">
       Increase and decrease the number of rows using the + or - or turn the
-      watch crown.
+      watch crown. Reset your row counter using the Reset Counter button.
     </p>
 
     <h3
@@ -52,17 +52,17 @@ export default {
         {
           alt: 'ArisaKnits Row Counter App Screenshot with Zero',
           title: 'ArisaKnits Row Counter App Screenshot with Zero',
-          src: '/img/screenshot_default.png',
+          src: 'static\img\v1.2screenshot_zero.png',
         },
         {
-          alt: 'ArisaKnits Row Counter App Screenshot with Numbers',
-          title: 'ArisaKnits Row Counter App Screenshot with Numbers',
-          src: '/img/screenshot_plus.png',
+          alt: 'ArisaKnits Row Counter App Screenshot with Increase Numbers',
+          title: 'ArisaKnits Row Counter App Screenshot with Increase Numbers',
+          src: 'static\img\v1.2screenshot_increase.png',
         },
         {
-          alt: 'ArisaKnits Row Counter App Screenshot with Negative Numbers',
-          title: 'ArisaKnits Row Counter App Screenshot with Negative Numbers',
-          src: '/img/screenshot_minus.png',
+          alt: 'ArisaKnits Row Counter App Screenshot with Reset Row Counter Button',
+          title: 'ArisaKnits Row Counter App Screenshot with Reset Row Counter Button',
+          src: 'static\img\v1.2screenshot_resetbutton.png',
         },
       ],
     }
