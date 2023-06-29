@@ -57,12 +57,12 @@ export default {
         {
           alt: 'ArisaKnits Row Counter App Screenshot with Increase Numbers',
           title: 'ArisaKnits Row Counter App Screenshot with Increase Numbers',
-          src: '~static\img\v1.2screenshot_increase.png',
+          src: 'img\v1.2screenshot_increase.png',
         },
         {
           alt: 'ArisaKnits Row Counter App Screenshot with Reset Row Counter Button',
           title: 'ArisaKnits Row Counter App Screenshot with Reset Row Counter Button',
-          src: '~static\img\v1.2screenshot_resetbutton.png',
+          src: 'img\v1.2screenshot_resetbutton.png',
         },
       ],
     }
