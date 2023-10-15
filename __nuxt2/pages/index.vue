@@ -2,79 +2,41 @@
   <div class="container">
     <div>
       <h1 class="title">
-        <span class="text-purple-600">arisa</span
-        ><span class="-ml-1">knits</span>
+        <span class="text-purple-600">arisa</span><span class="-ml-1">knits</span>
       </h1>
       <div class="pt-8 pb-0 sm:py-16 bg-gray-50 overflow-hidden lg:py-24">
-        <div
-          class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl"
-        >
-          <svg
-            class="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
-            width="404"
-            height="784"
-            fill="none"
-            viewBox="0 0 404 784"
-          >
+        <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
+          <svg class="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4" width="404"
+            height="784" fill="none" viewBox="0 0 404 784">
             <defs>
-              <pattern
-                id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7"
-                x="0"
-                y="0"
-                width="20"
-                height="20"
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x="0"
-                  y="0"
-                  width="4"
-                  height="4"
-                  class="text-gray-200"
-                  fill="currentColor"
-                />
+              <pattern id="b1e6e422-73f8-40a6-b5d9-c8586e37e0e7" x="0" y="0" width="20" height="20"
+                patternUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
               </pattern>
             </defs>
-            <rect
-              width="404"
-              height="784"
-              fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)"
-            />
+            <rect width="404" height="784" fill="url(#b1e6e422-73f8-40a6-b5d9-c8586e37e0e7)" />
           </svg>
 
           <div class="relative">
             <h2
-              class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
-            >
+              class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
               Arisa Raviwan Johnsey (She / Her)<br />
               อริซ่า รวิวรรณ จอห์นซี
             </h2>
 
-            <p
-              class="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500"
-            >
+            <p class="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500">
               🏡 Coast Salish lands 👾🧶 I do developer relations in games and knit/crochet/sew in my free time
             </p>
-            <p
-              class="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500"
-            >
+            <p class="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500">
               🐶 You can follow my dogs
-              <a
-                href="https://www.instagram.com/cheyenneanddundee/"
-                class="text-purple-500 hover:text-purple-700"
-                title="Follow Arisa's dog on Instagram!"
-                >@cheyenneanddundee</a
-              >
+              <a href="https://www.instagram.com/cheyenneanddundee/" class="text-purple-500 hover:text-purple-700"
+                title="Follow Arisa's dog on Instagram!">@cheyenneanddundee</a>
             </p>
           </div>
 
-          <div
-            class="relative mt-12 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center text-left"
-          >
+          <div class="relative mt-12 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center text-left">
             <div class="relative">
-              <h3
-                class="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9"
-              >
+              <h3 class="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9">
                 Recent Posts
               </h3>
               <p class="mt-3 text-lg leading-7 text-gray-500">
@@ -82,33 +44,16 @@
               </p>
 
               <ul class="mt-10">
-                <li
-                  v-for="article of articles"
-                  :key="article.slug"
-                  class="mt-10 hover:bg-pink-200"
-                >
-                  <NuxtLink
-                    :to="{ name: 'blog-slug', params: { slug: article.slug } }"
-                    :title="`Read More: ${article.title}`"
-                  >
+                <li v-for="article of articles" :key="article.slug" class="mt-10 hover:bg-pink-200">
+                  <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+                    :title="`Read More: ${article.title}`">
                     <div class="flex">
                       <div class="flex-shrink-0">
-                        <div
-                          class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                            />
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                           </svg>
                           <!-- <svg
                           class="h-6 w-6"
@@ -140,52 +85,24 @@
             </div>
 
             <div class="mt-10 -mx-4 relative lg:mt-0">
-              <svg
-                class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
-                width="784"
-                height="404"
-                fill="none"
-                viewBox="0 0 784 404"
-              >
+              <svg class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden" width="784" height="404"
+                fill="none" viewBox="0 0 784 404">
                 <defs>
-                  <pattern
-                    id="ca9667ae-9f92-4be7-abcb-9e3d727f2941"
-                    x="0"
-                    y="0"
-                    width="20"
-                    height="20"
-                    patternUnits="userSpaceOnUse"
-                  >
-                    <rect
-                      x="0"
-                      y="0"
-                      width="4"
-                      height="4"
-                      class="text-gray-200"
-                      fill="currentColor"
-                    />
+                  <pattern id="ca9667ae-9f92-4be7-abcb-9e3d727f2941" x="0" y="0" width="20" height="20"
+                    patternUnits="userSpaceOnUse">
+                    <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
                   </pattern>
                 </defs>
-                <rect
-                  width="784"
-                  height="404"
-                  fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
-                />
+                <rect width="784" height="404" fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)" />
               </svg>
-              <img
-                alt="Photo of Arisa knitting on the beach on April 27, 2019."
-                title="Photo of Arisa knitting on the beach on April 27, 2019."
-                class="relative mx-auto"
-                decoding="auto"
+              <img alt="Photo of Arisa knitting on the beach on April 27, 2019."
+                title="Photo of Arisa knitting on the beach on April 27, 2019." class="relative mx-auto" decoding="auto"
                 srcset="
                   /img/640w.jpg   640w,
                   /img/750w.jpg   750w,
                   /img/1080w.jpg 1080w
-                "
-                src="/img/FD192C33-952F-4A46-AC37-EC906C33F03F-12271-000007E434020820.jpg"
-                style="object-fit: cover; max-width: 400px"
-                loading="lazy"
-              />
+                " src="/img/FD192C33-952F-4A46-AC37-EC906C33F03F-12271-000007E434020820.jpg"
+                style="object-fit: cover; max-width: 400px" loading="lazy" />
               <!-- <img class="relative mx-auto" width="490" src="https://tailwindui.com/img/features/feature-example-1.png" alt=""> -->
               <!-- <instagram-embed
                 class="relative mx-auto"
