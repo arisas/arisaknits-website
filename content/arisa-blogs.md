@@ -21,6 +21,4 @@ const name = 'Arisa'
 let family = { spouse: 'Burton', pets: ['Cheyenne'] }
 ```
 
-### Tweet
 
-https://twitter.com/Teanah/status/1302732039825711106?s=20
