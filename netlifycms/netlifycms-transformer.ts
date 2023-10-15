@@ -4,7 +4,6 @@ export default defineTransformer({
   name: 'netlifycms-transformer',
   extensions: ['.json'],
   async parse (id: any, rawContent: any) {
-    console.error("Bujo was here to transform you")
     const jsonObject = await transformContent(id, rawContent)
     // console.log(jsonObject)
     if (jsonObject.body) {
