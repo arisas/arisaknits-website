@@ -11,7 +11,7 @@
         <nuxt-link to="/rowcounter/web" class="hover:drop-shadow-2xl">
             <h2 class="text-center text-2xl font-extrabold m-6">Web Version (beta)</h2>
             <img alt="ArisaKnits Row Counter Web Version Screenshot" title="ArisaKnits Row Counter Web Version Screenshot"
-                class="m-8 rounded-lg max-w-96 max-h-96" decoding="auto" src="~assets/img/rowcounter-web-screenshot1.png" />
+                class="m-8 rounded-lg max-w-96 max-h-96" decoding="auto" src="~assets/img/rowcounter-web-screenshot2.png" />
         </nuxt-link>
 
         <nuxt-link to="/rowcounter/watchos" class="hover:drop-shadow-2xl">
