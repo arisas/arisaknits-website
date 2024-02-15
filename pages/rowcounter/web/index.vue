@@ -1,0 +1,283 @@
+<template>
+    <div class="text-center my-8">
+        <img alt="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
+            title="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn" class="relative mx-auto rounded-full"
+            decoding="auto" src="~assets/img/icon_234.png" style="object-fit: cover; max-width: 100px" loading="lazy" />
+        <h1 class="text-3xl font-extrabold my-8">ArisaKnits Row Counter (beta)</h1>
+    </div>
+
+    <!-- : increase and undo button style counter -->
+
+    <div v-if="!toggleValue" class="items-center justify-evenly text-3xl">
+
+        <h2 class="text-gray-500 text-xl text-center">Style 1</h2>
+        <div class="flex items-center w-60 mt-5 justify-evenly m-auto pb-10">
+            <button type="button"
+                class="text-7xl rounded-full h-28 w-28 hover:border-gray-300 border-gray-200 border-4 hover:text-gray-900 text-gray-700"
+                @click="increaseNumber">
+
+                {{ counter }}
+
+            </button>
+
+            <!-- Undo to previous saved data -- connect to localstorage, data structure, array of objects with timestamp and data-->
+            <button type="button"
+                class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-10 w-10 hover:fill-gray-900 fill-gray-700"
+                @click="undoCounter">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M20 13.5C20 17.09 17.09 20 13.5 20H6V18H13.5C16 18 18 16 18 13.5S16 9 13.5 9H7.83L10.91 12.09L9.5 13.5L4 8L9.5 2.5L10.92 3.91L7.83 7H13.5C17.09 7 20 9.91 20 13.5Z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- 2: increase and decrease button style counter -->
+
+    <div v-else="toggleValue" class="items-center justify-evenly text-3xl">
+
+        <h2 class="text-gray-500 text-xl text-center">Style 2</h2>
+
+        <div class="flex items-center w-60 mt-5 justify-evenly m-auto pb-10">
+            <button type="button"
+                class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-10 w-10 hover:fill-gray-900 fill-gray-700"
+                @click="decreaseNumber">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M19 13H5v-2h14v2z" />
+                </svg>
+            </button>
+
+            <p class="text-7xl rounded-full h-28 w-28 text-gray-700 text-center">
+
+                {{ counter }}
+
+            </p>
+
+            <button type="button"
+                class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-10 w-10 hover:fill-gray-900 fill-gray-700"
+                @click="increaseNumber">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- settings section -->
+    <div class="p-4 w-64 bg-gray-100 rounded-lg">
+
+        <button class="text-xl text-center hover:text-gray-800 text-gray-600 hover:fill-gray-800 fill-gray-600"
+            @click="visible = !visible">
+            <svg class="w-10 h-10 inline-block" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                viewBox="0 0 24 24">
+                <g>
+                    <path d="M0,0h24v24H0V0z" fill="none" />
+                    <path
+                        d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z" />
+                </g>
+            </svg>
+            Settings
+        </button>
+
+        <div v-if="visible">
+
+            <!-- Toggle button -->
+            <div class="flex items-center justify-center">
+                <p class="text-gray-900 text-l m-2">
+                    Toggle Style
+                </p>
+                <toggle v-model="toggleValue" />
+
+            </div>
+
+            <!-- Reset Button -->
+            <div class="flex items-center justify-evenly items-center m-auto m-4">
+                <button type="button"
+                    class="text-l text-white font-medium rounded-lg hover:bg-indigo-700 bg-indigo-600 p-1 h-10 w-32"
+                    @click="resetCounter">
+                    Reset Counter
+                </button>
+            </div>
+
+            <!-- Row Counter History Selector -->
+            <div class="flex items-center justify-center">
+                <!-- child compontent HistorySelector.vue 
+          js historyList from child component respond with counterHistory from parent compontent
+          listen for historySelected from child compontent 
+          and respond with historySelected defined in parent component -->
+                <HistorySelector :historyList="counterHistory" @historySelected="historySelected" />
+            </div>
+        </div>
+
+    </div>
+</template>
+  
+  
+  
+<script>
+/**
+ * Slight optimization for our constants.
+ * Since these are constants that are not reactive nor are they used in the template,
+ * there is no need for them to be in the data section.
+ */
+const COUNTER_VALUE_MAX = 999;
+const COUNTER_VALUE_MIN = 0;
+/**
+ * The localStorage key that the row counter is saved under.
+ * @see https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+ * @see https://www.w3schools.com/jsref/prop_win_localstorage.asp
+ */
+const COUNTER_STORAGE_KEY = "counter";
+
+
+/**
+ * Set length limit to data stored in array -- it will delete data at the end of array
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length
+ * Unshift to save data at the beginning of the array
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
+ */
+
+export default {
+    /**
+     * Holds the counter value from a point in time
+     * @typedef {Object} CounterHistoryEntry
+     * @property {Number} timestamp - Indicates when the entry was recorded.
+     * @property {Number} counterData - The counter value.
+     */
+    data() {
+        return {
+            selected: '',
+            toggleValue: false,
+            counter: 0, // load from localStorage when component mounts in methods.
+            /**
+             * @type Array<CounterHistoryEntry>
+             */
+            counterHistory: [],
+            maxLength: 10,
+            historyItem: '',
+            visible: false,
+        };
+    },
+
+    // computed: {
+    //   computedVisibility: function () {
+    //     return this.visibility;
+    //   }
+    // },
+
+    methods: {
+        /**
+         * Save array counterHistory in localStorage
+         */
+        updateLocalStorage() {
+            //use same key 'counterHistory' as localStorage.getItem
+            localStorage.setItem('counterHistory', JSON.stringify(this.counterHistory))
+        },
+        /**
+         * Increase the row count by 1
+         */
+        increaseNumber() {
+            if (this.counter < COUNTER_VALUE_MAX) {
+                // increase the row count
+                this.counter++;
+
+                // save the row count to local storage when increased
+                // localStorage.setItem("counter", this.counter);
+                localStorage.setItem(COUNTER_STORAGE_KEY, this.counter);
+                this.updateHistory();
+                this.updateLocalStorage();
+            }
+        },
+        /**
+         * Decrease the row count by 1
+         */
+        decreaseNumber() {
+            if (this.counter > COUNTER_VALUE_MIN) {
+                // decrease the row count
+                this.counter--;
+                // save the row count to local storage when decreased
+                localStorage.setItem(COUNTER_STORAGE_KEY, this.counter);
+                this.updateHistory();
+                this.updateLocalStorage();
+            }
+        },
+        /**
+         * Save current state to counterHistory
+         */
+        updateHistory() {
+            // const counter1 = {timestamp: '2024-10-03 09:00:00', counterData: '5'}
+            /**
+             * @type {CounterHistoryEntry}
+             */
+            const counter1 = { timestamp: Date.now(), counterData: this.counter };
+            this.counterHistory.unshift(counter1);
+            // remove oldest item once maxLength is reached
+            if (this.counterHistory.length > this.maxLength) {
+                this.counterHistory.pop();
+                console.assert(this.counterHistory.length === this.maxLength, "counterHistory should be at max capacity", this.maxLength)
+            }
+        },
+        /**
+         * Undo the row count increase to previous save in counterHistory
+         */
+        undoCounter() {
+            //make sure there's at least one data in counterHistory
+            //TODO: gray out icon when there is 1 or less data on localStorage
+            if (this.counterHistory.length < 2) {
+                return
+            }
+            //choose previous save from current selected by shift (remove from the front)
+            this.counterHistory.shift();
+            //show counterData on counter
+            this.counter = this.counterHistory[0].counterData;
+            //keeping the lines below will duplicate the save data that we pulled from counterHistory
+            // this.updateHistory();
+            // this.updateLocalStorage();
+        },
+        resetCounter() {
+            // setting counter to 0 while keeping counterHistory data
+            this.counter = "0";
+        },
+        //update counter to the selected history item
+        historySelected(historyIndex) {
+            console.error(historyIndex);
+            // remove entries before the selected item in array
+            this.counterHistory.splice(0, historyIndex);
+            // update this.counter to selected counterData using the index value
+            this.counter = this.counterHistory[0].counterData;
+        },
+        // showSettings: function (event) {
+        //   this.visibility = 'visible';
+        // }
+    },
+
+    // setting counter to value in localStorage once component has mounted
+    mounted() {
+        this.counterHistory = JSON.parse(localStorage.getItem('counterHistory')) || [];
+        // set value in this.counterHistory to localStorage
+        // 1. get data from localStorage, created variable "persistedCounter"
+        const persistedCounter = localStorage.getItem(COUNTER_STORAGE_KEY);
+        // 2. validate counter data is a valid integer
+        // 2.1 convert string to integer and create new variable "pesistedCounterIn" 
+        const persistedCounterInt = parseInt(persistedCounter, 10);
+        // 2.2 if persistedCounterInt is NaN, do nothing
+        if (isNaN(persistedCounterInt)) {
+            return;
+        }
+        // 2.3 check if integer is inside range 0 and 999
+        if (persistedCounterInt > COUNTER_VALUE_MAX || persistedCounterInt < COUNTER_VALUE_MIN) {
+            return;
+        }
+        // 3. if data is valid, set counter to localStorage value
+        this.counter = persistedCounterInt;
+        // 4. else do nothing, counter is already initialized to 0
+
+    },
+
+};
+
+</script>
+  

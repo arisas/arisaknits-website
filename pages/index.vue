@@ -43,7 +43,7 @@
                 Recent Posts
               </h3>
               <p class="mt-3 text-lg leading-7 text-gray-500">
-                Check out my latest posts. Hope you enjoy!
+                Check out my latest posts. Enjoy!
               </p>
               <!-- https://content.nuxt.com/components/content-list -->
               <ul class="mt-10">
