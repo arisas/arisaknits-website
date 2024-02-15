@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="grid justify-items-center">
     <NuxtPage />
     <NuxtLayout></NuxtLayout>
   </div>
