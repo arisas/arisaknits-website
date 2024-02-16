@@ -13,7 +13,7 @@
         <h2 class="text-gray-500 text-xl text-center">Style 1</h2>
         <div class="flex items-center w-60 mt-5 justify-evenly m-auto pb-10">
             <button type="button"
-                class="text-7xl rounded-full h-28 w-28 hover:border-gray-300 border-gray-200 border-4 hover:text-gray-900 text-gray-700"
+                class="text-7xl rounded-full h-28 w-28 hover:border-gray-300 border-gray-200 border-4 hover:text-gray-900 text-gray-700 touch-manipulation"
                 @click="increaseNumber">
 
                 {{ counter }}
@@ -22,7 +22,7 @@
 
             <!-- Undo to previous saved data -- connect to localstorage, data structure, array of objects with timestamp and data-->
             <button type="button"
-                class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-10 w-10 hover:fill-gray-900 fill-gray-700"
+                class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-10 w-10 hover:fill-gray-900 fill-gray-700 touch-manipulation"
                 @click="undoCounter">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
@@ -41,7 +41,7 @@
 
         <div class="flex items-center w-60 mt-5 justify-evenly m-auto pb-10">
             <button type="button"
-                class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-10 w-10 hover:fill-gray-900 fill-gray-700"
+                class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-10 w-10 hover:fill-gray-900 fill-gray-700 touch-manipulation"
                 @click="decreaseNumber">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path d="M0 0h24v24H0z" fill="none" />
@@ -56,7 +56,7 @@
             </p>
 
             <button type="button"
-                class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-10 w-10 hover:fill-gray-900 fill-gray-700"
+                class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-10 w-10 hover:fill-gray-900 fill-gray-700 touch-manipulation"
                 @click="increaseNumber">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path d="M0 0h24v24H0z" fill="none" />
@@ -69,7 +69,8 @@
     <!-- settings section -->
     <div class="p-4 w-64 bg-gray-100 rounded-lg">
 
-        <button class="text-xl text-center hover:text-gray-800 text-gray-600 hover:fill-gray-800 fill-gray-600"
+        <button
+            class="text-xl text-center hover:text-gray-800 text-gray-600 hover:fill-gray-800 fill-gray-600 touch-manipulation"
             @click="visible = !visible">
             <svg class="w-10 h-10 inline-block" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
                 viewBox="0 0 24 24">
@@ -96,7 +97,7 @@
             <!-- Reset Button -->
             <div class="flex items-center justify-evenly items-center m-auto m-4">
                 <button type="button"
-                    class="text-l text-white font-medium rounded-lg hover:bg-indigo-700 bg-indigo-600 p-1 h-10 w-32"
+                    class="text-l text-white font-medium rounded-lg hover:bg-indigo-700 bg-indigo-600 p-1 h-10 w-32 touch-manipulation"
                     @click="resetCounter">
                     Reset Counter
                 </button>
