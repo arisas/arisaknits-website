@@ -7,7 +7,7 @@
         <h1 class="text-3xl font-extrabold">🧶 ArisaKnits Row Counter</h1>
     </div>
 
-    <div class="justify-evenly flex">
+    <div class="justify-evenly flex items-center">
         <nuxt-link to="/rowcounter/web" class="hover:drop-shadow-2xl">
             <h2 class="text-center text-2xl font-extrabold m-6">Web Version (beta)</h2>
             <img alt="ArisaKnits Row Counter Web Version Screenshot" title="ArisaKnits Row Counter Web Version Screenshot"
@@ -16,11 +16,8 @@
 
         <nuxt-link to="/rowcounter/watchos" class="hover:drop-shadow-2xl">
             <h2 class="text-center text-2xl font-extrabold m-6">⌚️ watchOS App</h2>
-            <div class="flex justify-center gap-6 overflow-auto">
-                <img v-for="screenshot in screenshots" :key="screenshot.src" :alt="screenshot.alt" :title="screenshot.title"
-                    decoding="auto" :src="screenshot.src" style="object-fit: cover; max-width: 300px" loading="lazy"
-                    class="applewatch" />
-            </div>
+            <img v-for="screenshot in screenshots" :key="screenshot.src" :alt="screenshot.alt" :title="screenshot.title"
+                decoding="auto" :src="screenshot.src" loading="lazy" class="applewatch" />
         </nuxt-link>
     </div>
 </template>
@@ -46,5 +43,7 @@ export default {
 .applewatch {
     border-radius: 46px;
     border: 1px solid black;
+    /* object-fit: cover; */
+    max-width: 300px;
 }
 </style>
