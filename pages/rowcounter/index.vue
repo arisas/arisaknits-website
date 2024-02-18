@@ -39,6 +39,11 @@
 </template>
 
 <script>
+useHead({
+    title: 'ArisaKnits Row Counter',
+    link: [{ rel: 'icon', type: 'image/png', href: '/arisaknits32.png' }],
+})
+
 export default {
     components: {},
     data() {

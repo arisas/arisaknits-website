@@ -20,3 +20,9 @@
     </p>
   </div>
 </template>
+
+<script setup>
+useHead({
+  title: 'ArisaKnits Privacy',
+})
+</script>
