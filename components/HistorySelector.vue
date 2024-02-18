@@ -42,7 +42,7 @@ export default {
     methods: {
         onChange(event) {
             // selection confirmation
-            if (confirm('Are you sure?'))
+            if (confirm('Are you sure you want to go back to a previous save?'))
                 this.$emit('historySelected', event.target.value);
             event.target.value = '';
         },

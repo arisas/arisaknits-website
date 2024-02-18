@@ -1,73 +1,20 @@
 <template>
     <div class="text-center my-8">
         <img alt="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
-            title="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn" class="relative mx-auto rounded-full"
-            decoding="auto" src="~assets/img/icon_234.png" style="object-fit: cover; max-width: 100px" loading="lazy" />
-        <h1 class="text-3xl font-extrabold my-8">ArisaKnits Row Counter (beta)</h1>
+            title="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
+            class="relative mx-auto rounded-full object-cover max-h-20" decoding="auto" src="~assets/img/icon_234.png"
+            loading="lazy" />
+
+        <h1 class="text-xl lg:text-3xl font-extrabold my-2">ArisaKnits Row Counter (beta)</h1>
     </div>
 
-    <!-- : increase and undo button style counter -->
-
-    <div v-if="!toggleValue" class="items-center justify-evenly text-3xl">
-
-        <h2 class="text-gray-500 text-xl text-center">Style 1</h2>
-        <div class="flex items-center w-60 mt-5 justify-evenly m-auto pb-10">
-            <button type="button"
-                class="text-7xl rounded-full h-28 w-28 hover:border-gray-300 border-gray-200 border-4 hover:text-gray-900 text-gray-700 touch-manipulation"
-                @click="increaseNumber">
-
-                {{ counter }}
-
-            </button>
-
-            <!-- Undo to previous saved data -- connect to localstorage, data structure, array of objects with timestamp and data-->
-            <button type="button"
-                class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-10 w-10 hover:fill-gray-900 fill-gray-700 touch-manipulation"
-                @click="undoCounter">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path
-                        d="M20 13.5C20 17.09 17.09 20 13.5 20H6V18H13.5C16 18 18 16 18 13.5S16 9 13.5 9H7.83L10.91 12.09L9.5 13.5L4 8L9.5 2.5L10.92 3.91L7.83 7H13.5C17.09 7 20 9.91 20 13.5Z" />
-                </svg>
-            </button>
-        </div>
-    </div>
-
-
-    <!-- 2: increase and decrease button style counter -->
-
-    <div v-else="toggleValue" class="items-center justify-evenly text-3xl">
-
-        <h2 class="text-gray-500 text-xl text-center">Style 2</h2>
-
-        <div class="flex items-center w-60 mt-5 justify-evenly m-auto pb-10">
-            <button type="button"
-                class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-10 w-10 hover:fill-gray-900 fill-gray-700 touch-manipulation"
-                @click="decreaseNumber">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M0 0h24v24H0z" fill="none" />
-                    <path d="M19 13H5v-2h14v2z" />
-                </svg>
-            </button>
-
-            <p class="text-7xl rounded-full h-28 w-28 text-gray-700 text-center">
-
-                {{ counter }}
-
-            </p>
-
-            <button type="button"
-                class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-10 w-10 hover:fill-gray-900 fill-gray-700 touch-manipulation"
-                @click="increaseNumber">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M0 0h24v24H0z" fill="none" />
-                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-                </svg>
-            </button>
-        </div>
-    </div>
+    <p class="text-gray-500 text-center mb-10">The counter will save to the browser you're using! You
+        can leave and
+        come
+        back later.</p>
 
     <!-- settings section -->
-    <div class="p-4 w-64 bg-gray-100 rounded-lg">
+    <div class="mb-10 p-2 w-64 bg-gray-100 rounded-lg">
 
         <button
             class="text-xl text-center hover:text-gray-800 text-gray-600 hover:fill-gray-800 fill-gray-600 touch-manipulation"
@@ -85,17 +32,8 @@
 
         <div v-if="visible">
 
-            <!-- Toggle button -->
-            <div class="flex items-center justify-center">
-                <p class="text-gray-900 text-l m-2">
-                    Toggle Style
-                </p>
-                <toggle v-model="toggleValue" />
-
-            </div>
-
             <!-- Reset Button -->
-            <div class="flex items-center justify-evenly items-center m-auto m-4">
+            <div class="flex justify-evenly items-center m-4">
                 <button type="button"
                     class="text-l text-white font-medium rounded-lg hover:bg-indigo-700 bg-indigo-600 p-1 h-10 w-32 touch-manipulation"
                     @click="resetCounter">
@@ -106,14 +44,91 @@
             <!-- Row Counter History Selector -->
             <div class="flex items-center justify-center">
                 <!-- child compontent HistorySelector.vue 
-          js historyList from child component respond with counterHistory from parent compontent
-          listen for historySelected from child compontent 
-          and respond with historySelected defined in parent component -->
+  js historyList from child component respond with counterHistory from parent compontent
+  listen for historySelected from child compontent 
+  and respond with historySelected defined in parent component -->
                 <HistorySelector :historyList="counterHistory" @historySelected="historySelected" />
             </div>
         </div>
 
     </div>
+
+    <!-- Toggle button -->
+    <!-- <div class="flex items-center justify-center">
+        <toggle v-model="toggleValue" />
+    </div> -->
+
+    <!-- Style 1: increase and undo button style counter -->
+    <!-- 
+    <div v-if="!toggleValue" class="items-center justify-evenly">
+
+        <h2 class="text-gray-500 text-xl text-center">Style 1</h2>
+        <div class="flex items-center w-72 mt-5 justify-evenly m-auto pb-10"> -->
+
+    <!-- Undo to previous saved data -- connect to localstorage, data structure, array of objects with timestamp and data -->
+    <!-- <button type="button"
+                class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-10 w-10 hover:fill-gray-900 fill-gray-700 mx-8 touch-manipulation"
+                @click="undoCounter">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M20 13.5C20 17.09 17.09 20 13.5 20H6V18H13.5C16 18 18 16 18 13.5S16 9 13.5 9H7.83L10.91 12.09L9.5 13.5L4 8L9.5 2.5L10.92 3.91L7.83 7H13.5C17.09 7 20 9.91 20 13.5Z" />
+                </svg>
+            </button>
+
+            <button type="button"
+                class="text-7xl rounded-full h-40 w-40 hover:border-gray-300 border-gray-200 border-8 hover:text-gray-900 text-gray-700 touch-manipulation"
+                @click="increaseNumber">
+
+                {{ counter }}
+
+            </button>
+
+
+        </div>
+    </div> -->
+
+
+    <!-- Style 2: increase and decrease button style counter -->
+
+    <!-- <div v-else="toggleValue" class="items-center justify-evenly"> -->
+
+    <!-- <h2 class="text-gray-500 text-xl text-center">Style 2</h2> -->
+
+    <div class="flex items-center w-80 mt-10 mb-16 justify-evenly">
+        <button type="button"
+            class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-14 w-14 hover:fill-gray-900 fill-gray-700 mx-8 touch-manipulation"
+            @click="decreaseNumber">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M19 13H5v-2h14v2z" />
+            </svg>
+        </button>
+
+        <button type="button"
+            class="text-7xl rounded-full h-48 w-48 hover:border-gray-300 border-gray-200 border-8 hover:text-gray-900 text-gray-700 touch-manipulation"
+            @click="increaseNumber">
+
+            {{ counter }}
+
+        </button>
+
+        <!-- <p class="text-7xl rounded-full h-28 w-28 text-gray-700 text-center">
+
+                {{ counter }}
+
+            </p> -->
+        <!-- 
+            <button type="button"
+                class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-10 w-10 hover:fill-gray-900 fill-gray-700 touch-manipulation"
+                @click="increaseNumber">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                </svg>
+            </button> -->
+
+    </div>
+    <!-- </div> -->
 </template>
   
   
