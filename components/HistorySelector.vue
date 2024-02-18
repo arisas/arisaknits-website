@@ -15,6 +15,15 @@
 </template>
 
 <script>
+const options = {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+};
+
 export default {
     props: {
         historyList: {
@@ -26,7 +35,7 @@ export default {
         counterHistory() {
             // `this` points to the component instance
             return this.historyList.map(record => {
-                const timeString = (new Date(record.timestamp)).toLocaleString();
+                const timeString = (new Date(record.timestamp)).toLocaleString('en-US', options);
                 return {
                     // spread syntax https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
                     // easier way to do 
