@@ -39,6 +39,12 @@
 
 <script>
 export default {
+  setup() {
+    useHead({
+      title: 'Row Counter',
+    });
+  },
+
   components: {},
   data() {
     return {

@@ -157,6 +157,12 @@ const COUNTER_STORAGE_KEY = "counter";
  */
 
 export default {
+    setup() {
+        useHead({
+            title: 'Row Counter',
+        });
+    },
+
     /**
      * Holds the counter value from a point in time
      * @typedef {Object} CounterHistoryEntry

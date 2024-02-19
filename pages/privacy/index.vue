@@ -21,9 +21,8 @@
   </div>
 </template>
 
-<script setup>
-// useHead({
-//   title: 'ArisaKnits Privacy',
-//   link: [{ rel: 'icon', type: 'image/png', href: '/yarnemoji.png' }],
-// })
+<script setup lang="ts">
+useHead({
+  title: 'Privacy Policy',
+})
 </script>

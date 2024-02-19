@@ -5,6 +5,9 @@ import MyModule from './netlifycms/netlifycms.mjs'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  hooks: {
+    close: () => { }
+  },
   modules: [MyModule, '@nuxt/content', '@nuxt/image', "@nuxtjs/tailwindcss"],
   devtools: { enabled: true },
   image: {

@@ -32,32 +32,17 @@
                 </svg>
                 watchOS App
             </h2>
-            <img v-for="screenshot in screenshots" :key="screenshot.src" :alt="screenshot.alt" :title="screenshot.title"
-                decoding="auto" :src="screenshot.src" loading="lazy" class="applewatch max-h-96 items-center" />
+            <img alt="ArisaKnits Row Counter App Screenshot with Increase Numbers"
+                title="ArisaKnits Row Counter App Screenshot with Increase Numbers" src="/img/v1.2screenshot_increase.png"
+                decoding="auto" loading="lazy" class="applewatch max-h-96 items-center" />
         </nuxt-link>
     </div>
 </template>
 
-<script>
-// useHead({
-//     title: 'ArisaKnits Row Counter',
-//     link: [{ rel: 'icon', type: 'image/png', href: '/arisaknits32.png' }],
-// })
-
-export default {
-    components: {},
-    data() {
-        return {
-            screenshots: [
-                {
-                    alt: 'ArisaKnits Row Counter App Screenshot with Increase Numbers',
-                    title: 'ArisaKnits Row Counter App Screenshot with Increase Numbers',
-                    src: '/img/v1.2screenshot_increase.png',
-                },
-            ],
-        }
-    },
-}
+<script setup lang="ts">
+useHead({
+    title: 'Row Counter',
+})
 </script>
 
 <style>

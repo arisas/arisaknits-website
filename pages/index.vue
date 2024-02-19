@@ -102,11 +102,6 @@
 </template>
 
 <script setup lang="ts">
-// useHead({
-//   title: 'ArisaKnits Website',
-//   link: [{ rel: 'icon', type: 'image/png', href: '/yarnemoji.png' }],
-// })
-
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
 const query: QueryBuilderParams = { path: '/blog', limit: 5, sort: [{ publishedAt: - 1 }] }
 </script>
