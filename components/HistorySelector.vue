@@ -1,14 +1,15 @@
 <template>
     <div>
         <!-- telling parent component index.vue to listen for "historySelected" see: https://vuejs.org/guide/components/events.html & https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events-->
-        <select title="return counter to a particular point in" @change="onChange" class="w-44 m-2">
+        <select title="return counter to a particular point in" @change="onChange" class="w-48 m-2">
             <option value="">Row Counter History</option>
             <!-- 
             for loop 
             value for each item is index
         -->
             <option v-for="(historyItem, index) in counterHistory" :value="index">
-                {{ historyItem.timeString }} - Row: {{ historyItem.counterData }}
+                {{ historyItem.timeString }} - Row: {{ historyItem.counterData }}, Repeats: {{
+                    historyItem.linkedCounterData }}
             </option>
         </select>
     </div>
@@ -55,7 +56,6 @@ export default {
                 this.$emit('historySelected', event.target.value);
             event.target.value = '';
         },
-
 
     },
 

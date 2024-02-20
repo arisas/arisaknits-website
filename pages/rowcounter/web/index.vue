@@ -5,17 +5,18 @@
             class="relative mx-auto rounded-full object-cover max-h-20" decoding="auto" src="~assets/img/icon_234.png"
             loading="lazy" />
 
-        <h1 class="text-xl lg:text-3xl font-extrabold my-2">ArisaKnits Row Counter (beta)</h1>
+        <h1 class="text-xl lg:text-3xl font-extrabold my-2">
+            ArisaKnits Row Counter (beta)
+        </h1>
     </div>
 
-    <p class="text-gray-500 text-center mb-10">The counter will save to the browser you're using! You
-        can leave and
-        come
-        back later.</p>
+    <p class="text-gray-500 text-center mb-10">
+        The counter will save to the browser you're using! You can leave and come
+        back later.
+    </p>
 
     <!-- settings section -->
     <div class="mb-10 p-2 w-64 bg-gray-100 rounded-lg">
-
         <button
             class="text-xl text-center hover:text-gray-800 text-gray-600 hover:fill-gray-800 fill-gray-600 touch-manipulation"
             @click="visible = !visible">
@@ -31,13 +32,18 @@
         </button>
 
         <div v-if="visible">
-
             <!-- Reset Button -->
+            <p class="text-center">
+                Reset after row:
+                <input v-model="settings.repeatRow" type="number"
+                    @input="() => { if (settings.repeatRow > 999 || settings.repeatRow < 1) { settings.repeatRow = null } }"
+                    class="pl-2 rounded bg-slate-200 w-12 touch-manipulation" @change="saveSettings" />
+            </p>
             <div class="flex justify-evenly items-center m-4">
                 <button type="button"
-                    class="text-l text-white font-medium rounded-lg hover:bg-indigo-700 bg-indigo-600 p-1 h-10 w-32 touch-manipulation"
+                    class="text-l text-white font-medium rounded-lg hover:bg-indigo-700 bg-indigo-600 p-1 h-10 w-52 touch-manipulation"
                     @click="resetCounter">
-                    Reset Counter
+                    Reset All Counters
                 </button>
             </div>
 
@@ -50,7 +56,6 @@
                 <HistorySelector :historyList="counterHistory" @historySelected="historySelected" />
             </div>
         </div>
-
     </div>
 
     <!-- Toggle button -->
@@ -87,7 +92,6 @@
         </div>
     </div> -->
 
-
     <!-- Style 2: increase and decrease button style counter -->
 
     <!-- <div v-else="toggleValue" class="items-center justify-evenly"> -->
@@ -107,9 +111,7 @@
         <button type="button"
             class="text-7xl rounded-full h-48 w-48 hover:border-gray-300 border-gray-200 border-8 hover:text-gray-900 text-gray-700 touch-manipulation"
             @click="increaseNumber">
-
             {{ counter }}
-
         </button>
 
         <!-- <p class="text-7xl rounded-full h-28 w-28 text-gray-700 text-center">
@@ -126,11 +128,19 @@
                     <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
                 </svg>
             </button> -->
-
     </div>
     <!-- </div> -->
+
+    <p v-if="settings.repeatRow" class="text-xl text-gray-700 font-bold">
+        Repeats:
+        {{ linkedCounter }}
+    </p>
 </template>
   
+  
+  
+  
+
   
   
 <script>
@@ -147,7 +157,7 @@ const COUNTER_VALUE_MIN = 0;
  * @see https://www.w3schools.com/jsref/prop_win_localstorage.asp
  */
 const COUNTER_STORAGE_KEY = "counter";
-
+const COUNTER_STORAGE_KEY_LINKED = "linkedCounter";
 
 /**
  * Set length limit to data stored in array -- it will delete data at the end of array
@@ -159,7 +169,7 @@ const COUNTER_STORAGE_KEY = "counter";
 export default {
     setup() {
         useHead({
-            title: 'Row Counter',
+            title: "Row Counter",
         });
     },
 
@@ -168,18 +178,24 @@ export default {
      * @typedef {Object} CounterHistoryEntry
      * @property {Number} timestamp - Indicates when the entry was recorded.
      * @property {Number} counterData - The counter value.
+     * @property {Number} linkedCounterData - The linkedCounter value.
      */
     data() {
         return {
-            selected: '',
+            selected: "",
             toggleValue: false,
             counter: 0, // load from localStorage when component mounts in methods.
+            linkedCounter: 0,
+
             /**
              * @type Array<CounterHistoryEntry>
              */
             counterHistory: [],
+            settings: {
+                repeatRow: 0,
+            },
             maxLength: 10,
-            historyItem: '',
+            historyItem: "",
             visible: false,
         };
     },
@@ -196,13 +212,23 @@ export default {
          */
         updateLocalStorage() {
             //use same key 'counterHistory' as localStorage.getItem
-            localStorage.setItem('counterHistory', JSON.stringify(this.counterHistory))
+            localStorage.setItem(
+                "counterHistory",
+                JSON.stringify(this.counterHistory)
+            );
+        },
+
+        saveSettings() {
+            localStorage.setItem("settings", JSON.stringify(this.settings));
+            //save settings everytime repeatRow is updated
+            this.linkedCounter = 0;
         },
         /**
          * Increase the row count by 1
          */
         increaseNumber() {
-            if (this.counter < COUNTER_VALUE_MAX) {
+            //TODO: Save this.counter only when the value is less than or equal to the this.settings.repeatRow
+            if (this.counter < COUNTER_VALUE_MAX && this.counter <= this.settings.repeatRow) {
                 // increase the row count
                 this.counter++;
 
@@ -211,7 +237,29 @@ export default {
                 localStorage.setItem(COUNTER_STORAGE_KEY, this.counter);
                 this.updateHistory();
                 this.updateLocalStorage();
-            }
+            };
+
+            if (this.counter - 1 == this.settings.repeatRow) {
+
+                //set counter to 1
+                this.counter = 1;
+                //increase linkedCounter ++
+                this.linkedCounter++;
+
+                //save both counter and linkedCounter to local storage
+                localStorage.setItem(
+                    COUNTER_STORAGE_KEY,
+                    this.counter
+                );
+
+                localStorage.setItem(
+                    COUNTER_STORAGE_KEY_LINKED,
+                    this.linkedCounter
+                );
+
+                this.updateHistory();
+                this.updateLocalStorage();
+            };
         },
         /**
          * Decrease the row count by 1
@@ -224,32 +272,43 @@ export default {
                 localStorage.setItem(COUNTER_STORAGE_KEY, this.counter);
                 this.updateHistory();
                 this.updateLocalStorage();
-            }
+            };
         },
         /**
          * Save current state to counterHistory
          */
         updateHistory() {
-            // const counter1 = {timestamp: '2024-10-03 09:00:00', counterData: '5'}
+            // const counter1 = {timestamp: '2024-10-03 09:00:00', counterData: '5', linkedCounter: }
             /**
              * @type {CounterHistoryEntry}
              */
-            const counter1 = { timestamp: Date.now(), counterData: this.counter };
+            const counter1 = {
+                timestamp: Date.now(),
+                counterData: this.counter,
+                linkedCounterData: this.linkedCounter,
+            };
+
             this.counterHistory.unshift(counter1);
+
             // remove oldest item once maxLength is reached
             if (this.counterHistory.length > this.maxLength) {
                 this.counterHistory.pop();
-                console.assert(this.counterHistory.length === this.maxLength, "counterHistory should be at max capacity", this.maxLength)
-            }
+                console.assert(
+                    this.counterHistory.length === this.maxLength,
+                    "counterHistory should be at max capacity",
+                    this.maxLength
+                );
+            };
         },
         /**
          * Undo the row count increase to previous save in counterHistory
          */
+
         undoCounter() {
             //make sure there's at least one data in counterHistory
             //TODO: gray out icon when there is 1 or less data on localStorage
             if (this.counterHistory.length < 2) {
-                return
+                return;
             }
             //choose previous save from current selected by shift (remove from the front)
             this.counterHistory.shift();
@@ -261,45 +320,80 @@ export default {
         },
         resetCounter() {
             // setting counter to 0 while keeping counterHistory data
-            this.counter = "0";
+            this.counter = 0;
+            this.linkedCounter = 0;
         },
         //update counter to the selected history item
         historySelected(historyIndex) {
-            console.error(historyIndex);
             // remove entries before the selected item in array
             this.counterHistory.splice(0, historyIndex);
-            // update this.counter to selected counterData using the index value
+
+            // update this.counter and this.linkedCounter to selected counterData and linkedCounterData using the index value
             this.counter = this.counterHistory[0].counterData;
+            this.linkedCounter = this.counterHistory[0].linkedCounterData;
+            // update
         },
         // showSettings: function (event) {
         //   this.visibility = 'visible';
         // }
-    },
 
-    // setting counter to value in localStorage once component has mounted
+        getValidCounter() {
+            // 1. get data from localStorage, created variable "persistedCounter"
+            const persistedCounter = localStorage.getItem(COUNTER_STORAGE_KEY);
+            // 2. validate counter data is a valid integer
+            // 2.1 convert string to integer and create new variable "persistedCounterInt"
+            const persistedCounterInt = parseInt(persistedCounter, 10);
+            // 2.2 if persistedCounterInt is NaN, do nothing
+
+            if (isNaN(persistedCounterInt)) {
+                return;
+            };
+            // 2.3 check if integer is inside range 0 and 999
+            if (
+                persistedCounterInt > COUNTER_VALUE_MAX ||
+                persistedCounterInt < COUNTER_VALUE_MIN
+            ) {
+                return;
+            };
+
+            return persistedCounterInt;
+
+        },
+
+        getValidLinkedCounter() {
+            const persistedLinkedCounter = localStorage.getItem(COUNTER_STORAGE_KEY_LINKED);
+            const persistedLinkedCounterInt = parseInt(persistedLinkedCounter, 10);
+            if (isNaN(persistedLinkedCounterInt)) {
+                return;
+            };
+
+            if (
+                persistedLinkedCounterInt > COUNTER_VALUE_MAX ||
+                persistedLinkedCounterInt < COUNTER_VALUE_MIN
+            ) {
+                return;
+            };
+
+            return persistedLinkedCounterInt;
+        },
+    },
+    // 3. if data is valid, set counter to localStorage value
+
+    // 4. else do nothing, counter is already initialized to 0
+
     mounted() {
-        this.counterHistory = JSON.parse(localStorage.getItem('counterHistory')) || [];
+        // setting counter to value in localStorage once component has mounted
+        this.counterHistory =
+            JSON.parse(localStorage.getItem("counterHistory")) || [];
+
+        //setting repeatRow to value in localStorage once component is mounted
+        this.settings =
+            JSON.parse(localStorage.getItem("settings")) || [];
+
         // set value in this.counterHistory to localStorage
-        // 1. get data from localStorage, created variable "persistedCounter"
-        const persistedCounter = localStorage.getItem(COUNTER_STORAGE_KEY);
-        // 2. validate counter data is a valid integer
-        // 2.1 convert string to integer and create new variable "pesistedCounterIn" 
-        const persistedCounterInt = parseInt(persistedCounter, 10);
-        // 2.2 if persistedCounterInt is NaN, do nothing
-        if (isNaN(persistedCounterInt)) {
-            return;
-        }
-        // 2.3 check if integer is inside range 0 and 999
-        if (persistedCounterInt > COUNTER_VALUE_MAX || persistedCounterInt < COUNTER_VALUE_MIN) {
-            return;
-        }
-        // 3. if data is valid, set counter to localStorage value
-        this.counter = persistedCounterInt;
-        // 4. else do nothing, counter is already initialized to 0
-
+        // persistedCounterInt = a function
+        this.counter = this.getValidCounter();
+        this.linkedCounter = this.getValidLinkedCounter();
     },
-
 };
-
 </script>
-  
