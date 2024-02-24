@@ -221,14 +221,15 @@ export default {
         saveSettings() {
             localStorage.setItem("settings", JSON.stringify(this.settings));
             //save settings everytime repeatRow is updated
-            this.linkedCounter = 0;
+            // this.linkedCounter = 0;
         },
         /**
          * Increase the row count by 1
          */
         increaseNumber() {
-            //TODO: Save this.counter only when the value is less than or equal to the this.settings.repeatRow
-            if (this.counter < COUNTER_VALUE_MAX && this.counter <= this.settings.repeatRow) {
+            //TODO: Save this.counter only when the value is less than or equal to the this.settings.repeatRow 
+            //&& this.counter <= this.settings.repeatRow
+            if (this.counter < COUNTER_VALUE_MAX) {
                 // increase the row count
                 this.counter++;
 
