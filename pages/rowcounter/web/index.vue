@@ -138,7 +138,7 @@
     <button
       type="button"
       class="h-48 w-48 touch-manipulation rounded-full border-8 border-gray-200 text-7xl text-gray-700 hover:border-gray-300 hover:text-gray-900"
-      @click="increaseNumber"
+      @click="onRowIncrease"
     >
       {{ counter }}
     </button>
@@ -233,7 +233,7 @@ export default {
     /**
      * Save array counterHistory in localStorage
      */
-    updateLocalStorage() {
+    persistCounterHistory() {
       //use same key 'counterHistory' as localStorage.getItem
       localStorage.setItem(
         'counterHistory',
@@ -247,36 +247,36 @@ export default {
       // this.linkedCounter = 0;
     },
     /**
-     * Increase the row count by 1
+     * @returns true if repeat row setting is enabled AND increasing the counter would exceed the configured value;
+     *  false if repeat row setting is disabled (`null`,`undefined`, or `0`) or the counter would still be below the configured value if incremented;
      */
-    increaseNumber() {
-      //TODO: Save this.counter only when the value is less than or equal to the this.settings.repeatRow
-      //&& this.counter <= this.settings.repeatRow
-      if (this.counter < COUNTER_VALUE_MAX) {
-        // increase the row count
-        this.counter++;
-
-        // save the row count to local storage when increased
-        // localStorage.setItem("counter", this.counter);
-        localStorage.setItem(COUNTER_STORAGE_KEY, this.counter);
-        this.updateHistory();
-        this.updateLocalStorage();
+    shouldRepeatRow() {
+      if (
+        this.settings.repeatRow > 0 &&
+        this.counter + 1 > this.settings.repeatRow
+      ) {
+        return true;
       }
 
-      if (this.counter - 1 == this.settings.repeatRow) {
-        //set counter to 1
+      return false;
+    },
+    /**
+     * Increase the row count by 1
+     */
+    onRowIncrease() {
+      if (this.shouldRepeatRow()) {
+        // set counter to 1
         this.counter = 1;
         //increase linkedCounter ++
         this.linkedCounter++;
-
-        //save both counter and linkedCounter to local storage
-        localStorage.setItem(COUNTER_STORAGE_KEY, this.counter);
-
         localStorage.setItem(COUNTER_STORAGE_KEY_LINKED, this.linkedCounter);
-
-        this.updateHistory();
-        this.updateLocalStorage();
+      } else if (this.counter < COUNTER_VALUE_MAX) {
+        // increase the row count
+        this.counter++;
       }
+      // save the row count to local storage when increased
+      localStorage.setItem(COUNTER_STORAGE_KEY, this.counter);
+      this.updateHistory();
     },
     /**
      * Decrease the row count by 1
@@ -288,7 +288,6 @@ export default {
         // save the row count to local storage when decreased
         localStorage.setItem(COUNTER_STORAGE_KEY, this.counter);
         this.updateHistory();
-        this.updateLocalStorage();
       }
     },
     /**
@@ -316,11 +315,11 @@ export default {
           this.maxLength,
         );
       }
+      this.persistCounterHistory();
     },
     /**
      * Undo the row count increase to previous save in counterHistory
      */
-
     undoCounter() {
       //make sure there's at least one data in counterHistory
       //TODO: gray out icon when there is 1 or less data on localStorage
