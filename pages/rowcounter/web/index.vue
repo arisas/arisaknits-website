@@ -400,6 +400,9 @@ export default {
   // 4. else do nothing, counter is already initialized to 0
 
   mounted() {
+    console.error(
+      `Mounted start. counter=${this.counter}, linkedCounter=${this.linkedCounter}, settings.repeatRow=${this.settings.repeatRow}, counterHistory[0]=${this.counterHistory[0]}`,
+    );
     // setting counter to value in localStorage once component has mounted
     this.counterHistory =
       JSON.parse(localStorage.getItem('counterHistory')) || [];
@@ -411,6 +414,10 @@ export default {
     // persistedCounterInt = a function
     this.counter = this.getValidCounter();
     this.linkedCounter = this.getValidLinkedCounter();
+    console.error(
+      `Mounted end. counter=${this.counter}, linkedCounter=${this.linkedCounter}, settings.repeatRow=${this.settings.repeatRow}, counterHistory[0]=`,
+      this.counterHistory[0],
+    );
   },
 };
 </script>
