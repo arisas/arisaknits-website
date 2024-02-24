@@ -53,6 +53,7 @@
               if (settings.repeatRow > 999 || settings.repeatRow < 1) {
                 settings.repeatRow = null;
               }
+              linkedCounter = 0;
             }
           "
           class="w-12 touch-manipulation rounded bg-slate-200 pl-2"
