@@ -202,7 +202,7 @@ export default {
    * @typedef {Object} CounterHistoryEntry
    * @property {Number} timestamp - Indicates when the entry was recorded.
    * @property {Number} counterData - The counter value.
-   * @property {Number} linkedCounterData - The linkedCounter value.
+   * @property {Number?} linkedCounterData - The linkedCounter value.
    */
   data() {
     return {
@@ -302,7 +302,7 @@ export default {
       const counter1 = {
         timestamp: Date.now(),
         counterData: this.counter,
-        linkedCounterData: this.linkedCounter,
+        linkedCounterData: this.settings.repeatRow ? this.linkedCounter : null,
       };
 
       this.counterHistory.unshift(counter1);

@@ -12,8 +12,12 @@
             value for each item is index
         -->
       <option v-for="(historyItem, index) in counterHistory" :value="index">
-        {{ historyItem.timeString }} - Row: {{ historyItem.counterData }},
-        Repeats: {{ historyItem.linkedCounterData }}
+        {{ historyItem.timeString }} - Row: {{ historyItem.counterData
+        }}{{
+          historyItem.linkedCounterData === null ?
+            ''
+          : ` (x${historyItem.linkedCounterData})`
+        }}
       </option>
     </select>
   </div>
