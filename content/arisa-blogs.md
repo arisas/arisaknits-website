@@ -17,8 +17,6 @@ Welcome to my blog! First post :)
 ## Check out my code
 
 ```js
-const name = 'Arisa'
-let family = { spouse: 'Burton', pets: ['Cheyenne'] }
+const name = 'Arisa';
+let family = { spouse: 'Burton', pets: ['Cheyenne'] };
 ```
-
-

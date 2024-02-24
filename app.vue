@@ -10,7 +10,11 @@ useHead({
   titleTemplate: 'ArisaKnits %s',
   link: [{ rel: 'icon', type: 'image/png', href: '/yarnemoji.png' }],
   meta: [
-    { name: 'ArisaKnits', content: 'Read my blog, try the ArisaKnits row counter, and learn more about the watchOS app!' }
+    {
+      name: 'ArisaKnits',
+      content:
+        'Read my blog, try the ArisaKnits row counter, and learn more about the watchOS app!',
+    },
   ],
-})
+});
 </script>

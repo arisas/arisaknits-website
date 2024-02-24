@@ -1,9 +1,7 @@
 <script setup>
-
-import { UseTimeAgo } from '@vueuse/components'
+import { UseTimeAgo } from '@vueuse/components';
 
 //https://vueuse.org/core/useTimeAgo/
-
 </script>
 
 <template>
