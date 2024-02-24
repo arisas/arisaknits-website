@@ -1,22 +1,22 @@
 <template>
-  <div class="text-center my-8">
+  <div class="my-8 text-center">
     <h1 class="text-3xl font-extrabold">ArisaKnits Row Counter App</h1>
-    <p class="text-gray-500 text-xl my-8">A watchOS app!</p>
+    <p class="my-8 text-xl text-gray-500">A watchOS app!</p>
     <img
       alt="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
       title="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
-      class="relative mx-auto rounded-full object-cover h-40"
+      class="relative mx-auto h-40 rounded-full object-cover"
       decoding="auto"
       src="/img/icon_234.png"
       loading="lazy"
     />
 
     <div class="flex flex-col text-center">
-      <p class="text-gray-500 text-xl mt-8">
+      <p class="mt-8 text-xl text-gray-500">
         A simple way of keeping track of your rows while knitting or crocheting.
       </p>
 
-      <p class="text-gray-500 text-xl mb-4">
+      <p class="mb-4 text-xl text-gray-500">
         Increase and decrease the number of rows using the + or - or turn the
         watch crown. Reset your row counter using the Reset Counter button.
       </p>
@@ -40,7 +40,7 @@
     /></a>
 
     <h3
-      class="flex justify-center text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9 my-8"
+      class="my-8 flex justify-center text-2xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-3xl sm:leading-9"
     >
       Screenshots
     </h3>

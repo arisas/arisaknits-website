@@ -1,12 +1,12 @@
 <template>
   <button
-    class="w-14 h-8 flex items-center bg-gray-300 rounded-full p-1 duration-300 cursor-pointer transition-color"
+    class="transition-color flex h-8 w-14 cursor-pointer items-center rounded-full bg-gray-300 p-1 duration-300"
     :class="{ 'bg-gray-300': modelValue }"
     :aria-checked="modelValue.toString()"
     @click="toggle()"
   >
     <div
-      class="bg-white w-6 h-6 rounded-full shadow-md transition-transform duration-300"
+      class="h-6 w-6 rounded-full bg-white shadow-md transition-transform duration-300"
       :class="{ 'translate-x-6': modelValue }"
     ></div>
   </button>

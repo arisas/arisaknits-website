@@ -1,29 +1,29 @@
 <template>
-  <div class="text-center m-4">
+  <div class="m-4 text-center">
     <img
       alt="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
       title="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
-      class="relative mx-auto rounded-full object-cover h-20 md:h-28"
+      class="relative mx-auto h-20 rounded-full object-cover md:h-28"
       decoding="auto"
       src="~assets/img/icon_234.png"
       loading="lazy"
     />
 
-    <h1 class="text-3xl font-extrabold mt-7 md:m-9">
+    <h1 class="mt-7 text-3xl font-extrabold md:m-9">
       🧶 ArisaKnits Row Counter
     </h1>
   </div>
 
-  <div class="justify-center flex flex-wrap">
+  <div class="flex flex-wrap justify-center">
     <nuxt-link
       to="/rowcounter/web"
       class="drop-shadow-xl hover:drop-shadow-2xl"
     >
-      <h2 class="text-center text-2xl font-extrabold mb-4 hover:underline">
+      <h2 class="mb-4 text-center text-2xl font-extrabold hover:underline">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          class="w-10 h-10 inline-block"
+          class="inline-block h-10 w-10"
         >
           <path d="M0 0h24v24H0z" fill="none" />
           <path
@@ -35,7 +35,7 @@
       <img
         alt="ArisaKnits Row Counter Web Version Screenshot"
         title="ArisaKnits Row Counter Web Version Screenshot"
-        class="m-8 rounded-lg max-h-96"
+        class="m-8 max-h-96 rounded-lg"
         decoding="auto"
         src="~assets/img/rowcounter-web-screenshot2.png"
       />
@@ -46,12 +46,12 @@
       class="drop-shadow-xl hover:drop-shadow-2xl"
     >
       <h2
-        class="text-center text-2xl font-extrabold mb-4 md:mb-8 hover:underline"
+        class="mb-4 text-center text-2xl font-extrabold hover:underline md:mb-8"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
-          class="w-10 h-10 inline-block"
+          class="inline-block h-10 w-10"
         >
           <path d="M0 0h24v24H0z" fill="none" />
           <path

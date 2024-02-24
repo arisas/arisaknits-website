@@ -1,32 +1,32 @@
 <template>
-  <div class="text-center my-8">
+  <div class="my-8 text-center">
     <img
       alt="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
       title="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
-      class="relative mx-auto rounded-full object-cover max-h-20"
+      class="relative mx-auto max-h-20 rounded-full object-cover"
       decoding="auto"
       src="~assets/img/icon_234.png"
       loading="lazy"
     />
 
-    <h1 class="text-xl lg:text-3xl font-extrabold my-2">
+    <h1 class="my-2 text-xl font-extrabold lg:text-3xl">
       ArisaKnits Row Counter (beta)
     </h1>
   </div>
 
-  <p class="text-gray-500 text-center mb-10">
+  <p class="mb-10 text-center text-gray-500">
     The counter will save to the browser you're using! You can leave and come
     back later.
   </p>
 
   <!-- settings section -->
-  <div class="mb-10 p-2 w-64 bg-gray-100 rounded-lg">
+  <div class="mb-10 w-64 rounded-lg bg-gray-100 p-2">
     <button
-      class="text-xl text-center hover:text-gray-800 text-gray-600 hover:fill-gray-800 fill-gray-600 touch-manipulation"
+      class="touch-manipulation fill-gray-600 text-center text-xl text-gray-600 hover:fill-gray-800 hover:text-gray-800"
       @click="visible = !visible"
     >
       <svg
-        class="w-10 h-10 inline-block"
+        class="inline-block h-10 w-10"
         xmlns="http://www.w3.org/2000/svg"
         enable-background="new 0 0 24 24"
         viewBox="0 0 24 24"
@@ -55,14 +55,14 @@
               }
             }
           "
-          class="pl-2 rounded bg-slate-200 w-12 touch-manipulation"
+          class="w-12 touch-manipulation rounded bg-slate-200 pl-2"
           @change="saveSettings"
         />
       </p>
-      <div class="flex justify-evenly items-center m-4">
+      <div class="m-4 flex items-center justify-evenly">
         <button
           type="button"
-          class="text-l text-white font-medium rounded-lg hover:bg-indigo-700 bg-indigo-600 p-1 h-10 w-52 touch-manipulation"
+          class="text-l h-10 w-52 touch-manipulation rounded-lg bg-indigo-600 p-1 font-medium text-white hover:bg-indigo-700"
           @click="resetCounter"
         >
           Reset All Counters
@@ -123,10 +123,10 @@
 
   <!-- <h2 class="text-gray-500 text-xl text-center">Style 2</h2> -->
 
-  <div class="flex items-center w-80 mt-10 mb-16 justify-evenly">
+  <div class="mb-16 mt-10 flex w-80 items-center justify-evenly">
     <button
       type="button"
-      class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-14 w-14 hover:fill-gray-900 fill-gray-700 mx-8 touch-manipulation"
+      class="mx-8 h-14 w-14 touch-manipulation rounded-full border-4 border-gray-200 fill-gray-700 hover:border-gray-300 hover:fill-gray-900"
       @click="decreaseNumber"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -137,7 +137,7 @@
 
     <button
       type="button"
-      class="text-7xl rounded-full h-48 w-48 hover:border-gray-300 border-gray-200 border-8 hover:text-gray-900 text-gray-700 touch-manipulation"
+      class="h-48 w-48 touch-manipulation rounded-full border-8 border-gray-200 text-7xl text-gray-700 hover:border-gray-300 hover:text-gray-900"
       @click="increaseNumber"
     >
       {{ counter }}
@@ -160,7 +160,7 @@
   </div>
   <!-- </div> -->
 
-  <p v-if="settings.repeatRow" class="text-xl text-gray-700 font-bold">
+  <p v-if="settings.repeatRow" class="text-xl font-bold text-gray-700">
     Repeats:
     {{ linkedCounter }}
   </p>

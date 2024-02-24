@@ -5,12 +5,12 @@
         <span class="text-purple-600">arisa</span
         ><span class="-ml-1">knits</span>
       </h1>
-      <div class="pt-8 pb-0 sm:py-16 bg-gray-50 overflow-hidden lg:py-24">
+      <div class="overflow-hidden bg-gray-50 pb-0 pt-8 sm:py-16 lg:py-24">
         <div
-          class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl"
+          class="relative mx-auto max-w-xl px-4 sm:px-6 lg:max-w-screen-xl lg:px-8"
         >
           <svg
-            class="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4"
+            class="absolute left-full hidden -translate-x-1/2 -translate-y-1/4 transform lg:block"
             width="404"
             height="784"
             fill="none"
@@ -44,14 +44,14 @@
 
           <div class="relative">
             <h2
-              class="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
+              class="text-center text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
             >
               Arisa Raviwan Johnsey (She / Her)<br />
               อริซ่า รวิวรรณ จอห์นซี
             </h2>
 
             <p
-              class="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500"
+              class="mx-auto mt-4 max-w-3xl text-center text-xl leading-7 text-gray-500"
             >
               👾 I do devrel in games 💻 I made a row counter app (more info
               <a
@@ -61,7 +61,7 @@
               >) ▶️ I post knitting reels & want to make crafts more accessible
             </p>
             <p
-              class="mt-4 max-w-3xl mx-auto text-center text-xl leading-7 text-gray-500"
+              class="mx-auto mt-4 max-w-3xl text-center text-xl leading-7 text-gray-500"
             >
               🐶 You can follow my dogs
               <a
@@ -74,11 +74,11 @@
           </div>
 
           <div
-            class="relative mt-12 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center text-left"
+            class="relative mt-12 text-left lg:grid lg:grid-cols-2 lg:items-center lg:gap-8"
           >
             <div class="relative">
               <h3
-                class="text-2xl leading-8 font-extrabold text-gray-900 tracking-tight sm:text-3xl sm:leading-9"
+                class="text-2xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-3xl sm:leading-9"
               >
                 Recent Posts
               </h3>
@@ -100,7 +100,7 @@
                       <div class="flex">
                         <div class="flex-shrink-0">
                           <div
-                            class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                            class="flex h-12 w-12 items-center justify-center rounded-md bg-indigo-500 text-white"
                           >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +133,7 @@
                         </div>
                         <div class="ml-4">
                           <h4
-                            class="text-lg leading-6 font-medium text-gray-900"
+                            class="text-lg font-medium leading-6 text-gray-900"
                           >
                             {{ article.title }}
                           </h4>
@@ -148,9 +148,9 @@
               </ul>
             </div>
 
-            <div class="mt-10 -mx-4 relative lg:mt-0">
+            <div class="relative -mx-4 mt-10 lg:mt-0">
               <svg
-                class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
+                class="absolute left-1/2 -translate-x-1/2 translate-y-16 transform lg:hidden"
                 width="784"
                 height="404"
                 fill="none"

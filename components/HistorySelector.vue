@@ -4,7 +4,7 @@
     <select
       title="return counter to a particular point in"
       @change="onChange"
-      class="w-48 m-2"
+      class="m-2 w-48"
     >
       <option value="">Row Counter History</option>
       <!-- 
