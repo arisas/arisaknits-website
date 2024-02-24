@@ -363,14 +363,14 @@ export default {
       // 2.2 if persistedCounterInt is NaN, do nothing
 
       if (isNaN(persistedCounterInt)) {
-        return;
+        return 0;
       }
       // 2.3 check if integer is inside range 0 and 999
       if (
         persistedCounterInt > COUNTER_VALUE_MAX ||
         persistedCounterInt < COUNTER_VALUE_MIN
       ) {
-        return;
+        return 0;
       }
 
       return persistedCounterInt;
