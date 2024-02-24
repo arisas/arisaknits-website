@@ -405,10 +405,11 @@ export default {
     );
     // setting counter to value in localStorage once component has mounted
     this.counterHistory =
-      JSON.parse(localStorage.getItem('counterHistory')) || [];
+      JSON.parse(localStorage.getItem('counterHistory')) || this.counterHistory;
 
     //setting repeatRow to value in localStorage once component is mounted
-    this.settings = JSON.parse(localStorage.getItem('settings')) || [];
+    this.settings =
+      JSON.parse(localStorage.getItem('settings')) || this.settings;
 
     // set value in this.counterHistory to localStorage
     // persistedCounterInt = a function
