@@ -382,14 +382,14 @@ export default {
       );
       const persistedLinkedCounterInt = parseInt(persistedLinkedCounter, 10);
       if (isNaN(persistedLinkedCounterInt)) {
-        return;
+        return 0;
       }
 
       if (
         persistedLinkedCounterInt > COUNTER_VALUE_MAX ||
         persistedLinkedCounterInt < COUNTER_VALUE_MIN
       ) {
-        return;
+        return 0;
       }
 
       return persistedLinkedCounterInt;
