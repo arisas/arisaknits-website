@@ -42,24 +42,18 @@
     </button>
 
     <div v-if="visible">
-      <!-- Reset Button -->
+      <!-- Enable Repeat Row -->
       <p class="text-center">
         Reset after row:
         <input
           v-model="settings.repeatRow"
           type="number"
-          @input="
-            () => {
-              if (settings.repeatRow > 999 || settings.repeatRow < 1) {
-                settings.repeatRow = null;
-              }
-              linkedCounter = 0;
-            }
-          "
           class="w-12 touch-manipulation rounded bg-slate-200 pl-2"
           @change="saveSettings"
         />
       </p>
+
+      <!-- Reset Button -->
       <div class="m-4 flex items-center justify-evenly">
         <button
           type="button"
@@ -84,46 +78,6 @@
     </div>
   </div>
 
-  <!-- Toggle button -->
-  <!-- <div class="flex items-center justify-center">
-        <toggle v-model="toggleValue" />
-    </div> -->
-
-  <!-- Style 1: increase and undo button style counter -->
-  <!-- 
-    <div v-if="!toggleValue" class="items-center justify-evenly">
-
-        <h2 class="text-gray-500 text-xl text-center">Style 1</h2>
-        <div class="flex items-center w-72 mt-5 justify-evenly m-auto pb-10"> -->
-
-  <!-- Undo to previous saved data -- connect to localstorage, data structure, array of objects with timestamp and data -->
-  <!-- <button type="button"
-                class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-10 w-10 hover:fill-gray-900 fill-gray-700 mx-8 touch-manipulation"
-                @click="undoCounter">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path
-                        d="M20 13.5C20 17.09 17.09 20 13.5 20H6V18H13.5C16 18 18 16 18 13.5S16 9 13.5 9H7.83L10.91 12.09L9.5 13.5L4 8L9.5 2.5L10.92 3.91L7.83 7H13.5C17.09 7 20 9.91 20 13.5Z" />
-                </svg>
-            </button>
-
-            <button type="button"
-                class="text-7xl rounded-full h-40 w-40 hover:border-gray-300 border-gray-200 border-8 hover:text-gray-900 text-gray-700 touch-manipulation"
-                @click="increaseNumber">
-
-                {{ counter }}
-
-            </button>
-
-
-        </div>
-    </div> -->
-
-  <!-- Style 2: increase and decrease button style counter -->
-
-  <!-- <div v-else="toggleValue" class="items-center justify-evenly"> -->
-
-  <!-- <h2 class="text-gray-500 text-xl text-center">Style 2</h2> -->
-
   <div class="mb-16 mt-10 flex w-80 items-center justify-evenly">
     <button
       type="button"
@@ -143,23 +97,7 @@
     >
       {{ counter }}
     </button>
-
-    <!-- <p class="text-7xl rounded-full h-28 w-28 text-gray-700 text-center">
-
-                {{ counter }}
-
-            </p> -->
-    <!-- 
-            <button type="button"
-                class="rounded-full hover:border-gray-300 border-gray-200 border-4 h-10 w-10 hover:fill-gray-900 fill-gray-700 touch-manipulation"
-                @click="increaseNumber">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M0 0h24v24H0z" fill="none" />
-                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-                </svg>
-            </button> -->
   </div>
-  <!-- </div> -->
 
   <p v-if="settings.repeatRow" class="text-xl font-bold text-gray-700">
     Repeats:
@@ -243,9 +181,15 @@ export default {
     },
 
     saveSettings() {
-      localStorage.setItem('settings', JSON.stringify(this.settings));
+      // repeatRow can't be greater than 999 or lower than 1
+      if (this.settings.repeatRow > 999 || this.settings.repeatRow < 1) {
+        this.settings.repeatRow = null;
+      }
+      // Changing repeatRow also sets linkedCounter to 0
+      this.linkedCounter = 0;
+
       //save settings everytime repeatRow is updated
-      // this.linkedCounter = 0;
+      localStorage.setItem('settings', JSON.stringify(this.settings));
     },
     /**
      * @returns true if repeat row setting is enabled AND increasing the counter would exceed the configured value;
@@ -399,6 +343,25 @@ export default {
 
   // 4. else do nothing, counter is already initialized to 0
 
+  /**
+   * Each Vue component instance goes through a series of initialization steps when it's created -
+   * for example, it needs to set up data observation, compile the template, mount the instance to the DOM, and update the DOM when data changes.
+   * Along the way, it also runs functions called __lifecycle hooks__, giving users the opportunity to add their own code at specific stages.
+   *
+   * The `mounted` hook can be used to run code after the component has finished the initial rendering and created the DOM nodes.
+   *
+   * A component is considered mounted after:
+   * - All of its synchronous child components have been mounted (does not include async components or components inside <Suspense> trees).
+   * - Its own DOM tree has been created and inserted into the parent container. Note it only guarantees that the component's DOM tree is in-document if the application's root container is also in-document.
+   *
+   * This hook is typically used for performing side effects that need access to the component's rendered DOM, or for limiting DOM-related code to the client in a [server-rendered application](https://vuejs.org/guide/scaling-up/ssr.html).
+   *
+   * __This hook is not called during server-side rendering.__
+   *
+   * @see https://vuejs.org/guide/essentials/lifecycle
+   * @see https://vuejs.org/api/options-lifecycle.html#mounted
+   * @see https://dev.to/firstclown/should-you-use-created-or-mounted-in-vue-2m5l
+   */
   mounted() {
     console.error(
       `Mounted start. counter=${this.counter}, linkedCounter=${this.linkedCounter}, settings.repeatRow=${this.settings.repeatRow}, counterHistory[0]=${this.counterHistory[0]}`,
