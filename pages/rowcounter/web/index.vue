@@ -60,7 +60,7 @@
           class="text-l h-10 w-52 touch-manipulation rounded-lg bg-indigo-600 p-1 font-medium text-white hover:bg-indigo-700"
           @click="resetCounter"
         >
-          Reset All Counters
+          Reset Counter
         </button>
       </div>
 
@@ -281,8 +281,15 @@ export default {
     },
     resetCounter() {
       // setting counter to 0 while keeping counterHistory data
-      this.counter = 0;
-      this.linkedCounter = 0;
+      if (this.counter || this.linkedCounter > COUNTER_VALUE_MIN) {
+        this.counter = 0;
+        this.linkedCounter = 0;
+
+        // save to local storage
+        localStorage.setItem(COUNTER_STORAGE_KEY, this.counter);
+        localStorage.setItem(COUNTER_STORAGE_KEY_LINKED, this.linkedCounter);
+        this.updateHistory();
+      }
     },
     //update counter to the selected history item
     historySelected(historyIndex) {
