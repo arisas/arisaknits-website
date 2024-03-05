@@ -57,7 +57,8 @@
       <div class="m-4 flex items-center justify-evenly">
         <button
           type="button"
-          class="text-l h-10 w-52 touch-manipulation rounded-lg bg-indigo-600 p-1 font-medium text-white hover:bg-indigo-700"
+          class="text-l h-10 w-52 touch-manipulation rounded-lg bg-indigo-600 p-1 font-medium text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-500"
+          :disabled="disableButton"
           @click="resetCounter"
         >
           Reset Counter
@@ -81,7 +82,8 @@
   <div class="mb-16 mt-10 flex w-80 items-center justify-evenly">
     <button
       type="button"
-      class="mx-8 h-14 w-14 touch-manipulation rounded-full border-4 border-gray-200 fill-gray-700 hover:border-gray-300 hover:fill-gray-900"
+      class="mx-8 h-14 w-14 touch-manipulation rounded-full border-4 border-gray-200 fill-gray-700 hover:border-gray-300 hover:fill-gray-900 disabled:cursor-not-allowed disabled:border-slate-100 disabled:bg-slate-100 disabled:fill-slate-300"
+      :disabled="disableButton"
       @click="decreaseNumber"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -148,6 +150,7 @@ export default {
       toggleValue: false,
       counter: 0, // load from localStorage when component mounts in methods.
       linkedCounter: 0,
+      disabled: false,
 
       /**
        * @type Array<CounterHistoryEntry>
@@ -167,6 +170,11 @@ export default {
   //     return this.visibility;
   //   }
   // },
+  computed: {
+    disableButton() {
+      return this.counter == COUNTER_VALUE_MIN;
+    },
+  },
 
   methods: {
     /**
