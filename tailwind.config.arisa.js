@@ -11,7 +11,14 @@
 
 module.exports = {
   theme: {},
-  variants: {},
+  variants: {
+    extend: {
+      opacity: ['disabled'],
+      border: ['disabled'],
+      bg: ['disabled'],
+      text: ['disabled'],
+    },
+  },
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
