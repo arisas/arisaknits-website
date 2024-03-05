@@ -195,6 +195,7 @@ export default {
       }
       // Changing repeatRow also sets linkedCounter to 0
       this.linkedCounter = 0;
+      this.counter = 0;
 
       //save settings everytime repeatRow is updated
       localStorage.setItem('settings', JSON.stringify(this.settings));
@@ -289,7 +290,10 @@ export default {
     },
     resetCounter() {
       // setting counter to 0 while keeping counterHistory data
-      if (this.counter || this.linkedCounter > COUNTER_VALUE_MIN) {
+      if (
+        this.counter > COUNTER_VALUE_MIN ||
+        this.linkedCounter > COUNTER_VALUE_MIN
+      ) {
         this.counter = 0;
         this.linkedCounter = 0;
 
