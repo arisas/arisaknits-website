@@ -14,11 +14,16 @@
     </h1>
   </div>
 
-  <p class="mb-10 text-center text-gray-500">
-    The counter will save to the browser you're using! You can leave and come
-    back later.
+  <p class="text-wrap mx-2 mb-2 text-center text-gray-500">
+    The counter will save to the browser you're using. You can leave and come
+    back later!
   </p>
 
+  <p class="text-wrap mx-2 mb-10 text-center text-gray-500">
+    <span class="font-bold">If you're on iOS, iPadOS, or Safari:</span> make
+    sure to come back to this page within 7 days! Apple will erase this data
+    after a week.
+  </p>
   <!-- settings section -->
   <div class="mb-10 w-64 rounded-lg bg-gray-100 p-2">
     <button
