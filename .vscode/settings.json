@@ -1,4 +1,9 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "conventionalCommits.scopes": ["rowcounter"],
+  "workbench.editor.customLabels.patterns": {
+    "**/index.vue": "${dirname} (${filename})",
+    "**/[[]*.vue": "${dirname}/${filename}"
+  }
 }
