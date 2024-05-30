@@ -12,6 +12,13 @@
     <h1 class="mt-7 text-3xl font-extrabold md:m-9">
       🧶 ArisaKnits Row Counter
     </h1>
+
+    <p class="text-wrap mx-40 my-2 text-center text-gray-500">
+      Thanks for trying out my app! I'm actively updating and love to hear from
+      you on how I can make the experience better. If there are any features
+      you'd like or a way to improve the app, let me know by email me at
+      <span class="font-bold">support@arisaknits.com</span>!
+    </p>
   </div>
 
   <div class="flex flex-wrap justify-center">
