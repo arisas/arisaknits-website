@@ -13,7 +13,7 @@
       🧶 ArisaKnits Row Counter
     </h1>
 
-    <p class="text-wrap mx-40 my-2 text-center text-gray-500">
+    <p class="text-wrap mx-4 my-2 text-center text-gray-500 lg:mx-40">
       Thanks for trying out my app! I'm actively updating and love to hear from
       you on how I can make the experience better. If there are any features
       you'd like or a way to improve the app, let me know by email me at
