@@ -12,19 +12,9 @@
     />
 
     <div class="flex flex-col text-center">
-      <p class="mx-40 mt-8 text-xl text-gray-500">
+      <p class="mx-2 mt-8 text-xl text-gray-500">
         Use this simple row counter right on your Apple Watch while you're
-        crocheting or knitting! This app features a way to increase, decrease,
-        reset the counter, and a setting to automatically reset the counter on a
-        specific row. This reset row setting includes another counter to track
-        repeats and may be helpful when following a repeating pattern.
-      </p>
-
-      <p class="mx-56 my-4 text-xl text-gray-500">
-        <span class="font-bold">Note:</span> Apple Watches by default will close
-        the app after 2 minutes. You can change this setting to 1 hour by going
-        to Settings > General > scroll down to "Return to Clock" > select "After
-        1 hour"
+        crocheting or knitting!
       </p>
     </div>
 
@@ -64,6 +54,20 @@
         class="applewatch"
       />
     </div>
+
+    <p class="mx-2 mt-10 text-xl text-gray-500">
+      This app features a way to increase, decrease, reset the counter, and a
+      setting to automatically reset the counter on a specific row. This reset
+      row setting includes another counter to track repeats and may be helpful
+      when following a repeating pattern.
+    </p>
+
+    <p class="mx-2 my-4 text-xl text-gray-500">
+      <span class="font-bold">Note:</span> Apple Watches by default will close
+      the app after 2 minutes. You can change this setting to 1 hour by going to
+      Settings > General > scroll down to "Return to Clock" > select "After 1
+      hour"
+    </p>
   </div>
 </template>
 
