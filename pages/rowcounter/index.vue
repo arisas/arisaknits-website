@@ -61,9 +61,9 @@
         watchOS App
       </h2>
       <img
-        alt="ArisaKnits Row Counter App Screenshot with Increase Numbers"
-        title="ArisaKnits Row Counter App Screenshot with Increase Numbers"
-        src="/img/v1.2screenshot_increase.png"
+        alt="ArisaKnits Row Counter App Screenshot of Counter and Repeat Linked Counter"
+        title="ArisaKnits Row Counter App Screenshot of Counter and Repeat Linked Counter"
+        src="/img/v2.0screenshot_counter_w_repeat.png"
         decoding="auto"
         loading="lazy"
         class="applewatch max-h-96 items-center"

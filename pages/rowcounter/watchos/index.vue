@@ -12,13 +12,19 @@
     />
 
     <div class="flex flex-col text-center">
-      <p class="mt-8 text-xl text-gray-500">
-        A simple way of keeping track of your rows while knitting or crocheting.
+      <p class="mx-40 mt-8 text-xl text-gray-500">
+        Use this simple row counter right on your Apple Watch while you're
+        crocheting or knitting! This app features a way to increase, decrease,
+        reset the counter, and a setting to automatically reset the counter on a
+        specific row. This reset row setting includes another counter to track
+        repeats and may be helpful when following a repeating pattern.
       </p>
 
-      <p class="mb-4 text-xl text-gray-500">
-        Increase and decrease the number of rows using the + or - or turn the
-        watch crown. Reset your row counter using the Reset Counter button.
+      <p class="mx-56 my-4 text-xl text-gray-500">
+        <span class="font-bold">Note:</span> Apple Watches by default will close
+        the app after 2 minutes. You can change this setting to 1 hour by going
+        to Settings > General > scroll down to "Return to Clock" > select "After
+        1 hour"
       </p>
     </div>
 
@@ -74,20 +80,20 @@ export default {
     return {
       screenshots: [
         {
-          alt: 'ArisaKnits Row Counter App Screenshot with Zero',
-          title: 'ArisaKnits Row Counter App Screenshot with Zero',
-          src: '/img/v1.2screenshot_zero.png',
-        },
-        {
-          alt: 'ArisaKnits Row Counter App Screenshot with Increase Numbers',
-          title: 'ArisaKnits Row Counter App Screenshot with Increase Numbers',
-          src: '/img/v1.2screenshot_increase.png',
-        },
-        {
-          alt: 'ArisaKnits Row Counter App Screenshot with Reset Row Counter Button',
+          alt: 'ArisaKnits Row Counter App Screenshot of Counter and Repeat Linked Counter',
           title:
-            'ArisaKnits Row Counter App Screenshot with Reset Row Counter Button',
-          src: '/img/v1.2screenshot_resetbutton.png',
+            'ArisaKnits Row Counter App Screenshot of Counter and Repeat Linked Counte',
+          src: '/img/v2.0screenshot_counter_w_repeat.png',
+        },
+        {
+          alt: 'ArisaKnits Row Counter App Screenshot of Counter Set to Zero',
+          title: 'ArisaKnits Row Counter App Screenshot of Counter Set to Zero',
+          src: '/img/v2.0screenshot_counter.png',
+        },
+        {
+          alt: 'ArisaKnits Row Counter App Screenshot of the Settings Face',
+          title: 'ArisaKnits Row Counter App Screenshot of the Settings Face',
+          src: '/img/v2.0screenshot_settings.png',
         },
       ],
     };
