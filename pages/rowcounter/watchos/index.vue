@@ -1,7 +1,7 @@
 <template>
   <div class="my-8 text-center">
     <h1 class="text-3xl font-extrabold">ArisaKnits Row Counter App</h1>
-    <p class="my-8 text-xl text-gray-500">A watchOS app!</p>
+    <p class="my-8 text-xl text-gray-500">An Apple Watch app!</p>
     <img
       alt="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
       title="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
