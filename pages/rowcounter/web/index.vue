@@ -62,7 +62,7 @@
       <div class="m-4 flex items-center justify-evenly">
         <button
           type="button"
-          class="text-l h-10 w-52 touch-manipulation rounded-lg bg-indigo-600 p-1 font-medium text-white hover:bg-indigo-700 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-500"
+          class="text-l h-10 w-52 touch-manipulation rounded-lg bg-rose-700 p-1 font-medium text-white hover:bg-rose-900 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-500"
           :disabled="disableButton"
           @click="resetCounter"
         >
@@ -82,6 +82,10 @@
         />
       </div>
     </div>
+  </div>
+
+  <div>
+    <CreateCounter />
   </div>
 
   <div class="mb-16 mt-10 flex w-80 items-center justify-evenly">
