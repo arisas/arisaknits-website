@@ -51,7 +51,7 @@
       <p class="text-center">
         Reset after row:
         <input
-          v-model="settings.repeatRow"
+          v-model="activeCounter.settings.repeatRow"
           type="number"
           class="w-12 touch-manipulation rounded bg-slate-200 pl-2"
           @change="saveSettings"
@@ -73,17 +73,18 @@
       <!-- Row Counter History Selector -->
       <div class="flex items-center justify-center">
         <!-- child compontent HistorySelector.vue 
-  js historyList from child component respond with counterHistory from parent compontent
+  js historyList from child component respond with activeCounter.counterHistory from parent compontent
   listen for historySelected from child compontent 
   and respond with historySelected defined in parent component -->
         <HistorySelector
-          :historyList="counterHistory"
+          :historyList="activeCounter.counterHistory"
           @historySelected="historySelected"
         />
       </div>
     </div>
   </div>
 
+  <!-- create new counter array in local storage when button is pressed-->
   <div>
     <CreateCounter />
   </div>
@@ -106,13 +107,16 @@
       class="h-48 w-48 touch-manipulation rounded-full border-8 border-gray-200 text-7xl text-gray-700 hover:border-gray-300 hover:text-gray-900"
       @click="onRowIncrease"
     >
-      {{ counter }}
+      {{ activeCounter.currentRow }}
     </button>
   </div>
 
-  <p v-if="settings.repeatRow" class="text-xl font-bold text-gray-700">
+  <p
+    v-if="activeCounter.settings.repeatRow"
+    class="text-xl font-bold text-gray-700"
+  >
     Repeats:
-    {{ linkedCounter }}
+    {{ activeCounter.linkedCounter }}
   </p>
 </template>
 
@@ -129,8 +133,8 @@ const COUNTER_VALUE_MIN = 0;
  * @see https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
  * @see https://www.w3schools.com/jsref/prop_win_localstorage.asp
  */
-const COUNTER_STORAGE_KEY = 'counter';
-const COUNTER_STORAGE_KEY_LINKED = 'linkedCounter';
+const COUNTER_STORAGE_KEY = 'activeCounter.currentRow';
+const COUNTER_STORAGE_KEY_LINKED = 'activeCounter.linkedCounter';
 
 /**
  * Set length limit to data stored in array -- it will delete data at the end of array
@@ -147,27 +151,30 @@ export default {
   },
 
   /**
-   * Holds the counter value from a point in time
+   * Holds the currentRow value from a point in time
    * @typedef {Object} CounterHistoryEntry
    * @property {Number} timestamp - Indicates when the entry was recorded.
    * @property {Number} counterData - The counter value.
-   * @property {Number?} linkedCounterData - The linkedCounter value.
+   * @property {Number?} linkedCounterData - The activeCounter.linkedCounter value.
    */
   data() {
     return {
       selected: '',
       toggleValue: false,
-      counter: 0, // load from localStorage when component mounts in methods.
-      linkedCounter: 0,
-      disabled: false,
-
-      /**
-       * @type Array<CounterHistoryEntry>
-       */
-      counterHistory: [],
-      settings: {
-        repeatRow: 0,
+      //save activeCounter to localStorage
+      activeCounter: {
+        currentRow: 0,
+        linkedCounter: 0,
+        /**
+         * @type Array<CounterHistoryEntry>
+         */
+        counterHistory: [],
+        settings: {
+          repeatRow: 0,
+        },
       },
+
+      disabled: false,
       maxLength: 10,
       historyItem: '',
       visible: false,
@@ -181,33 +188,39 @@ export default {
   // },
   computed: {
     disableButton() {
-      return this.counter == COUNTER_VALUE_MIN;
+      return this.activeCounter.currentRow == COUNTER_VALUE_MIN;
     },
   },
 
   methods: {
     /**
-     * Save array counterHistory in localStorage
+     * Save array activeCounter.counterHistory in localStorage
      */
     persistCounterHistory() {
-      //use same key 'counterHistory' as localStorage.getItem
+      //use same key 'activeCounter.counterHistory' as localStorage.getItem
       localStorage.setItem(
-        'counterHistory',
-        JSON.stringify(this.counterHistory),
+        'activeCounter.counterHistory',
+        JSON.stringify(this.activeCounter.counterHistory),
       );
     },
 
     saveSettings() {
       // repeatRow can't be greater than 999 or lower than 1
-      if (this.settings.repeatRow > 999 || this.settings.repeatRow < 1) {
-        this.settings.repeatRow = null;
+      if (
+        this.activeCounter.settings.repeatRow > 999 ||
+        this.activeCounter.settings.repeatRow < 1
+      ) {
+        this.activeCounter.settings.repeatRow = null;
       }
-      // Changing repeatRow also sets linkedCounter to 0
-      this.linkedCounter = 0;
-      this.counter = 0;
+      // Changing repeatRow also sets activeCounter.linkedCounter to 0
+      this.activeCounter.linkedCounter = 0;
+      this.currentRow = 0;
 
       //save settings everytime repeatRow is updated
-      localStorage.setItem('settings', JSON.stringify(this.settings));
+      localStorage.setItem(
+        'settings',
+        JSON.stringify(this.activeCounter.settings),
+      );
     },
     /**
      * @returns true if repeat row setting is enabled AND increasing the counter would exceed the configured value;
@@ -215,8 +228,9 @@ export default {
      */
     shouldRepeatRow() {
       if (
-        this.settings.repeatRow > 0 &&
-        this.counter + 1 > this.settings.repeatRow
+        this.activeCounter.settings.repeatRow > 0 &&
+        this.activeCounter.currentRow + 1 >
+          this.activeCounter.settings.repeatRow
       ) {
         return true;
       }
@@ -228,98 +242,116 @@ export default {
      */
     onRowIncrease() {
       if (this.shouldRepeatRow()) {
-        // set counter to 1
-        this.counter = 1;
-        //increase linkedCounter ++
-        this.linkedCounter++;
-        localStorage.setItem(COUNTER_STORAGE_KEY_LINKED, this.linkedCounter);
-      } else if (this.counter < COUNTER_VALUE_MAX) {
+        // set activeCounter.currentRow to 1
+        this.activeCounter.currentRow = 1;
+        //increase activeCounter.linkedCounter ++
+        this.activeCounter.linkedCounter++;
+        localStorage.setItem(
+          COUNTER_STORAGE_KEY_LINKED,
+          this.activeCounter.linkedCounter,
+        );
+      } else if (this.activeCounter.currentRow < COUNTER_VALUE_MAX) {
         // increase the row count
-        this.counter++;
+        this.activeCounter.currentRow++;
       }
       // save the row count to local storage when increased
-      localStorage.setItem(COUNTER_STORAGE_KEY, this.counter);
+      localStorage.setItem(COUNTER_STORAGE_KEY, this.activeCounter.currentRow);
       this.updateHistory();
     },
     /**
      * Decrease the row count by 1
      */
     decreaseNumber() {
-      if (this.counter > COUNTER_VALUE_MIN) {
+      if (this.activeCounter.currentRow > COUNTER_VALUE_MIN) {
         // decrease the row count
-        this.counter--;
+        this.activeCounter.currentRow--;
         // save the row count to local storage when decreased
-        localStorage.setItem(COUNTER_STORAGE_KEY, this.counter);
+        localStorage.setItem(
+          COUNTER_STORAGE_KEY,
+          this.activeCounter.currentRow,
+        );
         this.updateHistory();
       }
     },
     /**
-     * Save current state to counterHistory
+     * Save current state to activeCounter.counterHistory
      */
     updateHistory() {
-      // const counter1 = {timestamp: '2024-10-03 09:00:00', counterData: '5', linkedCounter: }
+      // const counter1 = {timestamp: '2024-10-03 09:00:00', counterData: '5', activeCounter.linkedCounter: }
       /**
        * @type {CounterHistoryEntry}
        */
       const counter1 = {
         timestamp: Date.now(),
-        counterData: this.counter,
-        linkedCounterData: this.settings.repeatRow ? this.linkedCounter : null,
+        counterData: this.activeCounter.currentRow,
+        linkedCounterData:
+          this.activeCounter.settings.repeatRow ?
+            this.activeCounter.linkedCounter
+          : null,
       };
 
-      this.counterHistory.unshift(counter1);
+      this.activeCounter.counterHistory.unshift(counter1);
 
       // remove oldest item once maxLength is reached
-      if (this.counterHistory.length > this.maxLength) {
-        this.counterHistory.pop();
+      if (this.activeCounter.counterHistory.length > this.maxLength) {
+        this.activeCounter.counterHistory.pop();
         console.assert(
-          this.counterHistory.length === this.maxLength,
-          'counterHistory should be at max capacity',
+          this.activeCounter.counterHistory.length === this.maxLength,
+          'activeCounter.counterHistory should be at max capacity',
           this.maxLength,
         );
       }
       this.persistCounterHistory();
     },
     /**
-     * Undo the row count increase to previous save in counterHistory
+     * Undo the row count increase to previous save in activeCounter.counterHistory
      */
     undoCounter() {
-      //make sure there's at least one data in counterHistory
+      //make sure there's at least one data in activeCounter.counterHistory
       //TODO: gray out icon when there is 1 or less data on localStorage
-      if (this.counterHistory.length < 2) {
+      if (this.activeCounter.counterHistory.length < 2) {
         return;
       }
       //choose previous save from current selected by shift (remove from the front)
-      this.counterHistory.shift();
+      this.activeCounter.counterHistory.shift();
       //show counterData on counter
-      this.counter = this.counterHistory[0].counterData;
-      //keeping the lines below will duplicate the save data that we pulled from counterHistory
+      this.activeCounter.currentRow =
+        this.activeCounter.counterHistory[0].counterData;
+      //keeping the lines below will duplicate the save data that we pulled from activeCounter.counterHistory
       // this.updateHistory();
       // this.updateLocalStorage();
     },
     resetCounter() {
-      // setting counter to 0 while keeping counterHistory data
+      // setting counter to 0 while keeping activeCounter.counterHistory data
       if (
-        this.counter > COUNTER_VALUE_MIN ||
-        this.linkedCounter > COUNTER_VALUE_MIN
+        this.activeCounter.currentRow > COUNTER_VALUE_MIN ||
+        this.activeCounter.linkedCounter > COUNTER_VALUE_MIN
       ) {
-        this.counter = 0;
-        this.linkedCounter = 0;
+        this.activeCounter.currentRow = 0;
+        this.activeCounter.linkedCounter = 0;
 
         // save to local storage
-        localStorage.setItem(COUNTER_STORAGE_KEY, this.counter);
-        localStorage.setItem(COUNTER_STORAGE_KEY_LINKED, this.linkedCounter);
+        localStorage.setItem(
+          COUNTER_STORAGE_KEY,
+          this.activeCounter.currentRow,
+        );
+        localStorage.setItem(
+          COUNTER_STORAGE_KEY_LINKED,
+          this.activeCounter.linkedCounter,
+        );
         this.updateHistory();
       }
     },
     //update counter to the selected history item
     historySelected(historyIndex) {
       // remove entries before the selected item in array
-      this.counterHistory.splice(0, historyIndex);
+      this.activeCounter.counterHistory.splice(0, historyIndex);
 
-      // update this.counter and this.linkedCounter to selected counterData and linkedCounterData using the index value
-      this.counter = this.counterHistory[0].counterData;
-      this.linkedCounter = this.counterHistory[0].linkedCounterData;
+      // update this.activeCounter.currentRow and this.activeCounter.linkedCounter to selected counterData and linkedCounterData using the index value
+      this.activeCounter.currentRow =
+        this.activeCounter.counterHistory[0].counterData;
+      this.activeCounter.linkedCounter =
+        this.activeCounter.counterHistory[0].linkedCounterData;
       // update
     },
     // showSettings: function (event) {
@@ -392,23 +424,25 @@ export default {
    */
   mounted() {
     console.error(
-      `Mounted start. counter=${this.counter}, linkedCounter=${this.linkedCounter}, settings.repeatRow=${this.settings.repeatRow}, counterHistory[0]=${this.counterHistory[0]}`,
+      `Mounted start. activeCounter.currentRow=${this.activeCounter.currentRow}, activeCounter.linkedCounter=${this.activeCounter.linkedCounter}, activeCounter.settings.repeatRow=${this.activeCounter.settings.repeatRow}, activeCounter.counterHistory[0]=${this.activeCounter.counterHistory[0]}`,
     );
     // setting counter to value in localStorage once component has mounted
-    this.counterHistory =
-      JSON.parse(localStorage.getItem('counterHistory')) || this.counterHistory;
+    this.activeCounter.counterHistory =
+      JSON.parse(localStorage.getItem('activeCounter.counterHistory')) ||
+      this.activeCounter.counterHistory;
 
     //setting repeatRow to value in localStorage once component is mounted
-    this.settings =
-      JSON.parse(localStorage.getItem('settings')) || this.settings;
+    this.activeCounter.settings =
+      JSON.parse(localStorage.getItem('activeCounter.settings')) ||
+      this.activeCounter.settings;
 
-    // set value in this.counterHistory to localStorage
+    // set value in this.activeCounter.counterHistory to localStorage
     // persistedCounterInt = a function
-    this.counter = this.getValidCounter();
-    this.linkedCounter = this.getValidLinkedCounter();
+    this.activeCounter.currentRow = this.getValidCounter();
+    this.activeCounter.linkedCounter = this.getValidLinkedCounter();
     console.error(
-      `Mounted end. counter=${this.counter}, linkedCounter=${this.linkedCounter}, settings.repeatRow=${this.settings.repeatRow}, counterHistory[0]=`,
-      this.counterHistory[0],
+      `Mounted end. currentRow=${this.activeCounter.currentRow}, activeCounter.linkedCounter=${this.activeCounter.linkedCounter}, activeCounter.settings.repeatRow=${this.activeCounter.settings.repeatRow}, activeCounter.counterHistory[0]=`,
+      this.activeCounter.counterHistory[0],
     );
   },
 };
