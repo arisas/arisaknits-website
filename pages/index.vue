@@ -3,7 +3,7 @@
     <div>
       <h1 class="title">
         <span class="text-purple-600">arisa</span
-        ><span class="-ml-1">knits</span>
+        ><span class="-ml-1">makes</span>
       </h1>
       <div class="overflow-hidden bg-gray-50 pb-0 pt-8 sm:py-16 lg:py-24">
         <div
@@ -53,12 +53,13 @@
             <p
               class="mx-auto mt-4 max-w-3xl text-center text-xl leading-7 text-gray-500"
             >
-              👾 I do devrel in games 💻 I made a row counter app (more info
+              👾 I do devrel in games 💻 I made a
               <a
-                href="http://arisaknits.com/rowcounter"
+                href="http://arisamakes.com/rowcounter"
                 class="text-purple-500 hover:text-purple-700"
-                >here</a
-              >) ▶️ I post knitting reels & want to make crafts more accessible
+                >row counter app</a
+              >
+              ▶️ I post knitting reels & want to make crafts more accessible
             </p>
             <p
               class="mx-auto mt-4 max-w-3xl text-center text-xl leading-7 text-gray-500"
@@ -74,18 +75,56 @@
           </div>
 
           <div
-            class="relative mt-12 text-left lg:grid lg:grid-cols-2 lg:items-center lg:gap-8"
+            class="relative mt-12 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8"
           >
             <div class="relative">
-              <h3
-                class="text-2xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-3xl sm:leading-9"
+              <nuxt-link
+                to="/rowcounter"
+                class="mt-10 flex items-center justify-center drop-shadow-xl hover:drop-shadow-2xl"
               >
-                Recent Posts
-              </h3>
+                <img
+                  alt="ArisaMakes Row Counter App Icon of Skeins and a Cake of Yarn"
+                  title="ArisaMakes Row Counter App Icon of Skeins and a Cake of Yarn"
+                  class="relative mx-auto max-h-20 rounded-full object-cover"
+                  decoding="auto"
+                  src="~assets/img/icon_234.png"
+                  loading="lazy"
+                />
+              </nuxt-link>
+
+              <nuxt-link
+                to="/rowcounter"
+                class="flex items-center justify-center drop-shadow-xl hover:drop-shadow-2xl"
+              >
+                <h3
+                  class="mt-3 text-2xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-3xl sm:leading-9"
+                >
+                  ArisaMakes Row Counter
+                </h3>
+              </nuxt-link>
+
               <p class="mt-3 text-lg leading-7 text-gray-500">
-                Check out my latest posts. Enjoy!
+                Keep track of your rows when crocheting and knitting
               </p>
-              <!-- https://content.nuxt.com/components/content-list -->
+              <p class="text-lg leading-7 text-gray-500">
+                on Apple Watch or for free on web!
+              </p>
+
+              <nuxt-link
+                to="/rowcounter"
+                class="mt-10 flex items-center justify-center drop-shadow-xl hover:drop-shadow-2xl"
+              >
+                <img
+                  alt="ArisaMakes Row Counter App Screenshot of Counter and Repeat Linked Counter"
+                  title="ArisaMakes Row Counter App Screenshot of Counter and Repeat Linked Counter"
+                  src="/img/v2.0screenshot_counter_w_repeat.png"
+                  decoding="auto"
+                  loading="lazy"
+                  class="applewatch max-h-96 items-center"
+                />
+              </nuxt-link>
+
+              <!-- https://content.nuxt.com/components/content-list
               <ul class="mt-10">
                 <ContentList :query="query" v-slot="{ list }">
                   <li
@@ -145,7 +184,7 @@
                     </NuxtLink>
                   </li>
                 </ContentList>
-              </ul>
+              </ul>-->
             </div>
 
             <div class="relative -mx-4 mt-10 lg:mt-0">
@@ -181,7 +220,10 @@
                   fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
                 />
               </svg>
-              <NuxtImg src="/img/1080w.jpg" sizes="750px sm:640px md:1080px" />
+              <NuxtImg
+                src="/img/1080wkhonkaen2025.jpg"
+                sizes="750px sm:640px md:1080px"
+              />
             </div>
           </div>
         </div>
@@ -189,15 +231,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
-const query: QueryBuilderParams = {
-  path: '/blog',
-  limit: 5,
-  sort: [{ publishedAt: -1 }],
-};
-</script>
 
 <style>
 /* Sample `apply` at-rules with Tailwind CSS

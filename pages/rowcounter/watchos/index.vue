@@ -1,10 +1,12 @@
 <template>
   <div class="my-8 text-center">
-    <h1 class="text-3xl font-extrabold">ArisaKnits Row Counter App</h1>
-    <p class="my-8 text-xl text-gray-500">An Apple Watch app!</p>
+    <h1 class="text-3xl font-extrabold">ArisaMakes Row Counter App</h1>
+    <p class="my-8 text-xl text-gray-500">
+      Apple Watch app for crocheting and knitting!
+    </p>
     <img
-      alt="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
-      title="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
+      alt="ArisaMakes Row Counter App Icon of Skeins and a Cake of Yarn"
+      title="ArisaMakes Row Counter App Icon of Skeins and a Cake of Yarn"
       class="relative mx-auto h-40 rounded-full object-cover"
       decoding="auto"
       src="/img/icon_234.png"
@@ -90,13 +92,13 @@ export default {
           src: '/img/v2.0screenshot_counter_w_repeat.png',
         },
         {
-          alt: 'ArisaKnits Row Counter App Screenshot of Counter Set to Zero',
-          title: 'ArisaKnits Row Counter App Screenshot of Counter Set to Zero',
+          alt: 'ArisaMakes Row Counter App Screenshot of Counter Set to Zero',
+          title: 'ArisaMakes Row Counter App Screenshot of Counter Set to Zero',
           src: '/img/v2.0screenshot_counter.png',
         },
         {
-          alt: 'ArisaKnits Row Counter App Screenshot of the Settings Face',
-          title: 'ArisaKnits Row Counter App Screenshot of the Settings Face',
+          alt: 'ArisaMakes Row Counter App Screenshot of the Settings Face',
+          title: 'ArisaMakes Row Counter App Screenshot of the Settings Face',
           src: '/img/v2.0screenshot_settings.png',
         },
       ],
