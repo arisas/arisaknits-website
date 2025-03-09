@@ -5,6 +5,14 @@ import MyModule from './netlifycms/netlifycms.mjs';
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  nitro: {
+    prerender: {
+      // Pre-render the homepage
+      routes: ['/'],
+      // Then crawl all the links on the page
+      crawlLinks: true
+    }
+  },
   hooks: {
     close: () => {},
   },
