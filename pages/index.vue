@@ -46,7 +46,6 @@
             <h2
               class="text-center text-3xl font-extrabold leading-8 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
             >
-              Arisa Raviwan Johnsey (She / Her)<br />
               อริซ่า รวิวรรณ จอห์นซี
             </h2>
 

@@ -7,13 +7,13 @@
 
 <script setup lang="ts">
 useHead({
-  titleTemplate: 'ArisaKnits %s',
+  titleTemplate: 'ArisaMakes %s',
   link: [{ rel: 'icon', type: 'image/png', href: '/yarnemoji.png' }],
   meta: [
     {
-      name: 'ArisaKnits',
+      name: 'ArisaMakes',
       content:
-        'Read my blog, try the ArisaKnits row counter, and learn more about the watchOS app!',
+        'Try the ArisaMakes row counter, learn more about the watchOS app, and read my blog!',
     },
   ],
 });
