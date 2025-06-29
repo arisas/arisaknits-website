@@ -21,7 +21,7 @@
     </div>
 
     <a
-      href="https://apps.apple.com/us/app/arisaknits-row-counter/id1598992914?itsct=apps_box_badge&amp;itscg=30200"
+      href="https://apps.apple.com/us/app/arisamakes-row-counter/id1598992914?itsct=apps_box_badge&amp;itscg=30200"
       class="my-6"
       style="
         display: inline-block;
@@ -86,9 +86,9 @@ export default {
     return {
       screenshots: [
         {
-          alt: 'ArisaKnits Row Counter App Screenshot of Counter and Repeat Linked Counter',
+          alt: 'ArisaMakes Row Counter App Screenshot of Counter and Repeat Linked Counter',
           title:
-            'ArisaKnits Row Counter App Screenshot of Counter and Repeat Linked Counte',
+            'ArisaMakes Row Counter App Screenshot of Counter and Repeat Linked Counte',
           src: '/img/v2.0screenshot_counter_w_repeat.png',
         },
         {

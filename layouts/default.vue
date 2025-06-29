@@ -42,7 +42,10 @@
               Row Counter
             </nuxt-link>
           </div>
-          <div class="px-5 py-2">
+
+          <!-- commenting out blog until I migrate to nuxt/content  -->
+
+          <!-- <div class="px-5 py-2">
             <nuxt-link
               to="/blog"
               class="text-base leading-6 text-gray-500 hover:text-gray-900"
@@ -50,7 +53,7 @@
             >
               Blog
             </nuxt-link>
-          </div>
+          </div> -->
 
           <div class="px-5 py-2">
             <nuxt-link
