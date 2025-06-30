@@ -106,7 +106,7 @@
                 Keep track of your rows when crocheting and knitting
               </p>
               <p class="text-lg leading-7 text-gray-500">
-                on Apple Watch or for free on web!
+                on Apple Watch or for free on the web!
               </p>
 
               <nuxt-link
