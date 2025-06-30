@@ -219,7 +219,10 @@
                   fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
                 />
               </svg>
-              <NuxtImg src="/img/1080w.jpg" sizes="750px sm:640px md:1080px" />
+              <NuxtImg
+                src="/img/2025-1080w.jpg"
+                sizes="750px sm:640px md:1080px"
+              />
             </div>
           </div>
         </div>
