@@ -1,11 +1,11 @@
 <script setup>
-import { UseTimeAgo } from '@vueuse/components';
+// import { UseTimeAgo } from '@vueuse/components';
 
-//https://vueuse.org/core/useTimeAgo/
+// //https://vueuse.org/core/useTimeAgo/
 </script>
 
 <template>
-  <div>
+  <!-- <div>
     <div class="title">
       <span class="text-purple-600">arisa</span><span>blogs</span>
     </div>
@@ -21,5 +21,5 @@ import { UseTimeAgo } from '@vueuse/components';
         </UseTimeAgo>
       </article>
     </ContentDoc>
-  </div>
+  </div> -->
 </template>

@@ -1,8 +1,8 @@
 <template>
   <div class="my-8 text-center">
     <img
-      alt="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
-      title="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
+      alt="ArisaMakes Row Counter App Icon of Skeins and a Cake of Yarn"
+      title="ArisaMakes Row Counter App Icon of Skeins and a Cake of Yarn"
       class="relative mx-auto max-h-20 rounded-full object-cover"
       decoding="auto"
       src="~assets/img/icon_234.png"
@@ -10,7 +10,7 @@
     />
 
     <h1 class="my-2 text-xl font-extrabold lg:text-3xl">
-      ArisaKnits Row Counter (beta)
+      ArisaMakes Row Counter (beta)
     </h1>
   </div>
 

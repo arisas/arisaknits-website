@@ -1,8 +1,8 @@
 <template>
   <div class="m-4 text-center">
     <img
-      alt="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
-      title="ArisaKnits Row Counter App Icon of Skeins and a Cake of Yarn"
+      alt="ArisaMakes Row Counter App Icon of Skeins and a Cake of Yarn"
+      title="ArisaMakes Row Counter App Icon of Skeins and a Cake of Yarn"
       class="relative mx-auto h-20 rounded-full object-cover md:h-28"
       decoding="auto"
       src="~assets/img/icon_234.png"
@@ -10,14 +10,14 @@
     />
 
     <h1 class="mt-7 text-3xl font-extrabold md:m-9">
-      🧶 ArisaKnits Row Counter
+      🧶 ArisaMakes Row Counter
     </h1>
 
     <p class="text-wrap mx-4 my-2 text-center text-gray-500 lg:mx-40">
       Thanks for trying out my app! I'm actively updating and love to hear from
       you on how I can make the experience better. If there are any features
       you'd like or a way to improve the app, let me know by email me at
-      <span class="font-bold">support@arisaknits.com</span>!
+      <span class="font-bold">support@arisamakes.com</span>!
     </p>
   </div>
 
@@ -40,8 +40,8 @@
         Web Version (beta)
       </h2>
       <img
-        alt="ArisaKnits Row Counter Web Version Screenshot"
-        title="ArisaKnits Row Counter Web Version Screenshot"
+        alt="ArisaMakes Row Counter Web Version Screenshot"
+        title="ArisaMakes Row Counter Web Version Screenshot"
         class="m-8 max-h-96 rounded-lg"
         decoding="auto"
         src="~assets/img/rowcounter-web-screenshot2.png"
@@ -68,8 +68,8 @@
         Apple Watch App
       </h2>
       <img
-        alt="ArisaKnits Row Counter App Screenshot of Counter and Repeat Linked Counter"
-        title="ArisaKnits Row Counter App Screenshot of Counter and Repeat Linked Counter"
+        alt="ArisaMakes Row Counter App Screenshot of Counter and Repeat Linked Counter"
+        title="ArisaMakes Row Counter App Screenshot of Counter and Repeat Linked Counter"
         src="/img/v2.0screenshot_counter_w_repeat.png"
         decoding="auto"
         loading="lazy"
