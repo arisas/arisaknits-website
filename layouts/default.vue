@@ -43,6 +43,16 @@
             </nuxt-link>
           </div>
 
+          <div class="px-5 py-2">
+            <nuxt-link
+              to="/patterns/tgyhcrochetdoll"
+              class="text-base leading-6 text-gray-500 hover:text-gray-900"
+              title="Thank Goodness You're Here Crochet Doll Pattern"
+            >
+              Pattern
+            </nuxt-link>
+          </div>
+
           <!-- commenting out blog until I migrate to nuxt/content  -->
 
           <!-- <div class="px-5 py-2">

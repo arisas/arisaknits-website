@@ -2,6 +2,14 @@
   <div class="container">
     <div>
       <h1 class="title">
+        <!-- <img
+          alt="ArisaMakes Logo"
+          title="ArisaMakes Logo"
+          class="relative mx-auto max-h-[400px] object-cover"
+          decoding="auto"
+          src="/img/Arisamakes_Logo_I_w_HankNeedlesnHook.png"
+          loading="lazy"
+        /> -->
         <span class="text-purple-600">arisa</span
         ><span class="-ml-1">makes</span>
       </h1>
