@@ -24,12 +24,12 @@
     </ul>
 
     <ul class="mt-2 list-inside list-disc text-xl text-gray-500">
-      <li>Pishkun in flower point (orange)</li>
-      <li>American fiber DK yarn dandelion (yellow)</li>
+      <li>The Farmer's Daughter Fibers Pishkun in flower point (orange)</li>
+      <li>Mitchell Wool Co. American Fiber DK yarn dandelion (yellow)</li>
       <li>HiKoo Sueno in Robin’s Egg (turquoise/aqua)</li>
-      <li>Sadnes Garn Double Sunday in 1002 (white)</li>
-      <li>Sadnes Garn Double Sunday in 5846 (blue)</li>
-      <li>Sadnes Garn Double Sunday in 4236 (red)</li>
+      <li>Sandnes Garn Double Sunday in 1002 (white)</li>
+      <li>Sandnes Garn Double Sunday in 5846 (blue)</li>
+      <li>Sandnes Garn Double Sunday in 4236 (red)</li>
       <li>Blue Sky Fibers Woolstok Worsted in Midnight Seas (dark blue)</li>
     </ul>
 
@@ -54,8 +54,8 @@ export default {
   methods: {
     downloadDoll() {
       const link = document.createElement('a');
-      link.href = '/tgyhcrochetdollpattern.pdf';
-      link.download = 'tgyhcrochetdollpattern.pdf';
+      link.href = '/tgyhcrochetdollpattern-v1.1.pdf';
+      link.download = 'tgyhcrochetdollpattern-v1.1.pdf';
       link.target = '_blank';
       link.click();
     },
