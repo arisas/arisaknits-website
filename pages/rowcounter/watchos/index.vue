@@ -58,10 +58,11 @@
     </div>
 
     <p class="mx-2 mt-10 text-xl text-gray-500 lg:mx-36">
-      This app features a way to increase, decrease, reset the counter, and a
-      setting to automatically reset the counter on a specific row. This reset
-      row setting includes another counter to track repeats and may be helpful
-      when following a repeating pattern.
+      A simple row counter right on your Apple Watch for your crochet and knit
+      projects! Use the reset row feature to automatically reset the counter and
+      track repeats-- helpful for when following a repeating pattern. NEW!
+      Customize your row counter with 6 hand-drawn icons and 3 background
+      colors.
     </p>
 
     <p class="mx-2 my-4 text-xl text-gray-500 lg:mx-36">
@@ -89,17 +90,17 @@ export default {
           alt: 'ArisaMakes Row Counter App Screenshot of Counter and Repeat Linked Counter',
           title:
             'ArisaMakes Row Counter App Screenshot of Counter and Repeat Linked Counte',
-          src: '/img/v2.0screenshot_counter_w_repeat.png',
+          src: '/img/v2.5mittens+black.png',
         },
         {
           alt: 'ArisaMakes Row Counter App Screenshot of Counter Set to Zero',
           title: 'ArisaMakes Row Counter App Screenshot of Counter Set to Zero',
-          src: '/img/v2.0screenshot_counter.png',
+          src: '/img/v2.5knithank+pinksettings.png',
         },
         {
           alt: 'ArisaMakes Row Counter App Screenshot of the Settings Face',
           title: 'ArisaMakes Row Counter App Screenshot of the Settings Face',
-          src: '/img/v2.0screenshot_settings.png',
+          src: '/img/v2.5cake+bluesettings.png',
         },
       ],
     };
@@ -110,6 +111,6 @@ export default {
 <style>
 .applewatch {
   border-radius: 5rem;
-  border: 1rem solid black;
+  /* border: 1rem solid black; */
 }
 </style>
