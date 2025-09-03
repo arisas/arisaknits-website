@@ -122,9 +122,9 @@
                 class="mt-10 flex items-center justify-center drop-shadow-xl hover:drop-shadow-2xl"
               >
                 <img
-                  alt="ArisaMakes Row Counter App Screenshot of Counter and Repeat Linked Counter"
-                  title="ArisaMakes Row Counter App Screenshot of Counter and Repeat Linked Counter"
-                  src="/img/v2.0screenshot_counter_w_repeat.png"
+                  alt="ArisaMakes Row Counter App Screenshot"
+                  title="ArisaMakes Row Counter App Screenshot"
+                  src="/img/v2.5crochethank+pink.png"
                   decoding="auto"
                   loading="lazy"
                   class="applewatch max-h-96 items-center"
@@ -282,5 +282,10 @@
 
 .links {
   padding-top: 15px;
+}
+
+.applewatch {
+  border-radius: 5rem;
+  /* border: 1rem solid black; */
 }
 </style>

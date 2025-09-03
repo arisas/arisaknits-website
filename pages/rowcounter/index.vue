@@ -13,7 +13,7 @@
       🧶 ArisaMakes Row Counter
     </h1>
 
-    <p class="text-wrap mx-4 my-2 text-center text-gray-500 lg:mx-40">
+    <p class="mx-4 my-2 text-wrap text-center text-gray-500 lg:mx-40">
       Thanks for trying out my app! I'm actively updating and love to hear from
       you on how I can make the experience better. If there are any features
       you'd like or a way to improve the app, let me know by email me at
@@ -44,7 +44,7 @@
         title="ArisaMakes Row Counter Web Version Screenshot"
         class="m-8 max-h-96 rounded-lg"
         decoding="auto"
-        src="~assets/img/rowcounter-web-screenshot2.png"
+        src="/img/rowcounter_web.png"
       />
     </nuxt-link>
 
@@ -68,9 +68,9 @@
         Apple Watch App
       </h2>
       <img
-        alt="ArisaMakes Row Counter App Screenshot of Counter and Repeat Linked Counter"
-        title="ArisaMakes Row Counter App Screenshot of Counter and Repeat Linked Counter"
-        src="/img/v2.0screenshot_counter_w_repeat.png"
+        alt="ArisaMakes Row Counter App Screenshot"
+        title="ArisaMakes Row Counter App Screenshot"
+        src="/img/v2.5crochethank+pink.png"
         decoding="auto"
         loading="lazy"
         class="applewatch max-h-96 items-center"
@@ -88,7 +88,7 @@ useHead({
 <style>
 .applewatch {
   border-radius: 46px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   /* object-fit: cover; */
   /* max-width: 300px; */
 }
