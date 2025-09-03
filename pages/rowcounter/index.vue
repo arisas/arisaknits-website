@@ -44,7 +44,7 @@
         title="ArisaMakes Row Counter Web Version Screenshot"
         class="m-8 max-h-96 rounded-lg"
         decoding="auto"
-        src="~assets/img/rowcounter-web-screenshot2.png"
+        src="/img/rowcounter_web.png"
       />
     </nuxt-link>
 
@@ -70,7 +70,7 @@
       <img
         alt="ArisaMakes Row Counter App Screenshot"
         title="ArisaMakes Row Counter App Screenshot"
-        src="/img/v2.5sweater+blue.png"
+        src="/img/v2.5crochethank+pink.png"
         decoding="auto"
         loading="lazy"
         class="applewatch max-h-96 items-center"
