@@ -1,11 +1,32 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-
+import { defineConfig, fontProviders } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
-  }
+  },
+  
+  fonts: [{
+    provider: fontProviders.fontsource(),
+    name: "Lato",
+    cssVariable: "--font-lato",
+      },
+
+      {
+    provider: fontProviders.fontsource(),
+    name: "Itim",
+    cssVariable: "--font-itim",
+      },
+
+      {
+    provider: fontProviders.fontsource(),
+    name: "Playpen Sans Thai",
+    cssVariable: "--font-playpen-sans-thai",
+      },
+    ]
+
 });
+
+

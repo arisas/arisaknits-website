@@ -23,6 +23,7 @@
     "tailwindcss": "^4.3.0"
   },
   "dependencies": {
+    "@fontsource/lato": "^5.2.7",
     "@headlessui/vue": "^1.7.23",
     "@heroicons/vue": "^2.2.0",
     "@nuxt/image": "^1.11.0",
