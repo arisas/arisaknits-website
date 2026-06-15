@@ -2,7 +2,7 @@
 ---
 import "../styles/global.css";
 import { Font } from "astro:assets";
-const { title } = Astro.props;
+const { title, subtitle } = Astro.props;
 ---
 
 <!doctype html>
@@ -17,10 +17,11 @@ const { title } = Astro.props;
 		<title>ArisaMakes</title>
 
 	</head>
-	<body>
-		<h1 class="mt-20 mb-3 text-center text-6xl lowercase font-(family-name:--font-lato) font-bold">{title}</h1>
-		<div>
-		<p class="text-center text-3xl font-(family-name:--font-itim)">อริซ่า รวิวรรณ</p>
+	<body class="font-(family-name:--font-lato)">
+		<h1 class="mt-20 mb-3 text-center text-6xl lowercase font-bold">{title}</h1>
+		
+		<div class="text-center text-3xl font-(family-name:--font-itim">
+		<p>{subtitle}</p>
 		</div>
 
 		<slot />
@@ -151,7 +152,22 @@ const { title } = Astro.props;
               />
             </svg>
 
+			</a>
+
+
+
 	 </div>
+
+	 <div class="m-5 text-center text-gray-400">			
+		
+		<p>© 2026       
+				<a 
+      href="https://baanburisa.com/"
+      class=" hover:text-gray-500 underline decoration-amber-300 decoration-2 underline-offset-2 hover:decoration-pink-500"
+      >
+      Burisa LLC
+    </a>. All rights reserved.</p>
+	</div>
 
 	</div>
 	</div>

@@ -1,28 +1,54 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import ArisaMakesLogo from "../assets/icon_234.png";
+import RowCounterWatch from "../assets/v2.5crochethank+pink.png";
+import ArisaProfile from "../assets/2025-1080w.jpg";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="arisamakes">
+<Layout title="arisamakes" subtitle="อริซ่า รวิวรรณ">
 		
-		<div class="text-center text-2xl">
+		<div class="my-8 text-center text-2xl m-auto px-5 md:max-w-md">
 		<p>
-		<div class="underline decoration-sky-500 underline-offset-4">
+		        <img
+          alt="ArisaMakes Row Counter App Icon of Skeins and a Cake of Yarn"
+          title="ArisaMakes Row Counter App Icon of Skeins and a Cake of Yarn"
+          class="relative mt-5 mx-auto max-h-25 rounded-full object-cover"
+          decoding="auto"
+          src={ArisaMakesLogo.src}
+          loading="lazy"
+        />
+
+		<div class="mt-5 underline decoration-3 decoration-sky-500 underline-offset-2">
 			<a 
 			href="/rowcounter"
 			class="hover:decoration-amber-300" 
 			title="ArisaMakes Row Counter App"
 			>
-			I made a row counter app!</a>
+			I made a row counter app!
+		
+			<img
+          alt="ArisaMakes Apple Watch Row Counter Screenshot"
+          title="ArisaMakes Apple Watch Row Counter Screenshot"
+          class="mt-5 mx-auto max-h-70 rounded-[5vw] object-cover"
+          decoding="auto"
+          src={RowCounterWatch.src}
+          loading="lazy"
+        />
+	
+	</a>
+
+			
+
 		</div>
 
-		<div class="underline decoration-teal-400 underline-offset-4">
+		<div class="mt-5 underline decoration-3 decoration-teal-400 underline-offset-2">
 			<a 
 			href="/bipocmonthly"
-			class="hover:decoration-pink-500" 
+			class="mt-5 hover:decoration-pink-500" 
 			title="ArisaMakes Row Counter App"
 			>
 			I host monthly craft nights for people of color!</a>
@@ -32,7 +58,51 @@ import Layout from '../layouts/Layout.astro';
 		</p>
 		</div>	
 
-    <p>
-      Hi I'm Arisa!
-    </p>
+<div class="pb-4 pt-4 text-xl bg-mauve-50">
+    <h2 class="text-center text-3xl font-bold">
+		Hi! I'm Arisa!
+	</h2>
+  <div class="flex flex-col justify-center">
+	<div class="text-center m-auto px-5 md:max-w-md py-5">
+	<p>she/her</p>
+
+	<p>
+	I like to knit, crochet, weave, and sew (sometimes), and I also make software! I have 12 years of experience in video games previously working at 
+	
+	<a 
+	href="https://panic.com/"
+	class="italic hover:underline decoration-2 underline-offset-2 hover:decoration-indigo-700"
+	>
+	Panic 
+	</a>
+
+	and 
+
+	<a 
+	href="https://www.valvesoftware.com/en/about"
+	class="italic hover:underline decoration-2 underline-offset-2 hover:decoration-red-600"
+	>Valve</a>.
+	</p>
+
+	<p class="my-3">
+	I quit my job in June 2026 to allow myself to explore my dreams around fiber arts by building apps for my crafts, a third place community, and learning more about Thai and Lao textiles!
+	</p>
+
+	<p>
+	I'm Thai American currently living in the Seattle area.
+	</p>
+			<img
+          alt="ArisaMakes Apple Watch Row Counter Screenshot"
+          title="ArisaMakes Apple Watch Row Counter Screenshot"
+          class="mt-5 mx-auto max-h-96 rounded-xl object-cover"
+          decoding="auto"
+          src={ArisaProfile.src}
+          loading="lazy"
+        />
+
+	</div>
+	</div>
+</div>
+
+
 </Layout>

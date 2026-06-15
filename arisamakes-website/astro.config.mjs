@@ -25,6 +25,12 @@ export default defineConfig({
     name: "Playpen Sans Thai",
     cssVariable: "--font-playpen-sans-thai",
       },
+
+      {
+    provider: fontProviders.fontsource(),
+    name: "Caveat",
+    cssVariable: "--font-caveat",
+      }
     ]
 
 });

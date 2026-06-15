@@ -12,6 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource-variable/caveat": "^5.2.8",
     "@fontsource-variable/playpen-sans-thai": "^5.2.4",
     "@fontsource/itim": "^5.2.7",
     "@fontsource/lato": "^5.2.7",
