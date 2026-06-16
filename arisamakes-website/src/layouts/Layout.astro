@@ -9,6 +9,7 @@ const { title, subtitle } = Astro.props;
 <html lang="en">
 	<head>
 		<Font cssVariable="--font-lato" />
+		<Font cssVariable="--font-itim" />
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -20,8 +21,8 @@ const { title, subtitle } = Astro.props;
 	<body class="font-(family-name:--font-lato)">
 		<h1 class="mt-20 mb-3 text-center text-6xl lowercase font-bold">{title}</h1>
 		
-		<div class="text-center text-3xl font-(family-name:--font-itim">
-		<p>{subtitle}</p>
+		<div class="text-center text-3xl">
+		<p class="font-(family-name:--font-itim)">{subtitle}</p>
 		</div>
 
 		<slot />
