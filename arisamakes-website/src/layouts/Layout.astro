@@ -3,6 +3,7 @@
 import "../styles/global.css";
 import { Font } from "astro:assets";
 const { title, subtitle } = Astro.props;
+import ArisaMakesLogo from "../assets/arisamakeslogo.svg";
 ---
 
 <!doctype html>
@@ -12,14 +13,26 @@ const { title, subtitle } = Astro.props;
 		<Font cssVariable="--font-lxgw-marker-gothic" />
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/A-magenta-dandelion-favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>ArisaMakes</title>
 
 	</head>
 	<body class="font-(family-name:--font-lxgw-marker-gothic)">
-		<h1 class="mt-20 mb-3 text-center text-6xl lowercase font-bold">{title}</h1>
+		
+		<a 
+			href="/"
+			title="ArisaMakes - Home"
+			>
+		<img
+          alt="ArisaMakes Logo"
+          title="ArisaMakes Logo"
+          class="my-8 mx-auto max-h-80 rounded-xl object-cover hover:shadow-md shadow-pink-500"
+          decoding="auto"
+          src={ArisaMakesLogo.src}
+          loading="lazy"
+        />
+		</a>
 		
 		<div class="text-center text-3xl">
 		<p class="font-(family-name:--font-itim)">{subtitle}</p>
@@ -164,10 +177,17 @@ const { title, subtitle } = Astro.props;
 		<p>© 2026       
 				<a 
       href="https://baanburisa.com/"
-      class=" hover:text-gray-500 underline decoration-amber-300 decoration-2 underline-offset-2 hover:decoration-pink-500"
-      >
-      Burisa LLC
+      class=" hover:text-gray-500 underline decoration-purple-500 decoration-2 underline-offset-2 hover:decoration-pink-500"
+      > Burisa LLC
     </a>. All rights reserved.</p>
+
+	<p class="my-2">
+		branding design by <a 
+      href="https://www.careeningsupport.com/"
+      class=" hover:text-gray-500 underline decoration-amber-300 decoration-2 underline-offset-2 hover:decoration-rose-500"
+      > careening support
+    </a>.
+	</p>
 	</div>
 
 	</div>

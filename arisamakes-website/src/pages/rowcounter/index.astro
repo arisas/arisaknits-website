@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import ArisaMakesLogo from "../../assets/icon_234.png";
 import RowCounterWatch from "../../assets/v2.5crochethank+pink.png";
+import RowCounterWeb from "../../assets/rowcounter_web.png";
 ---
 
 <Layout title="arisamakes">
@@ -29,7 +30,7 @@ import RowCounterWatch from "../../assets/v2.5crochethank+pink.png";
 		<div class="text-2xl mt-5 underline decoration-3 decoration-sky-500 underline-offset-2">
 		<a 
 			href="/rowcounter/watchos"
-			class="hover:decoration-amber-300" 
+			class="hover:decoration-amber-300 font-semibold" 
 			title="ArisaMakes Row Counter - Apple Watch"
 			>
 			Apple Watch App
@@ -37,7 +38,7 @@ import RowCounterWatch from "../../assets/v2.5crochethank+pink.png";
 		<img
           alt="ArisaMakes Apple Watch Row Counter Screenshot"
           title="ArisaMakes Apple Watch Row Counter Screenshot"
-          class="mt-5 mx-auto max-h-70 rounded-[5vw] object-cover"
+          class="mt-5 mx-auto max-h-70 rounded-[5vw] object-cover shadow-lg"
           decoding="auto"
           src={RowCounterWatch.src}
           loading="lazy"
@@ -51,11 +52,23 @@ import RowCounterWatch from "../../assets/v2.5crochethank+pink.png";
 	
 			<a 
 			href="/rowcounter/web"
-			class="hover:decoration-amber-300" 
+			class="hover:decoration-amber-300 font-semibold" 
 			title="ArisaMakes Row Counter - Web"
 			>
-			Web (free)
+			<p>(UNDER CONSTRUCTION)</p>
+			<p>Web - Free!</p>
+		
+		<img
+          alt="ArisaMakes Apple Watch Row Counter Screenshot"
+          title="ArisaMakes Apple Watch Row Counter Screenshot"
+          class="mt-5 mx-auto max-h-70 rounded-2xl object-cover shadow-lg"
+          decoding="auto"
+          src={RowCounterWeb.src}
+          loading="lazy"
+        />
 			</a>
+
+
 
     </div>			
 
@@ -69,8 +82,7 @@ import RowCounterWatch from "../../assets/v2.5crochethank+pink.png";
       <a 
         href="mailto:support@arisamakes.com"
         class="underline decoration-slate-300 decoration-2 underline-offset-2 hover:decoration-teal-400"
-        >
-        support@arisamakes.com
+        > support@arisamakes.com
         </a>!</p>
 	</div>
 

@@ -37,7 +37,11 @@ export default defineConfig({
     name: "LXGW Marker Gothic",
     cssVariable: "--font-lxgw-marker-gothic",
       }
-    ]
+    ],
+
+  @theme {
+
+  }
 
 });
 
