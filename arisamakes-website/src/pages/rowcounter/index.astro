@@ -1,23 +1,77 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-
+import ArisaMakesLogo from "../../assets/icon_234.png";
+import RowCounterWatch from "../../assets/v2.5crochethank+pink.png";
 ---
 
 <Layout title="arisamakes">
-			<a 
-			href="/rowcounter/web"
-			class="text-base leading-6 text-gray-500 hover:text-gray-900" 
-			title="ArisaMakes Row Counter - Web"
-			>
-			ROW COUNTER WEB
-			</a>
+	<div class="m-4 text-center">
+	    <h1 class="mt-7 text-3xl font-extrabold md:m-9">
+      🧶 ArisaMakes Row Counter
+    	</h1>
 
-            			<a 
+		<img
+          alt="ArisaMakes Row Counter App Icon of Skeins and a Cake of Yarn"
+          title="ArisaMakes Row Counter App Icon of Skeins and a Cake of Yarn"
+          class="relative mt-2 mx-auto max-h-25 rounded-full object-cover"
+          decoding="auto"
+          src={ArisaMakesLogo.src}
+          loading="lazy"
+        />
+
+		
+
+	</div>
+
+	<div class="text-center m-auto px-5 md:max-w-md py-5">
+		<p class="text-xl">Use this simple row counter while you're crocheting or knitting!</p>
+		
+		<div class="text-2xl mt-5 underline decoration-3 decoration-sky-500 underline-offset-2">
+		<a 
 			href="/rowcounter/watchos"
-			class="text-base leading-6 text-gray-500 hover:text-gray-900" 
+			class="hover:decoration-amber-300" 
 			title="ArisaMakes Row Counter - Apple Watch"
 			>
-			ROW COUNTER Apple Watch
+			Apple Watch App
+			
+		<img
+          alt="ArisaMakes Apple Watch Row Counter Screenshot"
+          title="ArisaMakes Apple Watch Row Counter Screenshot"
+          class="mt-5 mx-auto max-h-70 rounded-[5vw] object-cover"
+          decoding="auto"
+          src={RowCounterWatch.src}
+          loading="lazy"
+        />
+
+		</a>
+		</div>
+	</div>
+
+<div class="text-2xl text-center mt-5 underline decoration-3 decoration-sky-500 underline-offset-2">
+	
+			<a 
+			href="/rowcounter/web"
+			class="hover:decoration-amber-300" 
+			title="ArisaMakes Row Counter - Web"
+			>
+			Web (free)
 			</a>
+
+    </div>			
+
+	<div class="text-xl text-center m-auto px-5 md:max-w-md py-5">
+	<p>
+      Thanks for trying out my app! I'm actively updating and love to hear from
+      you on how I can make it better. 
+    </p>
+	<p class="m-4">If there are features
+      you'd like or improvements, let me know by emailing me at
+      <a 
+        href="mailto:support@arisamakes.com"
+        class="underline decoration-slate-300 decoration-2 underline-offset-2 hover:decoration-teal-400"
+        >
+        support@arisamakes.com
+        </a>!</p>
+	</div>
 
 </Layout>

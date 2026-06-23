@@ -16,8 +16,9 @@
     "@fontsource-variable/playpen-sans-thai": "^5.2.4",
     "@fontsource/itim": "^5.2.7",
     "@fontsource/lato": "^5.2.7",
+    "@fontsource/lxgw-marker-gothic": "^5.2.3",
     "@tailwindcss/vite": "^4.3.0",
-    "astro": "^6.4.5",
+    "astro": "^7.0.0",
     "tailwindcss": "^4.3.0"
   }
 }

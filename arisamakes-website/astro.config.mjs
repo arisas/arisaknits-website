@@ -30,6 +30,12 @@ export default defineConfig({
     provider: fontProviders.fontsource(),
     name: "Caveat",
     cssVariable: "--font-caveat",
+      },
+
+      {
+    provider: fontProviders.fontsource(),
+    name: "LXGW Marker Gothic",
+    cssVariable: "--font-lxgw-marker-gothic",
       }
     ]
 
