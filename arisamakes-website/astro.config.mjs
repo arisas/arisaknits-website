@@ -39,10 +39,6 @@ export default defineConfig({
       }
     ],
 
-  @theme {
-
-  }
-
 });
 
 
