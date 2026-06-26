@@ -6,8 +6,8 @@ import RowCounterWeb from "../../assets/rowcounter_web.png";
 ---
 
 <Layout title="arisamakes">
-     <div class="pb-4 pt-2 text-xl bg-gray-50">
-	<div class="m-4 text-center">
+     <div class="pb-4 pt-2 text-2xl bg-gray-50">
+	<div class="m-4 text-center m-auto px-5 md:max-w-md">
 	    <h1 class="mt-7 text-3xl font-extrabold md:m-9">
       🧶 ArisaMakes Row Counter
     	</h1>
@@ -15,11 +15,15 @@ import RowCounterWeb from "../../assets/rowcounter_web.png";
 		<img
           alt="ArisaMakes Row Counter App Icon of Skeins and a Cake of Yarn"
           title="ArisaMakes Row Counter App Icon of Skeins and a Cake of Yarn"
-          class="relative mt-2 mx-auto max-h-25 rounded-full object-cover"
+          class="relative mt-2 mx-auto max-h-25 rounded-full object-cover mb-3"
           decoding="auto"
           src={ArisaMakesLogo.src}
           loading="lazy"
         />
+
+
+
+
 
 		
 
@@ -27,6 +31,20 @@ import RowCounterWeb from "../../assets/rowcounter_web.png";
 
 	<div class="text-center m-auto px-5 md:max-w-md py-5">
 		<p class="text-xl">Use this simple row counter while you're crocheting or knitting!</p>
+
+    			<div class="bg-(--color-blush) rounded-lg mt-2 p-3">
+			
+			<p>Email <a 
+        href="mailto:support@arisamakes.com"
+        class="underline decoration-(--color-dark-teal) underline-offset-2 hover:decoration-(--color-sky-blue)"
+        >
+        support@arisamakes.com
+        </a> if you have an Apple Watch and want to help test <a 
+		href="/rowcounter/watchos/#update"
+		class="underline underline-offset-2 decoration-(--color-magenta) hover:decoration-(--color-dandelion)"
+		>update 3.0</a>!</p>
+
+		</div>
 		
 		<div class="text-2xl mt-5 underline decoration-3 decoration-(--color-blush) underline-offset-2">
 		<a 
@@ -81,7 +99,7 @@ import RowCounterWeb from "../../assets/rowcounter_web.png";
 	<p class="m-4">If there are features
       you'd like or improvements, let me know by emailing me at <a 
         href="mailto:support@arisamakes.com"
-        class="underline decoration-(--color-dark-gray) decoration-2 underline-offset-2 hover:decoration-(--color-sky-blue)"
+        class="underline decoration-(--color-gray-brand) decoration-2 underline-offset-2 hover:decoration-(--color-sky-blue)"
         >support@arisamakes.com
         </a>!</p>
 	</div>
