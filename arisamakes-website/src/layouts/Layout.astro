@@ -3,7 +3,7 @@
 import "../styles/global.css";
 import { Font } from "astro:assets";
 const { title, subtitle } = Astro.props;
-import ArisaMakesLogo from "../assets/arisamakeslogo.svg";
+import ArisaMakesLogo from "../assets/arisamakeslogo-white.svg";
 ---
 
 <!doctype html>
@@ -20,6 +20,7 @@ import ArisaMakesLogo from "../assets/arisamakeslogo.svg";
 	</head>
 	<body class="font-(family-name:--font-lxgw-marker-gothic)">
 		
+		<div class="bg-(--color-magenta) py-15">
 		<a 
 			href="/"
 			title="ArisaMakes - Home"
@@ -27,12 +28,13 @@ import ArisaMakesLogo from "../assets/arisamakeslogo.svg";
 		<img
           alt="ArisaMakes Logo"
           title="ArisaMakes Logo"
-          class="my-8 mx-auto max-h-80 rounded-xl object-cover"
+          class="mx-auto max-h-80 rounded-xl object-cover bg-(--color-magenta)"
           decoding="auto"
           src={ArisaMakesLogo.src}
           loading="lazy"
         />
 		</a>
+		</div>
 		
 		<!-- <div class="text-center text-3xl">
 		<p class="font-(family-name:--font-itim)">{subtitle}</p>
@@ -62,7 +64,7 @@ import ArisaMakesLogo from "../assets/arisamakeslogo.svg";
 			<a 
 			href="/rowcounter"
 			class="leading-6 text-gray-500 hover:text-gray-900 hover:decoration-(--color-magenta) hover:underline hover:underline-offset-2" 
-			title="ArisaMakes Row Counter App"
+			title="ArisaMakes - Row Counter App"
 			>
 			Row Counter
 			</a>
@@ -70,9 +72,19 @@ import ArisaMakesLogo from "../assets/arisamakeslogo.svg";
 
 			<div class="px-3 py-2">
 			<a 
+			href="/blog"
+			class="leading-6 text-gray-300 hover:text-gray-400 hover:decoration-(--color-magenta)/10 hover:underline hover:underline-offset-2" 
+			title="ArisaMakes - Blog"
+			>
+			Blog
+			</a>
+			</div>
+
+			<div class="px-3 py-2">
+			<a 
 			href="/patterns/tgyhcrochetdoll"
 			class="leading-6 text-gray-500 hover:text-gray-900 hover:decoration-(--color-dandelion) hover:underline hover:underline-offset-2" 
-			title="Thank Goodness You're Here Crochet Doll Pattern"
+			title="ArisaMakes - Thank Goodness You're Here Crochet Doll Pattern"
 			>
 			Pattern
 			</a>
