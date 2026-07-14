@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TGYHDoll from '../../assets/tgyhcrochetdollphoto.jpeg';
+---
+
+<Layout title="TGYH Crochet Pattern">
+
+  <div class="bg-gray-50 my-10 pb-0 pt-3 sm:py-16 pl-8 lg:px-[300px] lg:py-10">
+    <h1 class="text-center text-4xl font-extrabold">Pattern</h1>
+    <p class="mt-8 text-3xl font-semibold">
+      Thank Goodness You're Here Crochet Doll
+    </p>
+
+    <img
+      alt="Thank Goodness You're Here Crochet Doll Photo"
+      title="Thank Goodness You're Here Crochet Doll Photo"
+      class="mt-8 max-h-80 md:max-h-100 object-cover"
+      decoding="auto"
+      src={TGYHDoll.src}
+      loading="lazy"
+    />
+
+
+    <h2 class="mt-8 text-2xl font-bold text-gray-800">Supplies Needed:</h2>
+
+    <ul class="mt-2 list-none text-xl text-gray-600">
+      <li>Crochet hook: 2.75mm</li>
+      <li>Darning Needle</li>
+      <li>Stuffing</li>
+      <li>DK/Worsted weight yarn in:</li>
+    </ul>
+
+
+    <ul class="mt-2 list-inside list-disc text-xl text-gray-600">
+      <li>The Farmer's Daughter Fibers Pishkun in flower point (orange)</li>
+      <li>Mitchell Wool Co. American Fiber DK yarn dandelion (yellow)</li>
+      <li>HiKoo Sueno in Robin’s Egg (turquoise/aqua)</li>
+      <li>Sandnes Garn Double Sunday in 1002 (white)</li>
+      <li>Sandnes Garn Double Sunday in 5846 (blue)</li>
+      <li>Sandnes Garn Double Sunday in 4236 (red)</li>
+      <li>Blue Sky Fibers Woolstok Worsted in Midnight Seas (dark blue)</li>
+    </ul>
+
+    <div class="mt-8">
+        <a
+      class="text-lg p-2 touch-manipulation rounded-lg bg-(--color-dark-teal) font-medium text-white hover:bg-teal-900 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-500"
+     href="/tgyhcrochetdollpattern-v1.1.pdf"
+     download="tgyhcrochetdollpattern-v1.1.pdf"
+     target="_blank"
+    >
+      Download Pattern
+    </a>
+    </div>
+
+</div>
+
+</Layout>

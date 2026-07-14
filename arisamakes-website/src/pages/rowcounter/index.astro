@@ -1,0 +1,113 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArisaMakesLogo from "../../assets/icon_234.png";
+import RowCounterWatch from "../../assets/v2.5crochethank+pink.png";
+import RowCounterWeb from "../../assets/rowcounter_web.png";
+
+---
+
+<Layout title="Row Counter">
+
+<div class="bg-gray-50">
+	<div class="text-center m-auto px-5 flex md:max-w-lg py-8">
+		<img
+          alt="ArisaMakes Row Counter App Icon of Skeins and a Cake of Yarn"
+          title="ArisaMakes Row Counter App Icon of Skeins and a Cake of Yarn"
+          class="relative mt-2 mx-auto max-h-25 rounded-full object-cover mb-3"
+          decoding="auto"
+          src={ArisaMakesLogo.src}
+          loading="lazy"
+        />
+
+	    <h1 class="text-4xl font-extrabold text-center my-5 md:mx-15 whitespace-pre-line">
+        ArisaMakes
+        Row Counter
+    	</h1>
+		
+
+	</div>
+
+
+
+  <div class="pb-4 pt-8 text-2xl">
+	<div class="text-center m-auto md:max-w-md">
+		<p>Use this simple row counter while you're crocheting or knitting!</p>
+
+  <div class="bg-(--color-blush)/50 rounded-lg mt-10 p-3">
+			
+			<p>Email <a 
+        href="mailto:support@arisamakes.com"
+        class="underline decoration-(--color-dark-teal) underline-offset-2 hover:decoration-(--color-sky-blue)"
+        >
+        support@arisamakes.com
+        </a> if you have an Apple Watch and want to help test <a 
+		href="/rowcounter/watchos/#update"
+		class="underline underline-offset-2 decoration-(--color-magenta) hover:decoration-(--color-dandelion)"
+		>update 3.0</a>!</p>
+
+		</div>
+		
+		<div class="text-2xl mt-5 underline decoration-3 decoration-(--color-blush) underline-offset-2">
+		<a 
+			href="/rowcounter/watchos"
+			class="hover:decoration-(--color-dark-teal) font-semibold text-gray-800 hover:text-black" 
+			title="ArisaMakes Row Counter - Apple Watch"
+			>
+			Apple Watch App
+			
+		<img
+          alt="ArisaMakes Apple Watch Row Counter Screenshot"
+          title="ArisaMakes Apple Watch Row Counter Screenshot"
+          class="mt-5 mx-auto max-h-50 md:max-h-70 rounded-[9vw] md:rounded-[3vw] object-cover shadow-lg"
+          decoding="auto"
+          src={RowCounterWatch.src}
+          loading="lazy"
+        />
+
+		</a>
+		</div>
+	</div>
+
+<div class="text-2xl text-center mt-5 underline decoration-3 decoration-(--color-sky-blue) underline-offset-2">
+	
+			<a 
+			href="/rowcounter/web"
+			class="hover:decoration-(--color-dandelion) font-semibold text-gray-800 hover:text-black" 
+			title="ArisaMakes Row Counter - Web"
+			>
+			<p>(UNDER CONSTRUCTION)</p>
+			<p>Web - Free!</p>
+		
+		<img
+          alt="ArisaMakes Apple Watch Row Counter Screenshot"
+          title="ArisaMakes Apple Watch Row Counter Screenshot"
+          class="mt-5 mx-auto max-h-70 rounded-2xl object-cover shadow-lg"
+          decoding="auto"
+          src={RowCounterWeb.src}
+          loading="lazy"
+        />
+			</a>
+
+
+
+    </div>			
+
+	<div class="text-xl text-center m-auto px-5 md:max-w-md py-5">
+
+     <div class="bg-(--color-dandelion)/15 rounded-lg mt-10 p-3">
+	<p>
+      Thanks for trying out my app! I'm actively updating and love to hear from
+      you on how I can make it better. 
+    </p>
+	<p class="m-4">If there are features
+      you'd like or improvements, let me know by emailing me at <a 
+        href="mailto:support@arisamakes.com"
+        class="underline decoration-(--color-gray-brand) decoration-2 underline-offset-2 hover:decoration-(--color-sky-blue)"
+        >support@arisamakes.com
+        </a>!</p>
+	</div>
+  </div>
+</div>
+
+</div>
+</Layout>
