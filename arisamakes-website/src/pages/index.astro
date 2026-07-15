@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import RowCounterWatch from "../assets/v2.5crochethank+pink.png";
 import ArisaProfile from "../assets/2025-1080w.jpg";
+import WatchCakeDarkTeal from "../assets/3.0cake+darkteal.png";
 ---
 
 <Layout title="Home">
@@ -19,14 +19,14 @@ import ArisaProfile from "../assets/2025-1080w.jpg";
 			>
 			I made a row counter app!
 
-			<img
+    		<img
           alt="ArisaMakes Apple Watch Row Counter Screenshot"
           title="ArisaMakes Apple Watch Row Counter Screenshot"
-          class="mt-5 mx-auto max-h-50 md:max-h-70 rounded-[9vw] md:rounded-[3vw] object-cover"
+          class="mt-5 mx-auto max-h-70 rounded-[8vw] lg:rounded-[2vw] object-cover shadow-lg"
           decoding="auto"
-          src={RowCounterWatch.src}
+          src={WatchCakeDarkTeal.src}
           loading="lazy"
-        	/>
+        />
 
 	
 			</a>
@@ -34,15 +34,10 @@ import ArisaProfile from "../assets/2025-1080w.jpg";
 
 		<div class="bg-(--color-blush)/50 rounded-lg my-9 p-3">
 			
-			<p>Email <a 
-        href="mailto:support@arisamakes.com"
-        class="underline decoration-(--color-dark-teal) underline-offset-2 hover:decoration-(--color-sky-blue)"
-        >
-        support@arisamakes.com
-        </a> if you have an Apple Watch and want to help test <a 
-		href="/rowcounter/watchos/#update"
+			<p><a 
+		href="/rowcounter/watchos/"
 		class="underline underline-offset-2 decoration-(--color-magenta) hover:decoration-(--color-dandelion)"
-		>update 3.0</a>!</p>
+		>Update 3.0</a> for the Apple Watch is now available!</p>
 
 		</div>
 

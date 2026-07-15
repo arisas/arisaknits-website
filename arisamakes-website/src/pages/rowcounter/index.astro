@@ -1,9 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ArisaMakesLogo from "../../assets/icon_234.png";
-import RowCounterWatch from "../../assets/v2.5crochethank+pink.png";
 import RowCounterWeb from "../../assets/rowcounter_web.png";
-
+import WatchCakeDarkTeal from "../../assets/3.0cake+darkteal.png";
 ---
 
 <Layout title="Row Counter">
@@ -33,17 +32,12 @@ import RowCounterWeb from "../../assets/rowcounter_web.png";
 	<div class="text-center m-auto md:max-w-md">
 		<p>Use this simple row counter while you're crocheting or knitting!</p>
 
-  <div class="bg-(--color-blush)/50 rounded-lg mt-10 p-3">
+		<div class="bg-(--color-blush)/50 rounded-lg my-9 p-3">
 			
-			<p>Email <a 
-        href="mailto:support@arisamakes.com"
-        class="underline decoration-(--color-dark-teal) underline-offset-2 hover:decoration-(--color-sky-blue)"
-        >
-        support@arisamakes.com
-        </a> if you have an Apple Watch and want to help test <a 
-		href="/rowcounter/watchos/#update"
+			<p><a 
+		href="/rowcounter/watchos/"
 		class="underline underline-offset-2 decoration-(--color-magenta) hover:decoration-(--color-dandelion)"
-		>update 3.0</a>!</p>
+		>Update 3.0</a> for the Apple Watch is now available!</p>
 
 		</div>
 		
@@ -55,12 +49,12 @@ import RowCounterWeb from "../../assets/rowcounter_web.png";
 			>
 			Apple Watch App
 			
-		<img
+    		<img
           alt="ArisaMakes Apple Watch Row Counter Screenshot"
           title="ArisaMakes Apple Watch Row Counter Screenshot"
-          class="mt-5 mx-auto max-h-50 md:max-h-70 rounded-[9vw] md:rounded-[3vw] object-cover shadow-lg"
+          class="mt-5 mx-auto max-h-70 rounded-[8vw] lg:rounded-[2vw] object-cover shadow-lg"
           decoding="auto"
-          src={RowCounterWatch.src}
+          src={WatchCakeDarkTeal.src}
           loading="lazy"
         />
 
