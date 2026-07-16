@@ -5,5 +5,8 @@
   "workbench.editor.customLabels.patterns": {
     "**/index.vue": "${dirname} (${filename})",
     "**/[[]*.vue": "${dirname}/${filename}"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
   }
 }
