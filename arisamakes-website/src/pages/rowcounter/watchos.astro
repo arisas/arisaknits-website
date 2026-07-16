@@ -1,10 +1,11 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ArisaMakesLogo from "../../assets/icon_234.png";
-import WatchScreenshotMittens from "../../assets/v2.5mittens+black.png";
-import WatchScreenshotKnitSettings from "../../assets/v2.5knithank+pinksettings.png";
-import WatchScreenshotCakeSettings from "../../assets/v2.5cake+bluesettings.png";
-
+import WatchCakeDarkTeal from "../../assets/3.0cake+darkteal.png";
+import WatchRowCounterList from "../../assets/3.0rowcounterlist.png";
+import WatchCrochetHankPinkSetting from "../../assets/3.0crochethank+pinksettings.png";
+import WatchCrochetHankPinkDetail from "../../assets/3.0crochethank+pinkdetail.png";
+import WatchSweaterDarktealIconSetting from "../../assets/3.0sweater+darkteal+iconsetting.png";
 ---
 
 <Layout title="Apple Watch Row Counter">
@@ -38,20 +39,9 @@ import WatchScreenshotCakeSettings from "../../assets/v2.5cake+bluesettings.png"
         style="border-radius: 13px; width: 250px; height: 83px"
     /></a>
 
-    			<div class="bg-(--color-blush)/50 text-xl rounded-lg p-1"  id="update"> <p>Email <a 
-        href="mailto:support@arisamakes.com"
-        class="underline decoration-(--color-dark-teal) decoration-2 underline-offset-2 hover:decoration-(--color-sky-blue)"
-        >
-        support@arisamakes.com
-        </a> to help test update 3.0! </p>
-      <p class="text-left pl-12 mt-2">
-      Includes:
-  <ul class="mt-1 text-left pl-15">
-    <li>- multiple row counters</li>
-    <li>- save history to review and select a previous saved increase </li>
-    <li>- two new background colors</li>
-  </ul>
-    </p>
+    <div class="bg-(--color-blush)/50 text-xl rounded-lg mx-25 px-4 py-3 text-center">
+			
+			<p class="pl-10 font-bold">Update 3.0 is now available!</p>
 
 </div>
 
@@ -67,40 +57,65 @@ import WatchScreenshotCakeSettings from "../../assets/v2.5cake+bluesettings.png"
     		<img
           alt="ArisaMakes Apple Watch Row Counter Screenshot"
           title="ArisaMakes Apple Watch Row Counter Screenshot"
-          class="mt-5 mx-auto max-h-70 rounded-[5vw] object-cover shadow-lg"
+          class="mt-5 mx-auto max-h-70 rounded-[8vw] lg:rounded-[2vw] object-cover shadow-lg"
           decoding="auto"
-          src={WatchScreenshotMittens.src}
+          src={WatchCakeDarkTeal.src}
           loading="lazy"
         />
 
 
 		<img
-          alt="ArisaMakes Apple Watch Row Counter Screenshot"
-          title="ArisaMakes Apple Watch Row Counter Screenshot"
-          class="mt-5 mx-auto max-h-70 rounded-[5vw] object-cover shadow-lg"
+          alt="ArisaMakes Apple Watch Row Counter Screenshot of Counter List"
+          title="ArisaMakes Apple Watch Row Counter Screenshot of Counter List"
+          class="mt-5 mx-auto max-h-70 rounded-[8vw] lg:rounded-[2vw]  object-cover shadow-lg"
           decoding="auto"
-          src={WatchScreenshotKnitSettings.src}
+          src={WatchRowCounterList.src}
           loading="lazy"
         />
 
         		<img
-          alt="ArisaMakes Apple Watch Row Counter Screenshot"
-          title="ArisaMakes Apple Watch Row Counter Screenshot"
-          class="mt-5 mx-auto max-h-70 rounded-[5vw] object-cover shadow-lg"
+          alt="ArisaMakes Apple Watch Row Counter Screenshot of Settings"
+          title="ArisaMakes Apple Watch Row Counter Screenshot of Settings"
+          class="mt-5 mx-auto max-h-70 rounded-[8vw] lg:rounded-[2vw]  object-cover shadow-lg"
           decoding="auto"
-          src={WatchScreenshotCakeSettings.src}
+          src={WatchCrochetHankPinkSetting.src}
+          loading="lazy"
+        />
+
+                		<img
+          alt="ArisaMakes Apple Watch Row Counter Screenshot of Details"
+          title="ArisaMakes Apple Watch Row Counter Screenshot of Details"
+          class="mt-5 mx-auto max-h-70 rounded-[8vw] lg:rounded-[2vw]  object-cover shadow-lg"
+          decoding="auto"
+          src={WatchCrochetHankPinkDetail.src}
+          loading="lazy"
+        />
+
+                		<img
+          alt="ArisaMakes Apple Watch Row Counter Screenshot of Icon Setting"
+          title="ArisaMakes Apple Watch Row Counter Screenshot of Icon Setting"
+          class="mt-5 mx-auto max-h-70 rounded-[8vw] lg:rounded-[2vw]  object-cover shadow-lg"
+          decoding="auto"
+          src={WatchSweaterDarktealIconSetting.src}
           loading="lazy"
         />
 </div>
 
+<div class="mx-10 mt-10 text-xl">
+<p class="py-4">
+A simple row counter right on your Apple Watch for your crochet and knit projects! 
+</p>
+<p>
+<strong>Features include:</strong>
+</p>
+<ul class="mt-4 ml-15 text-xl list-disc list-inside">
+<li><strong>Multiple Row Counters</strong>: Create up to 10 row counters to track multiple projects!</li>
+<li><strong>Track Row Repeats</strong>: Automatically reset the counter on a specific row to track repeats. Helpful for when following a repeating pattern!</li>
+<li><strong>Customizable Counter</strong>: Customize your row counter with 6 hand-drawn icons and 5 background colors.</li>
+<li><strong>Save History</strong>: Tracks every increase or decrease on the counter with the date and time. You can tap the entry to rollback to a previous save!</li>
+</ul>
 
-        <p class="mx-2 mt-10 text-xl">
-      A simple row counter right on your Apple Watch for your crochet and knit
-      projects! Use the reset row feature to automatically reset the counter and
-      track repeats-- helpful for when following a repeating pattern. Customize 
-      your row counter with 6 hand-drawn icons and 3 background colors.
-    </p>
-
+</div>
 
     </div>
 </div>
