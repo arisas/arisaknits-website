@@ -12,10 +12,10 @@ The whale isn't my best work, but still cute! The pattern is free BTW.
 
 Pattern: [Cube Ocean Friends: Whale, Dolphin and Shark](https://www.ravelry.com/patterns/library/cube-ocean-friends-whale-dolphin-and-shark) by [@craftybunnybun](https://www.instagram.com/craftybunnybun/)
 
-![Blue and white crocheted amigurumi whale](/img/img_6783.jpeg 'Cubed Amigurumi Whale Front View')
+![Blue and white crocheted amigurumi whale](../../assets/blog/img/img_6783.jpeg 'Cubed Amigurumi Whale Front View')
 
-![side view of blue and white crocheted amigurumi whale](/img/img_6784.jpeg 'Cubed Amigurumi Whale Side View')
+![side view of blue and white crocheted amigurumi whale](../../assets/blog/img/img_6784.jpeg 'Cubed Amigurumi Whale Side View')
 
 I didn't love sewing all the parts to the amigurumi fox. It was a bit hard to make it look good, so the fox isn't as cute as the pattern photo...
 
-![red, white, and black amigurumi fox](/img/img_6815.jpeg 'Amigurumi Fox')
+![red, white, and black amigurumi fox](../../assets/blog/img/img_6815.jpeg 'Amigurumi Fox')

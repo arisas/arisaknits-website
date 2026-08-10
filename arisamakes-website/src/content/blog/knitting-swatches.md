@@ -20,7 +20,7 @@ Well, I now have so many swatches for all the projects I've worked on, and I can
 
 **How does everyone store their extra yarn, swatches, etc.?**
 
-![Variety of yarn colors and knitted swatches](/img/img_6522.jpg 'Gauge swatch')
+![Variety of yarn colors and knitted swatches](../../assets/blog/img/img_6522.jpg 'Gauge swatch')
 
 Also, the needle size that I end up using for the project never seems to match the needle the pattern suggests! I guess my gauge is just bigger than the average. I wonder how many people actually knit with the exact same gauge as the pattern.
 
@@ -30,6 +30,6 @@ Below are the latest socks that I knitted for my cousin. It's the second time I'
 
 I'm trying hard to get through my yarn stash without buying new yarn, so **if you have any recommendations on patterns for La Bien Aimée's Super Sock yarn, DM me at [@arisaknits](https://www.instagram.com/arisaknits/)!**
 
-![Purple, gray, and white speckled socks with the cuffs, toes, and heel in gray](/img/83cfc6f3-d082-4c60-9a7f-5bdc32f38ab3_1_105_c.jpeg 'Purple, gray, and white speckled socks')
+![Purple, gray, and white speckled socks with the cuffs, toes, and heel in gray](../../assets/blog/img/83cfc6f3-d082-4c60-9a7f-5bdc32f38ab3_1_105_c.jpeg 'Purple, gray, and white speckled socks')
 
 Alright, that's all I had. See you all next week! And, thanks for reading.

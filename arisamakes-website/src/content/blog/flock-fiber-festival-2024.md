@@ -10,7 +10,7 @@ Flock was such a blast!
 
 I’ve been to many conventions in the past 20 years (wow, am I that old now?) – video games, comics, and anime conventions and this was my very first convention for fiber artists. I’ve seen so many conventions I’ve been going to for a while now grow into something so big that they start becoming soulless and even more filled with advertisements from big companies. I loved how small and intimate the community at Flock is. With how small it is, you can directly interact and get to know the makers of the yarn, patterns, etc. There’s an importance around community and quality of their products over the greed of wanting more money. For those of you con-goers, it’s like the whole festival is an Artist Alley.
 
-![Arisa with some yarn friends at Flock](/img/img_5541.jpeg 'Arisa with some yarn friends at Flock')
+![Arisa with some yarn friends at Flock](../../assets/blog/img/img_5541.jpeg 'Arisa with some yarn friends at Flock')
 
 I didn’t get to sign up for the classes in time as they sold out very quickly, but I did get to enjoy the panels/talks that were there. I’ll summarize the two panels I went to below!
 
@@ -42,6 +42,6 @@ Crocheting mini hexagons (I don't have a photo but I'll share more in a couple w
 
 Starting [Britt’s new Shore Pine Cowl ](https://www.knotbadbritt.com/patterns/p/shore-pine-cowl)for my trips to Europe later this year!
 
-![Crocheted Rodney from Thank Goodness You're Here ](/img/img_4556.jpeg "Crocheted Rodney from Thank Goodness You're Here")
+![Crocheted Rodney from Thank Goodness You're Here ](../../assets/blog/img/img_4556.jpeg "Crocheted Rodney from Thank Goodness You're Here")
 
-![Crocheted piece of the Shore Pine Cowl in a yellow bulky weight wool](/img/img_5594.jpeg 'Crocheted piece of the Shore Pine Cowl in a yellow bulky weight wool')
+![Crocheted piece of the Shore Pine Cowl in a yellow bulky weight wool](../../assets/blog/img/img_5594.jpeg 'Crocheted piece of the Shore Pine Cowl in a yellow bulky weight wool')

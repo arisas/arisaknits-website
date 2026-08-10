@@ -19,9 +19,9 @@ This update was the first time I wrote the code all by myself with minimal help.
 
 **T﻿ip: Apple Watches by default will close the app after 2 minutes. You can change this setting to 1 hour by going to Settings > General > scroll down to "Return to Clock" > select "After 1 hour"**
 
-![Screenshot of the Settings face on the Apple Watch app ArisaKnits Row Counter ](/img/v2.0screenshot_settings.png 'ArisaKnits Row Counter Apple Watch app - Settings face')
+![Screenshot of the Settings face on the Apple Watch app ArisaKnits Row Counter ](../../assets/blog/img/v2.0screenshot_settings.png 'ArisaKnits Row Counter Apple Watch app - Settings face')
 
-![Screenshot of the Row Counter face on the Apple Watch app ArisaKnits Row Counter ](/img/v2.0screenshot_counter_w_repeat.png 'ArisaKnits Row Counter Apple Watch app - Row Counter face')
+![Screenshot of the Row Counter face on the Apple Watch app ArisaKnits Row Counter ](../../assets/blog/img/v2.0screenshot_counter_w_repeat.png 'ArisaKnits Row Counter Apple Watch app - Row Counter face')
 
 ## A﻿risaKnits Row Counter Web App
 
@@ -31,14 +31,14 @@ S﻿ince the last time I blogged, I also made a[ web version of the row counter]
 
 I﻿'m working on the ability to add multiple counters! I'm starting with updating the [web version](https://www.arisaknits.com/rowcounter/web) of it to make it easier for my friends to help test and then I'll add the update over to my Apple Watch app once it's done!
 
-![Screenshot of my work-in-progress ability to create multiple counters on the web version of the ArisaKnits Row Counter](/img/image-6-16-24-at-9.33 pm.jpeg "ArisaKnits Row Counter web app - work-in-progress new counter button ")
+![Screenshot of my work-in-progress ability to create multiple counters on the web version of the ArisaKnits Row Counter](../../assets/blog/img/image-6-16-24-at-9.33 pm.jpeg "ArisaKnits Row Counter web app - work-in-progress new counter button ")
 
 ## C﻿urrent Work In Progress
 
 I﻿ started my second ever weaving project on my Ashford Knitters Loom (rigid heddle loom)! I'm hoping to make a pillow cover with it. We shall see what happens haha.
 
-![Photo of my current weaving project in dark gray and bright green stripes](/img/img_4589.jpeg 'Photo of my current weaving project in dark gray and bright green stripes')
+![Photo of my current weaving project in dark gray and bright green stripes](../../assets/blog/img/img_4589.jpeg 'Photo of my current weaving project in dark gray and bright green stripes')
 
 I﻿'m also working on my second pair of The Whimsical Sock Collective - Sock 2. I've been wanting to make these socks and it'll be a great pair for the fall.
 
-![Working on a pair of dark green socks ](/img/img_4600.jpeg 'The Whimsical Sock Collective - Sock 2 work in progress')
+![Working on a pair of dark green socks ](../../assets/blog/img/img_4600.jpeg 'The Whimsical Sock Collective - Sock 2 work in progress')

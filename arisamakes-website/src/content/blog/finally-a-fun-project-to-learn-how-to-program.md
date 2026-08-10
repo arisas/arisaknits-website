@@ -20,11 +20,11 @@ Burton spent a day getting row counter app on watchOS. What took forever to get 
 
 The app is pretty barebones right now with only a way to increase or decrease the number of rows.
 
-![Apple Watch screen of version 1 ArisaKnits Row Counter app with a minus and plus button to increase or decrease the number of rows ](/img/img_9823.jpeg 'V1 Apple Watch screen of ArisaKnits Row Counter app')
+![Apple Watch screen of version 1 ArisaKnits Row Counter app with a minus and plus button to increase or decrease the number of rows ](../../assets/blog/img/img_9823.jpeg 'V1 Apple Watch screen of ArisaKnits Row Counter app')
 
 I have so many ideas on version 2 of this app. It's difficult figuring out what features to include and how to fit it in the Apple Watch screen without it being so cluttered. I designed these screens on Figma-- I'm sure I'll be making lots of changes to it.
 
-![V2 ArisaKnits Row Counter app designed to include new features such as multiple projects, two counters, and repeating.](/img/screen-shot-2022-01-31-at-9.50.37-pm.png 'V2 ArisaKnits Row Counter app designed to include new features such as multiple projects, two counters, and repeating')
+![V2 ArisaKnits Row Counter app designed to include new features such as multiple projects, two counters, and repeating.](../../assets/blog/img/screen-shot-2022-01-31-at-9.50.37-pm.png 'V2 ArisaKnits Row Counter app designed to include new features such as multiple projects, two counters, and repeating')
 
 What apps or tools do you use to track your rows while knitting? What tools did you wish you had?
 
@@ -32,10 +32,10 @@ What apps or tools do you use to track your rows while knitting? What tools did 
 
 I'm working on the pattern Ito Yuu by Eri Shimizu. It's a cute sweater using Isager Silk Mohair and Farmers Daughter Squish Fingering in Desert Rose. I love the cable pattern and the color I chose for it. Mohair is so soft.
 
-![Work in progress sweater on needles with yellow mohair and pink wool fingering weight ](/img/img_9805.jpeg 'Sweater status')
+![Work in progress sweater on needles with yellow mohair and pink wool fingering weight ](../../assets/blog/img/img_9805.jpeg 'Sweater status')
 
-![Close up photo of the knit with yellow mohair and pink wool fingering yarn.](/img/img_9804.jpeg 'Close up photo of WIP sweater')
+![Close up photo of the knit with yellow mohair and pink wool fingering yarn.](../../assets/blog/img/img_9804.jpeg 'Close up photo of WIP sweater')
 
 A note: I've been using [Obisidian](https://obsidian.md/) to track all the yarn, gauge, and needle sizes for each project. It takes some time to get used to because there's so much you can customize, but once you get the hang of it, it's amazing. I highly recommend it!
 
-![Screenshot of my Obsidian notes tracking my yarn and pattern info](/img/screen-shot-2022-01-31-at-10.41.39-pm.png 'Screenshot of my notes on Obsidian')
+![Screenshot of my Obsidian notes tracking my yarn and pattern info](../../assets/blog/img/screen-shot-2022-01-31-at-10.41.39-pm.png 'Screenshot of my notes on Obsidian')

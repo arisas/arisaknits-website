@@ -17,7 +17,7 @@ Nice to meet you. I'm Arisa - located on Duwamish and Coast Salish land (aka the
 - I have an Australian Kelpie named Cheyenne. She's the sweetest and quietest dog you'll ever meet, unless she gets excited and starts howling at you! You can follow her at [@cheyennethekelpie](https://www.instagram.com/cheyennethekelpie/) on Instagram for some of her cuteness. She was diagnosed with chronic mouth ulcers two years ago, so that's been a journey for my husband and me this past couple of years.
 - I have a knitting/crafts Instagram account [@arisaknits](https://www.instagram.com/arisaknits/) that I named this website after!
 
-![Cheyenne (my dog) smelling the knittin project that I have in my hands](/img/d2e3037a-87e1-4e04-81ba-835c766d98dd.jpg 'Cheyenne and me knitting')
+![Cheyenne (my dog) smelling the knittin project that I have in my hands](../../assets/blog/img/d2e3037a-87e1-4e04-81ba-835c766d98dd.jpg 'Cheyenne and me knitting')
 
 ## So, why do I want a blog?
 

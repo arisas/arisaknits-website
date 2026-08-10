@@ -10,11 +10,11 @@ publishedAt: '2020-11-23T01:49:24.937Z'
 - The Most Beautiful Thing - Kao Kalia Yang
 - A Map Into the World - Kao Kalia Yang
 
-![The cover of Antiracist Baby children's book by Ibram X Kendi](/img/IMG_5780.jpeg 'Antiracist Baby')
+![The cover of Antiracist Baby children's book by Ibram X Kendi](../../assets/blog/img/IMG_5780.jpeg 'Antiracist Baby')
 
 I've been on a kick with reading children's books by BIPOC authors recently. There's something about reading children's books: the art, how deep but easy it is to understand the story, etc. There is so much to experience and learn from these books, both for adults and children. Who says children's books are only for children?!
 
-![The cover of The Map Into the World and The Most Beautiful Thing by Kao Kalia Yang](/img/IMG_6284.jpeg 'The Map Into the World and The Most Beautiful Thing')
+![The cover of The Map Into the World and The Most Beautiful Thing by Kao Kalia Yang](../../assets/blog/img/IMG_6284.jpeg 'The Map Into the World and The Most Beautiful Thing')
 
 # **A little about the authors of these books:**
 
