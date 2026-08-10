@@ -57,8 +57,8 @@ const posts = await getCollection('blog');
       </p>
     </div>
   </div>
-  <div class="py-10 text-xl bg-(--color-dark-teal)/10">
-    <h2 class="text-center text-3xl font-bold">Hi! I'm Arisa!</h2>
+  <section class="py-10 text-xl bg-(--color-dark-teal)/10">
+    <h2 class="text-center text-3xl font-bold" id="about">Hi! I'm Arisa!</h2>
 
     <div class="flex flex-col justify-center">
       <div class="text-center m-auto px-5 md:max-w-md py-5">
@@ -95,17 +95,17 @@ const posts = await getCollection('blog');
         />
       </div>
     </div>
-    <section>
-      <h2>My posts</h2>
-      <ul>
-        {
-          posts.map((post) => (
-            <li>
-              <a href={`/blog/${post.id}`}>{post.data.title}</a>
-            </li>
-          ))
-        }
-      </ul>
-    </section>
-  </div>
+  </section>
+  <section class="pb-15 pt-10 text-xl bg-gray-50">
+    <h2 class="text-center text-3xl font-bold" id="blog">Updates from Arisa</h2>
+    <ul>
+      {
+        posts.map((post) => (
+          <li>
+            <a href={`/blog/${post.id}`}>{post.data.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
 </Layout>
