@@ -22,17 +22,20 @@ if (!entry) {
 const { Content } = await render(entry);
 ---
 
-<Layout title="Blog">
-  <h1 class="text-center text-4xl my-10 font-bold">{entry.data.title}</h1>
-
-  <p>Published on: {entry.data.publishedAt.toDateString()}</p>
-  <section
-    class="p-4 font-sans prose
+<Layout title={`${entry.data.title} | Blog`}>
+  <article class="m-auto max-w-3xl px-5">
+    <h1 class="text-center text-4xl mt-10 font-bold">{entry.data.title}</h1>
+    <p class="text-sm mt-5">
+      Published on: {entry.data.publishedAt.toDateString()}
+    </p>
+    <hr class="my-5" />
+    <section
+      class="p-4 font-sans prose
   prose-h1:font-bold prose-h1:text-xl
   prose-a:text-blue-600 prose-p:text-justify prose-img:rounded-xl
   prose-headings:underline"
-  >
-    <!-- <h2>{entry.filePath}</h2>
+    >
+      <!-- <h2>{entry.filePath}</h2>
     <p>Entry ID: {entry.id}</p>
     <pre
       class="bg-black text-white">
@@ -45,6 +48,7 @@ publishedAt: "{entry.data.publishedAt.toISOString()}"
 {entry.data.body}
         </code>
     </pre> -->
-    <Content />
-  </section>
+      <Content />
+    </section>
+  </article>
 </Layout>
