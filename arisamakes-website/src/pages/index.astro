@@ -96,13 +96,18 @@ const posts = await getCollection('blog');
       </div>
     </div>
   </section>
-  <section class="pb-15 pt-10 text-xl bg-gray-50">
+  <section class="pb-15 pt-10 text-xl bg-gray-50 flex flex-col items-center">
     <h2 class="text-center text-3xl font-bold" id="blog">Updates from Arisa</h2>
-    <ul>
+    <ul class="mt-5 list-disc list-inside px-1">
       {
         posts.map((post) => (
           <li>
-            <a href={`/blog/${post.id}`}>{post.data.title}</a>
+            <a
+              class="underline decoration-2 decoration-sky-blue underline-offset-2 hover:decoration-blush text-gray-800 hover:text-black text-base/7"
+              href={`/blog/${post.id}`}
+            >
+              {post.data.title}
+            </a>
           </li>
         ))
       }
