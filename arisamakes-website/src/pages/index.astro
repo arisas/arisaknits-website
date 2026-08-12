@@ -5,7 +5,9 @@ import Layout from '../layouts/Layout.astro';
 import ArisaProfile from '../assets/2025-1080w.jpg';
 import WatchCakeDarkTeal from '../assets/3.0cake+darkteal.png';
 
-const posts = await getCollection('blog');
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
+  .slice(0, 10);
 ---
 
 <Layout title="Home">
