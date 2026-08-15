@@ -7,7 +7,7 @@ import WatchCakeDarkTeal from '../assets/3.0cake+darkteal.png';
 
 const posts = (await getCollection('blog'))
   .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
-  .slice(0, 10);
+  .slice(0, 5);
 ---
 
 <Layout title="Home">
@@ -99,20 +99,21 @@ const posts = (await getCollection('blog'))
     </div>
   </section>
   <section class="pb-15 pt-10 text-xl bg-gray-50 flex flex-col items-center">
-    <h2 class="text-center text-3xl font-bold" id="blog">Updates from Arisa</h2>
+    <h2 class="text-center text-3xl font-bold" id="blog">Latest Updates from Arisa</h2>
     <ul class="mt-5 list-disc list-inside px-1">
       {
         posts.map((post) => (
-          <li>
+          <li class="text-gray-800 text-base">
             <a
               class="underline decoration-2 decoration-sky-blue underline-offset-2 hover:decoration-blush text-gray-800 hover:text-black text-base/7"
               href={`/blog/${post.id}`}
             >
               {post.data.title}
-            </a>
+            </a> - {post.data.publishedAt.toDateString()}
           </li>
         ))
       }
     </ul>
+
   </section>
 </Layout>

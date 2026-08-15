@@ -1,15 +1,29 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
 
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
 ---
 
 <Layout title="Blog">
-
-<h1 class="text-center text-4xl my-10 font-bold">
-    Blog
+  <div class="pb-15 pt-10 bg-gray-50 flex flex-col items-center">
+    <h1 class="text-center text-4xl font-bold">
+    All Blog Posts
 </h1>
-
-<p class="text-center text-3xl m-auto my-20">This page is a work in progress! Come back later!
-
-</p>
+    <ul class="mt-5 list-disc list-inside px-1">
+      {
+        posts.map((post) => (
+          <li class="text-gray-800 text-base">
+            <a
+              class="underline decoration-2 decoration-sky-blue underline-offset-2 hover:decoration-blush text-gray-800 hover:text-black text-base/7"
+              href={`/blog/${post.id}`}
+            >
+              {post.data.title}
+            </a> - {post.data.publishedAt.toDateString()}
+          </li>
+        ))
+      }
+    </ul>
+</div>
 </Layout>
