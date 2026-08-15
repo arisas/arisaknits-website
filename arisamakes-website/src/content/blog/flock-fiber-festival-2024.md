@@ -36,12 +36,12 @@ Anyway, such great discussions and I’m looking forward to thinking about these
 
 (I only have crochet projects that I’m working on right now with my very first clothing wear!)
 
-Another Rodney from amigurumi [Thank Goodness You’re Here](https://thankgoodness.game/) – a game we (Panic) just released
+Another amigurumi doll from [Thank Goodness You’re Here](https://thankgoodness.game/) – a game we (Panic) just released
 
 Crocheting mini hexagons (I don't have a photo but I'll share more in a couple weeks!)
 
 Starting [Britt’s new Shore Pine Cowl ](https://www.knotbadbritt.com/patterns/p/shore-pine-cowl)for my trips to Europe later this year!
 
-![Crocheted Rodney from Thank Goodness You're Here ](../../assets/blog/img/img_4556.jpeg "Crocheted Rodney from Thank Goodness You're Here")
+![Crocheted amigurumi from Thank Goodness You're Here ](../../assets/blog/img/img_4556.jpeg "Crocheted amigurumi from Thank Goodness You're Here")
 
 ![Crocheted piece of the Shore Pine Cowl in a yellow bulky weight wool](../../assets/blog/img/img_5594.jpeg 'Crocheted piece of the Shore Pine Cowl in a yellow bulky weight wool')
