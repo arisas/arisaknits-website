@@ -1,90 +1,93 @@
 ---
+import { getCollection } from 'astro:content';
+
 import Layout from '../layouts/Layout.astro';
-import ArisaProfile from "../assets/2025-1080w.jpg";
-import WatchCakeDarkTeal from "../assets/3.0cake+darkteal.png";
+import ArisaProfile from '../assets/2025-1080w.jpg';
+import WatchCakeDarkTeal from '../assets/3.0cake+darkteal.png';
+
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf())
+  .slice(0, 5);
 ---
 
 <Layout title="Home">
+  <div class="pb-15 pt-10 text-xl bg-gray-50">
+    <div class="text-center text-2xl m-auto px-5 md:max-w-md">
+      <p>
+        <div
+          class="mt-5 underline decoration-3 decoration-(--color-sky-blue) underline-offset-2"
+        >
+          <a
+            href="/rowcounter"
+            class="hover:decoration-(--color-blush) font-semibold text-gray-800 hover:text-black"
+            title="ArisaMakes Row Counter Page"
+          >
+            I made a row counter app!
 
-	<div class="pb-15 pt-10 text-xl bg-gray-50">
+            <img
+              alt="ArisaMakes Apple Watch Row Counter Screenshot"
+              title="ArisaMakes Apple Watch Row Counter Screenshot"
+              class="mt-5 mx-auto max-h-70 rounded-[8vw] lg:rounded-[2vw] object-cover shadow-lg"
+              decoding="auto"
+              src={WatchCakeDarkTeal.src}
+              loading="lazy"
+            />
+          </a>
+        </div>
 
-		
-		<div class="text-center text-2xl m-auto px-5 md:max-w-md">
-		<p>
-		<div class="mt-5 underline decoration-3 decoration-(--color-sky-blue) underline-offset-2">
-			<a 
-			href="/rowcounter"
-			class="hover:decoration-(--color-blush) font-semibold text-gray-800 hover:text-black" 
-			title="ArisaMakes Row Counter Page"
-			>
-			I made a row counter app!
+        <div class="bg-(--color-blush)/50 rounded-lg my-9 p-3">
+          <p>
+            <a
+              href="/rowcounter/watchos/"
+              class="underline underline-offset-2 decoration-(--color-magenta) hover:decoration-(--color-dandelion)"
+              >Update 3.0</a
+            > for the Apple Watch is now available!
+          </p>
+        </div>
 
-    		<img
-          alt="ArisaMakes Apple Watch Row Counter Screenshot"
-          title="ArisaMakes Apple Watch Row Counter Screenshot"
-          class="mt-5 mx-auto max-h-70 rounded-[8vw] lg:rounded-[2vw] object-cover shadow-lg"
-          decoding="auto"
-          src={WatchCakeDarkTeal.src}
-          loading="lazy"
-        />
+        <div
+          class="mt-5 underline decoration-3 decoration-(--color-dandelion) underline-offset-2"
+        >
+          <a
+            href="/bipoccraftcircle"
+            class="mt-5 hover:decoration-(--color-dark-teal) font-semibold text-gray-800 hover:text-black"
+            title="BIPOC Craft Circle Page"
+          >
+            I cohost monthly craft nights for people of color!</a
+          >
+        </div>
+      </p>
+    </div>
+  </div>
+  <section class="py-10 text-xl bg-(--color-dark-teal)/10">
+    <h2 class="text-center text-3xl font-bold" id="about">Hi! I'm Arisa!</h2>
 
-	
-			</a>
-		</div>
+    <div class="flex flex-col justify-center">
+      <div class="text-center m-auto px-5 md:max-w-md py-5">
+        <p>she/her</p>
 
-		<div class="bg-(--color-blush)/50 rounded-lg my-9 p-3">
-			
-			<p><a 
-		href="/rowcounter/watchos/"
-		class="underline underline-offset-2 decoration-(--color-magenta) hover:decoration-(--color-dandelion)"
-		>Update 3.0</a> for the Apple Watch is now available!</p>
+        <p>
+          I like to knit, crochet, weave, and sew (sometimes), and I also make
+          software! I have 12 years of experience in video games previously
+          working at <a
+            href="https://panic.com/"
+            class="italic hover:underline decoration-2 underline-offset-2 hover:decoration-indigo-700"
+            >Panic
+          </a> and <a
+            href="https://www.valvesoftware.com/en/about"
+            class="italic hover:underline decoration-2 underline-offset-2 hover:decoration-red-600"
+            >Valve</a
+          >.
+        </p>
 
-		</div>
+        <p class="my-3">
+          I quit my job in June 2026 to allow myself to explore my dreams around
+          fiber arts by building apps for my crafts, a third place community,
+          and learning more about Thai and Lao textiles!
+        </p>
 
-		<div class="mt-5 underline decoration-3 decoration-(--color-dandelion) underline-offset-2">
-			<a 
-			href="/bipoccraftcircle"
-			class="mt-5 hover:decoration-(--color-dark-teal) font-semibold text-gray-800 hover:text-black" 
-			title="BIPOC Craft Circle Page"
-			>
-			I cohost monthly craft nights for people of color!</a>
-		</div>
-
-
-		</p>
-		</div>	
-		</div>
-<div class="py-10 text-xl bg-(--color-dark-teal)/10">
-
-
-
-    <h2 class="text-center text-3xl font-bold">
-		Hi! I'm Arisa!
-	</h2>
-
-  	<div class="flex flex-col justify-center">
-	<div class="text-center m-auto px-5 md:max-w-md py-5">
-	<p>she/her</p>
-
-	<p>
-	I like to knit, crochet, weave, and sew (sometimes), and I also make software! I have 12 years of experience in video games previously working at <a 
-	href="https://panic.com/"
-	class="italic hover:underline decoration-2 underline-offset-2 hover:decoration-indigo-700"
-	>Panic
-	</a> and <a 
-	href="https://www.valvesoftware.com/en/about"
-	class="italic hover:underline decoration-2 underline-offset-2 hover:decoration-red-600"
-	>Valve</a>.
-	</p>
-
-	<p class="my-3">
-	I quit my job in June 2026 to allow myself to explore my dreams around fiber arts by building apps for my crafts, a third place community, and learning more about Thai and Lao textiles!
-	</p>
-
-	<p>
-	I'm Thai American currently living in the Seattle area.
-	</p>
-			<img
+        <p>I'm Thai American currently living in the Seattle area.</p>
+        <img
           alt="Arisa Weaving"
           title="Arisa Weaving"
           class="mt-5 mx-auto max-h-80 md:max-h-96 rounded-xl object-cover"
@@ -92,10 +95,25 @@ import WatchCakeDarkTeal from "../assets/3.0cake+darkteal.png";
           src={ArisaProfile.src}
           loading="lazy"
         />
+      </div>
+    </div>
+  </section>
+  <section class="pb-15 pt-10 text-xl bg-gray-50 flex flex-col items-center">
+    <h2 class="text-center text-3xl font-bold" id="blog">Latest Updates from Arisa</h2>
+    <ul class="mt-5 list-disc list-inside px-1">
+      {
+        posts.map((post) => (
+          <li class="text-gray-800 text-base">
+            <a
+              class="underline decoration-2 decoration-sky-blue underline-offset-2 hover:decoration-blush text-gray-800 hover:text-black text-base/7"
+              href={`/blog/${post.id}`}
+            >
+              {post.data.title}
+            </a> - {post.data.publishedAt.toDateString()}
+          </li>
+        ))
+      }
+    </ul>
 
-	</div>
-	</div>
-</div>
-
-
+  </section>
 </Layout>

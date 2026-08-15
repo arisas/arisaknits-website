@@ -1,0 +1,30 @@
+---
+title: 'Hi, Hello! Welcome to my blog'
+description: 'My first ever blog post on arisaknits! Check out my fun facts, topics I want to blog, why I want to blog, and what an FFT is (thanks Brene Brown).'
+publishedAt: '2020-09-25T15:00:00.000Z'
+---
+
+Hey there fellow readers,
+
+## Welcome to arisaknits' blog!
+
+Nice to meet you. I'm Arisa - located on Duwamish and Coast Salish land (aka the greater Seattle area). Thanks for joining me in my first ever blog post here.
+
+## Fun facts about me:
+
+- I've been working in the video game industry for almost seven years.
+- I grew up in Bangkok for nine years before moving back to the US at age twelve.
+- I have an Australian Kelpie named Cheyenne. She's the sweetest and quietest dog you'll ever meet, unless she gets excited and starts howling at you! You can follow her at [@cheyennethekelpie](https://www.instagram.com/cheyennethekelpie/) on Instagram for some of her cuteness. She was diagnosed with chronic mouth ulcers two years ago, so that's been a journey for my husband and me this past couple of years.
+- I have a knitting/crafts Instagram account [@arisaknits](https://www.instagram.com/arisaknits/) that I named this website after!
+
+![Cheyenne (my dog) smelling the knittin project that I have in my hands](../../assets/blog/img/d2e3037a-87e1-4e04-81ba-835c766d98dd.jpg 'Cheyenne and me knitting')
+
+## So, why do I want a blog?
+
+Well, of course, I do hope people read whatever I write. If not, I hope to at least gain some experience and practice with writing!
+
+There's been a lot of learning that I've done this past year while in quarantine, and I thought it'd be fun (and helpful for me) to share that journey with everyone. Some topics I plan to write about: my experience with learning to knit, being dog parents to a dog with a chronic illness, language learning as an adult, self-care, social justice, gardening, etc. If you have any topics you want me to write about, DM me on Instagram [@arisaknits](https://www.instagram.com/arisaknits/).
+
+I've wanted to blog for a while, so I'm excited (and extremely nervous) to blog to the world for the first time! As Brene Brown would call it, this blog is an FFT (fucking first time). You can listen to [Brene Brown's podcast episode on FFTs](https://brenebrown.com/podcast/brene-on-ffts/) that she did at the beginning of the pandemic. I also highly recommend her podcast!
+
+Anyway, thank you for being a part of this journey with me :)
