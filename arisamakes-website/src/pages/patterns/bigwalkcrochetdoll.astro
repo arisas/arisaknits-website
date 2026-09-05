@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 import Layout from '../../layouts/Layout.astro';
 import BigWalkDoll from '../../assets/bigwalkdollphoto.png';
 ---
@@ -20,13 +22,11 @@ import BigWalkDoll from '../../assets/bigwalkdollphoto.png';
       Big Walk Crochet Doll Pattern
     </h2>
 
-    <img
+    <Image
       alt="Big Walk Crochet Doll Photo"
       title="Big Walk Crochet Doll Photo"
       class="mt-8 max-h-80 md:max-h-100 object-cover"
-      decoding="auto"
-      src={BigWalkDoll.src}
-      loading="lazy"
+      src={BigWalkDoll}
     />
 
 
