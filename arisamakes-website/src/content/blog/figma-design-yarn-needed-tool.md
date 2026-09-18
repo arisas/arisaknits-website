@@ -1,5 +1,5 @@
 ---
-title: 'Designing in Figma - Tool for How Much Yarn is Needed'
+title: "Designing in Figma - Tool for How Much Yarn is Needed + What I'm Making This Past Month"
 
 description: 'New video of me designing in Figma a new tool for how to calculate how much yarn is needed for a pattern'
 
@@ -9,6 +9,8 @@ publishedAt: '2026-09-18T13:42:53.055Z'
 I'm experimenting with designing a tool that you can use to calculate how much yarn you need. For example, you're looking at a pattern and you're at the yarn store and you need help figuring out what yarn to buy. It can be confusing, especially as a beginner crocheter or knitter, to navigate what yarn you need for a pattern with all the different names for the yarn weights/yarn thickness. So, I'm hoping this tool would be helpful for that!
 
 I have a new video out on YouTube on [Designing in Figma - Tool for How Much Yarn is Needed](https://www.youtube.com/watch?v=aVwv2JKlJxk)!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aVwv2JKlJxk?si=BCcNNgzewd5-Eo55" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 I've been noodling on this tool idea for a while, and I'm not sure if anyone would use a tool like this, so I thought I'd spend some time designing it out on Figma to experiment! This feature/tool isn't set in stone so things may change drastically and I might decide to not add this feature in the app at all!
 
