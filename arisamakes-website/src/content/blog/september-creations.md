@@ -20,7 +20,7 @@ I'm using some white Cotton Slub Spiral yarn I got for free from the Seattle Wea
 
 ![Magical Girl Scarf in progress](../../assets/blog/img/MagicalGirlScarf.jpeg 'Magical Girl Scarf in progress')
 
-I've been slowly making my friend a Sailor Moon scarf-- the pattern is by [Katharina Kuntz](https://katharina-kuntz.myshopify.com/products/magical-girl-scarf-signs-knitting-pattern) who's known for a bunch of beautiful double knit patterned scarves and you can find the pattern here. It's my first time doing double knitting and I highly recommend getting the ring to help make sure your tension is good. It's looking so beautiful already and I want to design my own double knit pattern now!
+I've been slowly making my friend a Sailor Moon scarf-- the pattern is by [Katharina Kuntz](https://katharina-kuntz.myshopify.com/products/magical-girl-scarf-signs-knitting-pattern) who's known for a bunch of beautiful double knit patterned scarves and you can find the pattern here. It's my first time doing double knitting and I highly recommend getting the Norwegian Knitting ring to help make sure your tension is good. It's looking so beautiful already and I want to design my own double knit pattern now!
 
 ### I'm using:
 
