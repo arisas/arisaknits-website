@@ -3,7 +3,7 @@ title: 'September Creations'
 
 description: 'My monthly blog on a round up of things I worked on in September'
 
-publishedAt: '2026-10-02T13:42:53.055Z'
+publishedAt: '2026-10-06T12:12:53.055Z'
 ---
 
 I'm starting a monthly showcase of all the random art things I worked on each month. Here are my September creations!
