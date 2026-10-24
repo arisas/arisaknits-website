@@ -1,5 +1,5 @@
 ---
-title: "Designing in Figma - Tool for How Much Yarn is Needed + What I'm Making This Past Month"
+title: 'Designing in Figma - Tool for How Much Yarn is Needed'
 
 description: 'New video of me designing in Figma a new tool for how to calculate how much yarn is needed for a pattern'
 
