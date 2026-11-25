@@ -3,7 +3,7 @@ title: 'Two Years of BIPOC Craft Nights'
 
 description: 'My monthly blog on a round up of things I worked on in September'
 
-publishedAt: '2026-11-24T20:12:53.055Z'
+publishedAt: '2026-11-24T19:57:53.055Z'
 ---
 
 Hi! I'm back from my break and last week we celebrated our two years of having a BIPOC Craft Night! We meet every month usually on the third Monday and you can find more info [here](https://arisamakes.com/bipoccraftcircle/).
